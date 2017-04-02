@@ -6,6 +6,7 @@ CMakeFiles/pathFinding.dir/DFS.cpp.o: ../DFS.h
 CMakeFiles/pathFinding.dir/DFS.cpp.o: ../Parser.h
 CMakeFiles/pathFinding.dir/DFS.cpp.o: ../SearchTemplates/Action.h
 CMakeFiles/pathFinding.dir/DFS.cpp.o: ../SearchTemplates/Node.h
+CMakeFiles/pathFinding.dir/DFS.cpp.o: ../SearchTemplates/Path.h
 CMakeFiles/pathFinding.dir/DFS.cpp.o: ../SearchTemplates/Problem.h
 CMakeFiles/pathFinding.dir/DFS.cpp.o: ../SearchTemplates/SearchType.h
 CMakeFiles/pathFinding.dir/DFS.cpp.o: ../SearchTemplates/SolutionResponse.h
@@ -14,11 +15,28 @@ CMakeFiles/pathFinding.dir/Parser.cpp.o: ../Parser.cpp
 CMakeFiles/pathFinding.dir/Parser.cpp.o: ../Parser.h
 CMakeFiles/pathFinding.dir/Parser.cpp.o: ../SearchTemplates/Action.h
 CMakeFiles/pathFinding.dir/Parser.cpp.o: ../SearchTemplates/Node.h
+CMakeFiles/pathFinding.dir/Parser.cpp.o: ../SearchTemplates/Path.h
 CMakeFiles/pathFinding.dir/Parser.cpp.o: ../SearchTemplates/Problem.h
 CMakeFiles/pathFinding.dir/Parser.cpp.o: ../SearchTemplates/SearchType.h
+CMakeFiles/pathFinding.dir/Parser.cpp.o: ../SearchTemplates/SolutionResponse.h
 
 CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o: ../SearchTemplates/Action.cpp
 CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o: ../SearchTemplates/Action.h
+
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: ../Parser.h
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: ../SearchTemplates/Action.h
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: ../SearchTemplates/BFS.cpp
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: ../SearchTemplates/BFS.h
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: ../SearchTemplates/Node.h
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: ../SearchTemplates/Path.h
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: ../SearchTemplates/Problem.h
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: ../SearchTemplates/SearchType.h
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: ../SearchTemplates/SolutionResponse.h
+
+CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o: ../SearchTemplates/Action.h
+CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o: ../SearchTemplates/Node.h
+CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o: ../SearchTemplates/Path.cpp
+CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o: ../SearchTemplates/Path.h
 
 CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o: ../SearchTemplates/Action.h
 CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o: ../SearchTemplates/Node.h
@@ -28,19 +46,24 @@ CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o: ../SearchTemplates/Pro
 CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o: ../Parser.h
 CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o: ../SearchTemplates/Action.h
 CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o: ../SearchTemplates/Node.h
+CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o: ../SearchTemplates/Path.h
 CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o: ../SearchTemplates/Problem.h
 CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o: ../SearchTemplates/SearchType.cpp
 CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o: ../SearchTemplates/SearchType.h
+CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o: ../SearchTemplates/SolutionResponse.h
 
 CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o: ../SearchTemplates/Action.h
 CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o: ../SearchTemplates/Node.h
+CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o: ../SearchTemplates/Path.h
 CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o: ../SearchTemplates/SolutionResponse.cpp
 CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o: ../SearchTemplates/SolutionResponse.h
 
 CMakeFiles/pathFinding.dir/main.cpp.o: ../DFS.h
 CMakeFiles/pathFinding.dir/main.cpp.o: ../Parser.h
 CMakeFiles/pathFinding.dir/main.cpp.o: ../SearchTemplates/Action.h
+CMakeFiles/pathFinding.dir/main.cpp.o: ../SearchTemplates/BFS.h
 CMakeFiles/pathFinding.dir/main.cpp.o: ../SearchTemplates/Node.h
+CMakeFiles/pathFinding.dir/main.cpp.o: ../SearchTemplates/Path.h
 CMakeFiles/pathFinding.dir/main.cpp.o: ../SearchTemplates/Problem.h
 CMakeFiles/pathFinding.dir/main.cpp.o: ../SearchTemplates/SearchType.h
 CMakeFiles/pathFinding.dir/main.cpp.o: ../SearchTemplates/SolutionResponse.h

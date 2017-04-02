@@ -7,6 +7,7 @@ CMakeFiles/pathFinding.dir/DFS.cpp.o
  /home/mac/IntroAI/pathFinding/Parser.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Node.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Path.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Problem.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.h
@@ -15,11 +16,28 @@ CMakeFiles/pathFinding.dir/Parser.cpp.o
  /home/mac/IntroAI/pathFinding/Parser.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Node.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Path.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Problem.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.h
 CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o
  /home/mac/IntroAI/pathFinding/SearchTemplates/Action.cpp
  /home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o
+ /home/mac/IntroAI/pathFinding/Parser.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/BFS.cpp
+ /home/mac/IntroAI/pathFinding/SearchTemplates/BFS.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Node.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Path.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Problem.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.h
+CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Node.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Path.cpp
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Path.h
 CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o
  /home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Node.h
@@ -29,19 +47,24 @@ CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o
  /home/mac/IntroAI/pathFinding/Parser.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Node.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Path.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Problem.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.cpp
  /home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.h
 CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o
  /home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Node.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Path.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.cpp
  /home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.h
 CMakeFiles/pathFinding.dir/main.cpp.o
  /home/mac/IntroAI/pathFinding/DFS.h
  /home/mac/IntroAI/pathFinding/Parser.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/BFS.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Node.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Path.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Problem.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.h

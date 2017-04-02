@@ -204,6 +204,60 @@ SearchTemplates/Action.cpp.s:
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.s
 .PHONY : SearchTemplates/Action.cpp.s
 
+SearchTemplates/BFS.o: SearchTemplates/BFS.cpp.o
+
+.PHONY : SearchTemplates/BFS.o
+
+# target to build an object file
+SearchTemplates/BFS.cpp.o:
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o
+.PHONY : SearchTemplates/BFS.cpp.o
+
+SearchTemplates/BFS.i: SearchTemplates/BFS.cpp.i
+
+.PHONY : SearchTemplates/BFS.i
+
+# target to preprocess a source file
+SearchTemplates/BFS.cpp.i:
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.i
+.PHONY : SearchTemplates/BFS.cpp.i
+
+SearchTemplates/BFS.s: SearchTemplates/BFS.cpp.s
+
+.PHONY : SearchTemplates/BFS.s
+
+# target to generate assembly for a file
+SearchTemplates/BFS.cpp.s:
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.s
+.PHONY : SearchTemplates/BFS.cpp.s
+
+SearchTemplates/Path.o: SearchTemplates/Path.cpp.o
+
+.PHONY : SearchTemplates/Path.o
+
+# target to build an object file
+SearchTemplates/Path.cpp.o:
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o
+.PHONY : SearchTemplates/Path.cpp.o
+
+SearchTemplates/Path.i: SearchTemplates/Path.cpp.i
+
+.PHONY : SearchTemplates/Path.i
+
+# target to preprocess a source file
+SearchTemplates/Path.cpp.i:
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.i
+.PHONY : SearchTemplates/Path.cpp.i
+
+SearchTemplates/Path.s: SearchTemplates/Path.cpp.s
+
+.PHONY : SearchTemplates/Path.s
+
+# target to generate assembly for a file
+SearchTemplates/Path.cpp.s:
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.s
+.PHONY : SearchTemplates/Path.cpp.s
+
 SearchTemplates/Problem.o: SearchTemplates/Problem.cpp.o
 
 .PHONY : SearchTemplates/Problem.o
@@ -330,6 +384,12 @@ help:
 	@echo "... SearchTemplates/Action.o"
 	@echo "... SearchTemplates/Action.i"
 	@echo "... SearchTemplates/Action.s"
+	@echo "... SearchTemplates/BFS.o"
+	@echo "... SearchTemplates/BFS.i"
+	@echo "... SearchTemplates/BFS.s"
+	@echo "... SearchTemplates/Path.o"
+	@echo "... SearchTemplates/Path.i"
+	@echo "... SearchTemplates/Path.s"
 	@echo "... SearchTemplates/Problem.o"
 	@echo "... SearchTemplates/Problem.i"
 	@echo "... SearchTemplates/Problem.s"

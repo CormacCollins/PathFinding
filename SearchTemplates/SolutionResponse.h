@@ -8,21 +8,25 @@
 #include <vector>
 #include <string>
 #include "Node.h"
+#include "Path.h"
 
 class SolutionResponse {
 public:
 
+    SolutionResponse(std::string outcome="undefined"){
+        responseOutcome = outcome;
+        solutionActions = std::vector<Path>();
+    }
     //Solution in XY coords added to SolutionResponse wrapper
-    SolutionResponse(std::vector<Node*> solution, std::string outcome){
+    SolutionResponse(std::vector<Path>& solution, std::string outcome){
         solutionActions = solution;
         responseOutcome = outcome;
     }
-    //Used when just a failed response
-    SolutionResponse(std::string outcome){
-        responseOutcome = outcome;
-    }
 
-    std::vector<Node*> solutionActions;
+    std::vector<Path> GetActions();
+    std::string ResOutcome();
+
+    std::vector<Path> solutionActions;
     std::string responseOutcome;
 };
 

@@ -225,6 +225,54 @@ CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o.provides: CMak
 CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o.provides.build: CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o
 
 
+CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o: CMakeFiles/pathFinding.dir/flags.make
+CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o: ../SearchTemplates/Path.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o -c /home/mac/IntroAI/pathFinding/SearchTemplates/Path.cpp
+
+CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mac/IntroAI/pathFinding/SearchTemplates/Path.cpp > CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.i
+
+CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mac/IntroAI/pathFinding/SearchTemplates/Path.cpp -o CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.s
+
+CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o.requires:
+
+.PHONY : CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o.requires
+
+CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o.provides: CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o.provides.build
+.PHONY : CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o.provides
+
+CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o.provides.build: CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o
+
+
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: CMakeFiles/pathFinding.dir/flags.make
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: ../SearchTemplates/BFS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o -c /home/mac/IntroAI/pathFinding/SearchTemplates/BFS.cpp
+
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mac/IntroAI/pathFinding/SearchTemplates/BFS.cpp > CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.i
+
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mac/IntroAI/pathFinding/SearchTemplates/BFS.cpp -o CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.s
+
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o.requires:
+
+.PHONY : CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o.requires
+
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o.provides: CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o.provides.build
+.PHONY : CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o.provides
+
+CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o.provides.build: CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o
+
+
 # Object files for target pathFinding
 pathFinding_OBJECTS = \
 "CMakeFiles/pathFinding.dir/main.cpp.o" \
@@ -233,7 +281,9 @@ pathFinding_OBJECTS = \
 "CMakeFiles/pathFinding.dir/DFS.cpp.o" \
 "CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o" \
 "CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o" \
-"CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o"
+"CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o" \
+"CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o" \
+"CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o"
 
 # External object files for target pathFinding
 pathFinding_EXTERNAL_OBJECTS =
@@ -245,9 +295,11 @@ pathFinding: CMakeFiles/pathFinding.dir/DFS.cpp.o
 pathFinding: CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o
 pathFinding: CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o
 pathFinding: CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o
+pathFinding: CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o
+pathFinding: CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o
 pathFinding: CMakeFiles/pathFinding.dir/build.make
 pathFinding: CMakeFiles/pathFinding.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable pathFinding"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable pathFinding"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pathFinding.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -262,6 +314,8 @@ CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/DFS.cpp.o.requir
 CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o.requires
 CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o.requires
 CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o.requires
+CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o.requires
+CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o.requires
 
 .PHONY : CMakeFiles/pathFinding.dir/requires
 

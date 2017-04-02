@@ -1,15 +1,12 @@
 //
-// Created by mac on 23/03/17.
+// Created by mac on 2/04/17.
 //
 
-#include "DFS.h"
+#include "BFS.h"
 
-//recursively call DepthSearch
-SolutionResponse DFS::Search(Problem& problem, Node* nodeSearch) {
-    return DepthSearch(problem, nodeSearch);
-}
+//How to add to single path for only successful route
 
-SolutionResponse DFS::DepthSearch(Problem& problem, Node* searchNode){
+SolutionResponse BFS::BreadthFirstSearch(Problem& problem, Node* searchNode){
 
     //Return list from each child expansion
     std::vector<Path> children;
@@ -18,17 +15,14 @@ SolutionResponse DFS::DepthSearch(Problem& problem, Node* searchNode){
     //To be returned solution
     SolutionResponse* solution;
 
-
     //Goal check
     if (GoalTest(problem, searchNode)){
         solution = new SolutionResponse(currentPath, "success");
         return *solution;
     }
 
-    RenderCurrentMap(searchNode, problem);
     //Push first children onto frontier
     children = ExpandNode(searchNode, problem);
-
 
     if(children.empty()){
         PopPath();
@@ -36,7 +30,6 @@ SolutionResponse DFS::DepthSearch(Problem& problem, Node* searchNode){
         solution = new SolutionResponse("failed");
         return *solution;
     }
-
 
     //Extract Nodes form children path
     for(Path& p : children){
@@ -46,19 +39,22 @@ SolutionResponse DFS::DepthSearch(Problem& problem, Node* searchNode){
     //Add path to frontier
     PushFrontier(childrenNodes);
 
-    while(!FrontierIsEmpty()) {
-        //Get top of stack for DFS (LIFO)
-        Node* currentNode = PopFrontier();
-        //Add node-action pair to path - this setup works fine but clearly can be refactored to something better!
-        PushPath(currentNode, GetAction(children, currentNode));
+    //Add to correct path
+    PushPath(searchNode, GetAction(children, searchNode));
 
-        //begin search again
-        return DepthSearch(problem, currentNode);
-    }
+    RenderCurrentMap(searchNode, problem);
+    BreadthFirstSearch(problem, PopFrontier());
+
 };
 
+Node* BFS::PopFrontier() {
+    Node* removeNode = frontier[0];
+    frontier.erase(frontier.begin());
+    return removeNode;
+}
+
 //Multi-node push
-void DFS::PushFrontier(std::vector<Node*> newFrontier) {
+void BFS::PushFrontier(std::vector<Node*> newFrontier) {
     //Add node/action pairs to frontier
     for(auto n : newFrontier){
         frontier.push_back(n);
@@ -66,28 +62,21 @@ void DFS::PushFrontier(std::vector<Node*> newFrontier) {
 }
 
 //Single node push
-void DFS::PushFrontier(Node* newFrontier) {
+void BFS::PushFrontier(Node* newFrontier) {
     //Add node/action pairs to frontier
     frontier.push_back(newFrontier);
 }
 
-Node* DFS::PopFrontier() {
-    Node* removeNode = frontier[frontier.size()-1];
-    frontier.pop_back();
-    return removeNode;
-}
-
-bool DFS::GoalTest(Problem& problem, Node* node) {
-    RenderCurrentMap(node, problem);
+bool BFS::GoalTest(Problem& problem, Node* node) {
     return problem.GoalState == node;
 }
 
 
 
-void DFS::PushPath(Node* node, ActionType journeyAction) {
+void BFS::PushPath(Node* node, ActionType journeyAction) {
     currentPath.push_back(Path(node, journeyAction));
 }
 
-void DFS::PopPath() {
+void BFS::PopPath() {
     currentPath.pop_back();
 }

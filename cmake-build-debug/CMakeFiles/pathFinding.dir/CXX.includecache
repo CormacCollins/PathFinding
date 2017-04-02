@@ -9,20 +9,6 @@
 /home/mac/IntroAI/pathFinding/DFS.cpp
 DFS.h
 /home/mac/IntroAI/pathFinding/DFS.h
-vector
--
-algorithm
--
-search.h
--
-SearchTemplates/Action.h
-/home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
-iostream
--
-sstream
--
-SearchTemplates/SolutionResponse.h
-/home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.h
 
 /home/mac/IntroAI/pathFinding/DFS.h
 SearchTemplates/SearchType.h
@@ -33,6 +19,8 @@ SearchTemplates/SolutionResponse.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.h
 Parser.h
 /home/mac/IntroAI/pathFinding/Parser.h
+SearchTemplates/Path.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/Path.h
 
 /home/mac/IntroAI/pathFinding/Parser.cpp
 Parser.h
@@ -68,6 +56,14 @@ Action.h
 
 /home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
 
+/home/mac/IntroAI/pathFinding/SearchTemplates/BFS.cpp
+BFS.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/BFS.h
+
+/home/mac/IntroAI/pathFinding/SearchTemplates/BFS.h
+SearchType.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h
+
 /home/mac/IntroAI/pathFinding/SearchTemplates/Node.h
 string
 -
@@ -75,6 +71,14 @@ vector
 -
 Action.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
+
+/home/mac/IntroAI/pathFinding/SearchTemplates/Path.cpp
+Path.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/Path.h
+
+/home/mac/IntroAI/pathFinding/SearchTemplates/Path.h
+Node.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/Node.h
 
 /home/mac/IntroAI/pathFinding/SearchTemplates/Problem.cpp
 Problem.h
@@ -101,6 +105,22 @@ tuple
 -
 ../Parser.h
 /home/mac/IntroAI/pathFinding/Parser.h
+Path.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/Path.h
+vector
+-
+algorithm
+-
+search.h
+-
+Action.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
+iostream
+-
+sstream
+-
+SolutionResponse.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.h
 
 /home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.cpp
 SolutionResponse.h
@@ -113,6 +133,8 @@ string
 -
 Node.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/Node.h
+Path.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/Path.h
 
 /home/mac/IntroAI/pathFinding/main.cpp
 iostream
@@ -129,6 +151,8 @@ Parser.h
 /home/mac/IntroAI/pathFinding/Parser.h
 DFS.h
 /home/mac/IntroAI/pathFinding/DFS.h
+SearchTemplates/BFS.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/BFS.h
 sstream
 -
 

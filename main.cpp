@@ -5,7 +5,10 @@
 #include <iostream>
 #include "Parser.h"
 #include "DFS.h"
+#include "SearchTemplates/BFS.h"
 #include <sstream>
+
+using namespace std;
 
 int main() {
 
@@ -28,37 +31,33 @@ int main() {
 
 
     //Pass in node map and problem (as defined by the parsing result)
-    DFS search1(pp.nodeMatrix, pp.problem);
+    BFS search1(pp.nodeMatrix, pp.problem);
 
-
-//    //Parser test
-//    int i = 0;
-//    for(int j = 0; j < pp.nodeMatrix.size(); j++) {
-//        for (Node *a : pp.nodeMatrix[j]) {
-//            std::stringstream ss;
-//
-//            if (i > 10) {
-//                i = 0;
-//                ss << std::endl;
-//            }
-//
-//            if (a == pp.problem.InitialState){
-//                ss << "#" << " | ";
-//            }
-//            else if (a == pp.problem.GoalState){
-//                ss << "X" << " | ";
-//            }
-//            else if (a == NULL){
-//                ss << "W" << " | ";
-//            }
-//            else {
-//                ss << "0" << " | ";
-//            }
-//
-//            i++;
-//            std::cout << ss.str();
-//        }
-//    }
-
-    search1.DepthSearch(pp.problem, pp.problem.InitialState);
+    SolutionResponse res = search1.BreadthFirstSearch(pp.problem, pp.problem.InitialState);
+    if(res.ResOutcome() == "failure"){
+        cout << "Search failed depth search could not find solution" << endl;
+    }
+    else{
+        string route = "";
+        for(Path& p : res.GetActions()){
+            switch(p.pathAction) {
+                case ActionType::LEFT:
+                    route += "LEFT";
+                    break;
+                case ActionType::RIGHT:
+                    route += "UP";
+                    break;
+                case ActionType::UP:
+                    route += "RIGHT";
+                    break;
+                case ActionType::DOWN:
+                    route += "DOWN";
+                    break;
+                default:
+                    break;
+            }
+            route += ", ";
+        }
+        cout << "Search successful!" << endl << route << endl;
+    }
 }

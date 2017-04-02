@@ -102,7 +102,19 @@
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Action.h">
 			<Option target="pathFinding"/>
 		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/BFS.cpp">
+			<Option target="pathFinding"/>
+		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/BFS.h">
+			<Option target="pathFinding"/>
+		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Node.h">
+			<Option target="pathFinding"/>
+		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Path.cpp">
+			<Option target="pathFinding"/>
+		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Path.h">
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Problem.cpp">
