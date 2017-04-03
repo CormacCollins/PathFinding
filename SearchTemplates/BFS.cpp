@@ -4,7 +4,15 @@
 
 #include "BFS.h"
 
-//How to add to single path for only successful route
+SolutionResponse BFS::Search(Problem& problem, Node* nodeSearch) {
+    SolutionResponse s = BreadthFirstSearch(problem, nodeSearch);
+
+    //Show final path
+    for(Path& p : currentPath){
+        RenderCurrentMap(p.pathNode, problem);
+    }
+    return s;
+}
 
 SolutionResponse BFS::BreadthFirstSearch(Problem& problem, Node* searchNode){
 
@@ -14,37 +22,43 @@ SolutionResponse BFS::BreadthFirstSearch(Problem& problem, Node* searchNode){
     std::vector<Node*> childrenNodes;
     //To be returned solution
     SolutionResponse* solution;
-
     //Goal check
     if (GoalTest(problem, searchNode)){
+        TrimPath();
         solution = new SolutionResponse(currentPath, "success");
         return *solution;
     }
 
-    //Push first children onto frontier
+    //Push initial child
     children = ExpandNode(searchNode, problem);
+    do {
+        //Extract Nodes form children path
+        for (Path& n : children) {
+            //Goal check
+            if(GoalTest(problem, n.pathNode)){
+                PushPath(n.pathNode, GetAction(children, n.pathNode));
+                TrimPath();
+                solution = new SolutionResponse(currentPath, "success");
+                return *solution;
+            }
+            //add all nodes to current path (we store them all)
+            PushPath(n.pathNode, n.pathAction);
+            PushFrontier(n.pathNode);
+        }
+        children.clear();
+        //pop first children off frontier
+        Node* popped = PopFrontier();
+        //RenderCurrentMap(popped, problem);
+        //Expand this node fresh off the frontier
+        children = ExpandNode(popped, problem);
 
-    if(children.empty()){
-        PopPath();
-        std::cerr << "Could not find solution - empty child";
-        solution = new SolutionResponse("failed");
-        return *solution;
-    }
+    } while(!FrontierIsEmpty());
 
-    //Extract Nodes form children path
-    for(Path& p : children){
-        childrenNodes.push_back(p.pathNode);
-    }
-
-    //Add path to frontier
-    PushFrontier(childrenNodes);
-
-    //Add to correct path
-    PushPath(searchNode, GetAction(children, searchNode));
-
-    RenderCurrentMap(searchNode, problem);
-    BreadthFirstSearch(problem, PopFrontier());
-
+    //if children empty
+    PopPath();
+    std::cerr << "Could not find solution - empty child";
+    solution = new SolutionResponse("failed");
+    return *solution;
 };
 
 Node* BFS::PopFrontier() {
@@ -80,3 +94,43 @@ void BFS::PushPath(Node* node, ActionType journeyAction) {
 void BFS::PopPath() {
     currentPath.pop_back();
 }
+
+void BFS::TrimPath() {
+    std::vector<Path> trimmedPath;
+
+
+    //Loop through current path backwards - we want to work backwards from the goal node that we have found
+    //E.g. if
+    while(!currentPath.empty()){
+
+        //Get top of path stack (Goal) and follow parents back to start
+        Path p = currentPath[currentPath.size()-1];
+        trimmedPath.push_back(p);
+
+        currentPath.erase(currentPath.end());
+
+        //Looping backwards checking nodes against node we have followed with action
+        //Remove nodes that don't match the correct route
+        std::cerr << currentPath[currentPath.size()-1].pathNode << std::endl;
+        while(currentPath[currentPath.size()-1].pathNode != p.pathNode->_parent){
+            //remove from current path (trim)
+            currentPath.erase(currentPath.end());
+            if(currentPath.empty())
+                break;
+        }
+    }
+
+    //reverse paths from start to finish
+    std::reverse(trimmedPath.begin(), trimmedPath.end());
+
+    //Replace current path with the newly trimmed goal path
+    currentPath = trimmedPath;
+}
+
+
+
+
+
+
+
+

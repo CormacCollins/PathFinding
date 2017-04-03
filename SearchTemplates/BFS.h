@@ -33,6 +33,11 @@ public:
     void PushPath(Node* node, ActionType journeyAction);
 
     void PopPath();
+
+    SolutionResponse Search(Problem& problem, Node* nodeSearch);
+
+    //Removes redundant nodes for list containing correct path / actions to goals
+    void TrimPath();
 };
 
 

@@ -13,12 +13,8 @@
 class Node {
 public:
     Node* _parent;
-    std::vector<Node> _children;
     int _pathcost;
     int _depth;
-
-    //Each node taken from root to this node
-    Node* state[];
 };
 
 

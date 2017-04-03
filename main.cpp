@@ -33,7 +33,7 @@ int main() {
     //Pass in node map and problem (as defined by the parsing result)
     BFS search1(pp.nodeMatrix, pp.problem);
 
-    SolutionResponse res = search1.BreadthFirstSearch(pp.problem, pp.problem.InitialState);
+    SolutionResponse res = search1.Search(pp.problem, pp.problem.InitialState);
     if(res.ResOutcome() == "failure"){
         cout << "Search failed depth search could not find solution" << endl;
     }
@@ -45,10 +45,10 @@ int main() {
                     route += "LEFT";
                     break;
                 case ActionType::RIGHT:
-                    route += "UP";
+                    route += "RIGHT";
                     break;
                 case ActionType::UP:
-                    route += "RIGHT";
+                    route += "UP";
                     break;
                 case ActionType::DOWN:
                     route += "DOWN";
@@ -57,7 +57,9 @@ int main() {
                     break;
             }
             route += ", ";
+
         }
         cout << "Search successful!" << endl << route << endl;
     }
+
 }

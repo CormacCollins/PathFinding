@@ -15,7 +15,6 @@ public:
 
     SolutionResponse(std::string outcome="undefined"){
         responseOutcome = outcome;
-        solutionActions = std::vector<Path>();
     }
     //Solution in XY coords added to SolutionResponse wrapper
     SolutionResponse(std::vector<Path>& solution, std::string outcome){
