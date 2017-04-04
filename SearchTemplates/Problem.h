@@ -15,8 +15,6 @@ public:
     ActionType ProblemActions;
     int PathCost = 1;
 
-    bool GoalReached();
-
     //TODO
     //Transition model function - given a state we need to return the next given state
     //e.g. check available position moves i.e. Left Right and have their corresponding return states given the state prior to the action

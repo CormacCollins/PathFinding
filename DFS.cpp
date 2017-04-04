@@ -33,7 +33,7 @@ SolutionResponse DFS::DepthSearch(Problem& problem, Node* searchNode){
     if(children.empty()){
         PopPath();
         std::cerr << "Could not find solution - empty child";
-        solution = new SolutionResponse("failed");
+        solution = new SolutionResponse("failure");
         return *solution;
     }
 

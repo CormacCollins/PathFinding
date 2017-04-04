@@ -29,35 +29,44 @@ SolutionResponse BFS::BreadthFirstSearch(Problem& problem, Node* searchNode){
         return *solution;
     }
 
-    //Push initial child
+    //Expand first node and add to frontier
     children = ExpandNode(searchNode, problem);
+    for(auto& a: children){
+        if (GoalTest(problem, searchNode)){
+            TrimPath();
+            solution = new SolutionResponse(currentPath, "success");
+            return *solution;
+        }
+
+        //Add to frontier and add to path storage
+        PushFrontier(a.pathNode);
+        PushPath(a.pathNode, GetAction(children, a.pathNode));
+    }
+
+    //Main do while loop
     do {
-        //Extract Nodes form children path
-        for (Path& n : children) {
+        Node* n = PopFrontier();
+        children = ExpandNode(n, problem);
+        for(auto& p : children){
             //Goal check
-            if(GoalTest(problem, n.pathNode)){
-                PushPath(n.pathNode, GetAction(children, n.pathNode));
+            if(GoalTest(problem, p.pathNode)){
+                PushPath(p.pathNode, GetAction(children, p.pathNode));
                 TrimPath();
                 solution = new SolutionResponse(currentPath, "success");
                 return *solution;
             }
-            //add all nodes to current path (we store them all)
-            PushPath(n.pathNode, n.pathAction);
-            PushFrontier(n.pathNode);
-        }
-        children.clear();
-        //pop first children off frontier
-        Node* popped = PopFrontier();
-        //RenderCurrentMap(popped, problem);
-        //Expand this node fresh off the frontier
-        children = ExpandNode(popped, problem);
 
+            PushFrontier(p.pathNode);
+            PushPath(p.pathNode, GetAction(children, p.pathNode));
+            RenderCurrentMap(p.pathNode, problem);
+        }
     } while(!FrontierIsEmpty());
 
+    std::cerr << frontier.size() << std::endl;
     //if children empty
     PopPath();
     std::cerr << "Could not find solution - empty child";
-    solution = new SolutionResponse("failed");
+    solution = new SolutionResponse("failure");
     return *solution;
 };
 
@@ -111,7 +120,6 @@ void BFS::TrimPath() {
 
         //Looping backwards checking nodes against node we have followed with action
         //Remove nodes that don't match the correct route
-        std::cerr << currentPath[currentPath.size()-1].pathNode << std::endl;
         while(currentPath[currentPath.size()-1].pathNode != p.pathNode->_parent){
             //remove from current path (trim)
             currentPath.erase(currentPath.end());

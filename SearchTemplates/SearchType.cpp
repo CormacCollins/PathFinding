@@ -28,10 +28,6 @@ std::vector<Path> SearchType::ExpandNode(Node* currentNode, Problem problem) {
         successors.push_back(Path(n, ActionType(i)));
     }
 
-    //no new nodes (ignored parent)
-    if(successors.empty() || &successors == NULL){
-        return successors;
-    }
     return successors;
 }
 

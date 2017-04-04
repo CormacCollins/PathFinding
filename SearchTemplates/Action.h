@@ -6,6 +6,6 @@
 #define PATHFINDING_ACTIONS_H
 
 //Action choices in graph type search
-enum ActionType {LEFT, UP, RIGHT, DOWN};
+enum ActionType {UP, LEFT, DOWN, RIGHT};
 
 #endif //PATHFINDING_ACTIONS_H
