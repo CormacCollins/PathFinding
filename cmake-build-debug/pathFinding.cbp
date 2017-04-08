@@ -102,6 +102,12 @@
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Action.h">
 			<Option target="pathFinding"/>
 		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Astar.cpp">
+			<Option target="pathFinding"/>
+		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Astar.h">
+			<Option target="pathFinding"/>
+		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/BFS.cpp">
 			<Option target="pathFinding"/>
 		</Unit>

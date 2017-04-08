@@ -23,6 +23,16 @@ CMakeFiles/pathFinding.dir/Parser.cpp.o: ../SearchTemplates/SolutionResponse.h
 CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o: ../SearchTemplates/Action.cpp
 CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o: ../SearchTemplates/Action.h
 
+CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o: ../Parser.h
+CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o: ../SearchTemplates/Action.h
+CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o: ../SearchTemplates/Astar.cpp
+CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o: ../SearchTemplates/Astar.h
+CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o: ../SearchTemplates/Node.h
+CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o: ../SearchTemplates/Path.h
+CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o: ../SearchTemplates/Problem.h
+CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o: ../SearchTemplates/SearchType.h
+CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o: ../SearchTemplates/SolutionResponse.h
+
 CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: ../Parser.h
 CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: ../SearchTemplates/Action.h
 CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: ../SearchTemplates/BFS.cpp
@@ -61,6 +71,7 @@ CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o: ../SearchTemp
 CMakeFiles/pathFinding.dir/main.cpp.o: ../DFS.h
 CMakeFiles/pathFinding.dir/main.cpp.o: ../Parser.h
 CMakeFiles/pathFinding.dir/main.cpp.o: ../SearchTemplates/Action.h
+CMakeFiles/pathFinding.dir/main.cpp.o: ../SearchTemplates/Astar.h
 CMakeFiles/pathFinding.dir/main.cpp.o: ../SearchTemplates/BFS.h
 CMakeFiles/pathFinding.dir/main.cpp.o: ../SearchTemplates/Node.h
 CMakeFiles/pathFinding.dir/main.cpp.o: ../SearchTemplates/Path.h

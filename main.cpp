@@ -6,6 +6,7 @@
 #include "Parser.h"
 #include "DFS.h"
 #include "SearchTemplates/BFS.h"
+#include "SearchTemplates/Astar.h"
 #include <sstream>
 
 using namespace std;
@@ -31,7 +32,7 @@ int main() {
 
 
     //Pass in node map and problem (as defined by the parsing result)
-    BFS search1(pp.nodeMatrix, pp.problem);
+    Astar search1(pp.nodeMatrix, pp.problem);
 
     SolutionResponse res = search1.Search(pp.problem, pp.problem.InitialState);
     if(res.ResOutcome() == "failure"){

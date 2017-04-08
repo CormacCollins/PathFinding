@@ -20,9 +20,9 @@ std::vector<Path> SearchType::ExpandNode(Node* currentNode, Problem problem) {
             continue;
         }
 
-        n->_depth = currentNode->_depth + problem.PathCost;
-        n->_pathcost = currentNode->_depth + problem.PathCost;
-        n->_parent = currentNode;
+        n->Depth = currentNode->Depth + problem.PathCost;
+        n->PathCost = currentNode->Depth + problem.PathCost;
+        n->Parent = currentNode;
 
         //Add to vector of Path types
         successors.push_back(Path(n, ActionType(i)));
@@ -77,7 +77,7 @@ Node* SearchType::StateLookUp(Node* node, std::tuple<int,int> instruction) {
                     Node* n = NULL;
                     return n;
                 }
-                else if(stateList[i+std::get<0>(instruction)][j+std::get<1>(instruction)] == node->_parent){
+                else if(stateList[i+std::get<0>(instruction)][j+std::get<1>(instruction)] == node->Parent){
                     Node* n = NULL;
                     return n;
                 }
@@ -143,6 +143,14 @@ ActionType SearchType::GetAction(std::vector<Path> path, Node* nodeLookUp ) {
     std::cerr << "Error in node to path look up" << std::endl;
 }
 
+Path& SearchType::GetPathFromNode(std::vector<Path> path, Node* nodeLookUp ) {
+    for(Path& a : path){
+        if(a.pathNode == nodeLookUp)
+            return a;
+    }
+    std::cerr << "Error in node to path look up" << std::endl;
+}
+
 //Get nodes stores in current path
 std::vector<Node*> SearchType::getNodes() {
     std::vector<Node*> currentNodePath;
@@ -154,5 +162,44 @@ std::vector<Node*> SearchType::getNodes() {
 
 bool SearchType::FrontierIsEmpty() {
     return frontier.empty();
+}
+
+void SearchType::PushPath(Node *node, ActionType journeyAction) {
+    currentPath.push_back(Path(node, journeyAction));
+}
+
+void SearchType::TrimPath() {
+    std::vector<Path> trimmedPath;
+
+
+    //Loop through current path backwards - we want to work backwards from the goal node that we have found
+    //E.g. if
+    while(!currentPath.empty()){
+
+        //Get top of path stack (Goal) and follow parents back to start
+        Path p = currentPath[currentPath.size()-1];
+        trimmedPath.push_back(p);
+
+        currentPath.erase(currentPath.end());
+
+        //Looping backwards checking nodes against node we have followed with action
+        //Remove nodes that don't match the correct route
+        while(currentPath[currentPath.size()-1].pathNode != p.pathNode->Parent){
+            //remove from current path (trim)
+            currentPath.erase(currentPath.end());
+            if(currentPath.empty())
+                break;
+        }
+    }
+
+    //reverse paths from start to finish
+    std::reverse(trimmedPath.begin(), trimmedPath.end());
+
+    //Replace current path with the newly trimmed goal path
+    currentPath = trimmedPath;
+}
+
+bool SearchType::GoalTest(Problem& problem, Node* node) {
+    return problem.GoalState == node;
 }
 

@@ -162,6 +162,7 @@ void Parser::SetupProblem() {
             else if(GOAL_STATE[0] == j && GOAL_STATE[1] == i) {
                 n = new Node();
                 newProblem.GoalState = n;
+                newProblem.GoalState->PathCost = i + j;
                 row.push_back(n);
             }
             else if(addWall)
@@ -179,8 +180,22 @@ void Parser::SetupProblem() {
         newMatrix.push_back(row);
     }
 
+    //Add pathcosts to nodes for informed search
+    for(int i = 0; i < newMatrix.size()-1; i++){
+        for(int j = 0; j < newMatrix[i].size()-1; j++){
+            if(newMatrix[i][j] != NULL){
+                //Add goalPathCOst
+                // f(n) = g(n) + h(n)
+                newMatrix[i][j]->goalCost = (newProblem.GoalState->PathCost) - (i + j);
+            }
+        }
+    }
+
+
+
     //Assign to class properties
     problem = newProblem;
     nodeMatrix = newMatrix;
 
 }
+

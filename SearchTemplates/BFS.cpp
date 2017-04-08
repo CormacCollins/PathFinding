@@ -90,49 +90,10 @@ void BFS::PushFrontier(Node* newFrontier) {
     frontier.push_back(newFrontier);
 }
 
-bool BFS::GoalTest(Problem& problem, Node* node) {
-    return problem.GoalState == node;
-}
 
-
-
-void BFS::PushPath(Node* node, ActionType journeyAction) {
-    currentPath.push_back(Path(node, journeyAction));
-}
 
 void BFS::PopPath() {
     currentPath.pop_back();
-}
-
-void BFS::TrimPath() {
-    std::vector<Path> trimmedPath;
-
-
-    //Loop through current path backwards - we want to work backwards from the goal node that we have found
-    //E.g. if
-    while(!currentPath.empty()){
-
-        //Get top of path stack (Goal) and follow parents back to start
-        Path p = currentPath[currentPath.size()-1];
-        trimmedPath.push_back(p);
-
-        currentPath.erase(currentPath.end());
-
-        //Looping backwards checking nodes against node we have followed with action
-        //Remove nodes that don't match the correct route
-        while(currentPath[currentPath.size()-1].pathNode != p.pathNode->_parent){
-            //remove from current path (trim)
-            currentPath.erase(currentPath.end());
-            if(currentPath.empty())
-                break;
-        }
-    }
-
-    //reverse paths from start to finish
-    std::reverse(trimmedPath.begin(), trimmedPath.end());
-
-    //Replace current path with the newly trimmed goal path
-    currentPath = trimmedPath;
 }
 
 

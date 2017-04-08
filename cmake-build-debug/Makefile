@@ -204,6 +204,33 @@ SearchTemplates/Action.cpp.s:
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.s
 .PHONY : SearchTemplates/Action.cpp.s
 
+SearchTemplates/Astar.o: SearchTemplates/Astar.cpp.o
+
+.PHONY : SearchTemplates/Astar.o
+
+# target to build an object file
+SearchTemplates/Astar.cpp.o:
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o
+.PHONY : SearchTemplates/Astar.cpp.o
+
+SearchTemplates/Astar.i: SearchTemplates/Astar.cpp.i
+
+.PHONY : SearchTemplates/Astar.i
+
+# target to preprocess a source file
+SearchTemplates/Astar.cpp.i:
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.i
+.PHONY : SearchTemplates/Astar.cpp.i
+
+SearchTemplates/Astar.s: SearchTemplates/Astar.cpp.s
+
+.PHONY : SearchTemplates/Astar.s
+
+# target to generate assembly for a file
+SearchTemplates/Astar.cpp.s:
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.s
+.PHONY : SearchTemplates/Astar.cpp.s
+
 SearchTemplates/BFS.o: SearchTemplates/BFS.cpp.o
 
 .PHONY : SearchTemplates/BFS.o
@@ -384,6 +411,9 @@ help:
 	@echo "... SearchTemplates/Action.o"
 	@echo "... SearchTemplates/Action.i"
 	@echo "... SearchTemplates/Action.s"
+	@echo "... SearchTemplates/Astar.o"
+	@echo "... SearchTemplates/Astar.i"
+	@echo "... SearchTemplates/Astar.s"
 	@echo "... SearchTemplates/BFS.o"
 	@echo "... SearchTemplates/BFS.i"
 	@echo "... SearchTemplates/BFS.s"

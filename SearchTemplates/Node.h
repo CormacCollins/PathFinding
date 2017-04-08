@@ -12,9 +12,10 @@
 //Node data type for search
 class Node {
 public:
-    Node* _parent;
-    int _pathcost;
-    int _depth;
+    Node* Parent;
+    int PathCost;
+    int Depth;
+    int goalCost;
 };
 
 

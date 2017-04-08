@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/mac/IntroAI/pathFinding/DFS.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/pathFinding.dir/DFS.cpp.o"
   "/home/mac/IntroAI/pathFinding/Parser.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/pathFinding.dir/Parser.cpp.o"
   "/home/mac/IntroAI/pathFinding/SearchTemplates/Action.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o"
+  "/home/mac/IntroAI/pathFinding/SearchTemplates/Astar.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o"
   "/home/mac/IntroAI/pathFinding/SearchTemplates/BFS.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o"
   "/home/mac/IntroAI/pathFinding/SearchTemplates/Path.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o"
   "/home/mac/IntroAI/pathFinding/SearchTemplates/Problem.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o"

@@ -56,6 +56,14 @@ Action.h
 
 /home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
 
+/home/mac/IntroAI/pathFinding/SearchTemplates/Astar.cpp
+Astar.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/Astar.h
+
+/home/mac/IntroAI/pathFinding/SearchTemplates/Astar.h
+SearchType.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h
+
 /home/mac/IntroAI/pathFinding/SearchTemplates/BFS.cpp
 BFS.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/BFS.h
@@ -153,6 +161,8 @@ DFS.h
 /home/mac/IntroAI/pathFinding/DFS.h
 SearchTemplates/BFS.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/BFS.h
+SearchTemplates/Astar.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/Astar.h
 sstream
 -
 

@@ -35,6 +35,7 @@ public:
     SearchType(std::vector<std::vector<Node*>> states, Problem& problem){
         stateList = states;
         CurrentProblem = problem;
+        currentPath = std::vector<Path>();
     }
 
     //get child from a node via a given action
@@ -44,7 +45,7 @@ public:
     Node* StateLookUp(Node* node, std::tuple<int,int> instruction);
 
     //Expand current node return path list
-    std::vector<Path> ExpandNode(Node* currentNode, Problem problem);
+    virtual std::vector<Path> ExpandNode(Node* currentNode, Problem problem);
 
     //renderer
     void RenderCurrentMap(Node* currentPosition,  Problem& problem);
@@ -60,6 +61,19 @@ public:
 
     //Check for empty frontier
     bool FrontierIsEmpty();
+
+    //Add to path storage
+    void PushPath(Node* node, ActionType journeyAction);
+
+    //Removes redundant nodes for list containing correct path / actions to goals
+    void TrimPath();
+
+    //Takes problem and can invoke its 'Goal Test'
+    //Using its state root node and goals state
+    //Returns true for if goal reached and returns solution path
+    bool GoalTest(Problem& problem, Node* node);
+
+    Path& GetPathFromNode(std::vector<Path> path, Node* nodeLookUp );
 };
 
 

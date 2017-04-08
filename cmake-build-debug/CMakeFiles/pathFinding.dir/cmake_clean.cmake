@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o"
   "CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o"
   "CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o"
+  "CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o"
   "pathFinding.pdb"
   "pathFinding"
 )
