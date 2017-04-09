@@ -29,8 +29,10 @@ protected:
     std::vector<Node*> frontier;
     //Route taken is stored as we go
     std::vector<Path> currentPath;
+    std::vector<std::vector<std::string>> stringPathVec = std::vector<std::vector<std::string>>();
 
 public:
+    virtual std::vector<std::vector<std::string>> GetStringPath();
     //Construct search with given state map and problem
     SearchType(std::vector<std::vector<Node*>> states, Problem& problem){
         stateList = states;
@@ -66,7 +68,7 @@ public:
     void PushPath(Node* node, ActionType journeyAction);
 
     //Removes redundant nodes for list containing correct path / actions to goals
-    void TrimPath();
+    std::vector<Path> TrimPath();
 
     //Takes problem and can invoke its 'Goal Test'
     //Using its state root node and goals state

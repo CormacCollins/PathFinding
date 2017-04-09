@@ -1,3 +1,4 @@
 /home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/MySFML.dir
 /home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/pathFinding.dir

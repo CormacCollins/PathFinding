@@ -13,6 +13,8 @@ SolutionResponse Astar::Search(Problem& problem, Node* nodeSearch) {
 
     //First node so is the lowest
     lowestCostNode = nodeSearch;
+    //Current distance from node
+    currentLowestCostFunction = lowestCostNode->goalCost;
 
     do{
         vector<Path> children = ExpandNode(lowestCostNode, problem);
@@ -55,7 +57,7 @@ Node* Astar::HeuristicFunction() {
         int tempLowestCost = (nodeStepCost + child->Parent->goalCost);
 
         //if new one is lower than the previous lowest it is now the lower
-        if(tempLowestCost < currentLowestCostFunction || currentLowestCostFunction == NULL)
+        if(tempLowestCost < currentLowestCostFunction)
             currentLowestCostFunction = tempLowestCost;
             lowestPath = child;
     }
@@ -94,5 +96,9 @@ void Astar::PopFrontierNodeSpecific(Node* node) {
             break;
         }
     }
+}
+
+std::vector<std::vector<std::string>> Astar::GetStringPath() {
+    return stringPathVec;
 }
 

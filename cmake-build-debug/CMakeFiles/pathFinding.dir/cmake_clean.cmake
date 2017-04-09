@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/pathFinding.dir/main.cpp.o"
   "CMakeFiles/pathFinding.dir/Parser.cpp.o"
   "CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o"
   "CMakeFiles/pathFinding.dir/DFS.cpp.o"
@@ -9,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o"
   "CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o"
   "CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o"
+  "CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o"
+  "CMakeFiles/pathFinding.dir/main2.cpp.o"
   "pathFinding.pdb"
   "pathFinding"
 )

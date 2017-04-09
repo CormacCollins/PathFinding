@@ -8,12 +8,15 @@
 #include "SearchTemplates/BFS.h"
 #include "SearchTemplates/Astar.h"
 #include <sstream>
+#include <cstdlib>
+#include <future>
+
 
 using namespace std;
 
-int main() {
 
-    //Setup parsing object
+int main() {
+   //Setup parsing object
     Parser pp;
 
     // Read text file
@@ -62,5 +65,6 @@ int main() {
         }
         cout << "Search successful!" << endl << route << endl;
     }
+
 
 }

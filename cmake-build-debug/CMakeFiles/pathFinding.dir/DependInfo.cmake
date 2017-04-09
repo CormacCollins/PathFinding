@@ -13,7 +13,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/mac/IntroAI/pathFinding/SearchTemplates/Problem.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o"
   "/home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o"
   "/home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o"
-  "/home/mac/IntroAI/pathFinding/main.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/pathFinding.dir/main.cpp.o"
+  "/home/mac/IntroAI/pathFinding/main2.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/pathFinding.dir/main2.cpp.o"
+  "/home/mac/IntroAI/pathFinding/sfmlGUI.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

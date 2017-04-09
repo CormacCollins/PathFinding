@@ -106,6 +106,10 @@ void Parser::SetupProblem() {
     if(!std::isnan(dataMatrix[0][0]) && !std::isnan(dataMatrix[0][1])){
         MAP_ROWS = dataMatrix[0][0];
         MAP_COLUMNS = dataMatrix[0][1];
+
+        //For visualization access
+        mapHeight = MAP_ROWS;
+        mapWidth = MAP_COLUMNS;
     } else {
         std::cerr << "Data not formatted correctly - no map size";
         exit(1);

@@ -19,6 +19,8 @@ private:
     void SetupProblem();
 
 public:
+    int mapHeight;
+    int mapWidth;
     //Designed to parse specific path file into 2d vector for easy access
     void ParseFile(std::ifstream& file);
 

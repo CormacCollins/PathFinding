@@ -10,7 +10,7 @@
 
 //f (n) = g(n) + h(n)
 
-class Astar : SearchType {
+class Astar : public SearchType {
 private:
     int currentLowestCostFunction;
     Node* lowestCostNode;
@@ -35,6 +35,8 @@ public:
     Node* HeuristicFunction();
 
     void PopFrontierNodeSpecific(Node* node);
+
+    std::vector<std::vector<std::string>> GetStringPath() override;
 
 };
 

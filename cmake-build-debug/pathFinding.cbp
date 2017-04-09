@@ -5,7 +5,7 @@
 		<Option title="pathFinding"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake_modules\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/mac/IntroAI/pathFinding/cmake-build-debug"/>
@@ -22,6 +22,52 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/mac/IntroAI/pathFinding/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mac/IntroAI/pathFinding/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mac/IntroAI/pathFinding/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mac/IntroAI/pathFinding/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MySFML">
+				<Option output="/home/mac/IntroAI/pathFinding/cmake-build-debug/MySFML" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mac/IntroAI/pathFinding/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mac/IntroAI/pathFinding/cmake-build-debug/Makefile&quot;  VERBOSE=1 MySFML"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mac/IntroAI/pathFinding/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mac/IntroAI/pathFinding/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mac/IntroAI/pathFinding/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MySFML/fast">
+				<Option output="/home/mac/IntroAI/pathFinding/cmake-build-debug/MySFML" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mac/IntroAI/pathFinding/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mac/IntroAI/pathFinding/cmake-build-debug/Makefile&quot;  VERBOSE=1 MySFML/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mac/IntroAI/pathFinding/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/mac/IntroAI/pathFinding/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mac/IntroAI/pathFinding/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -85,67 +131,101 @@
 			</Target>
 		</Build>
 		<Unit filename="/home/mac/IntroAI/pathFinding/DFS.cpp">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/DFS.h">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/Parser.cpp">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/Parser.h">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Action.cpp">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Action.h">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Astar.cpp">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Astar.h">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/BFS.cpp">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/BFS.h">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Node.h">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Path.cpp">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Path.h">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Problem.cpp">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Problem.h">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.cpp">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.cpp">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.h">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
-		<Unit filename="/home/mac/IntroAI/pathFinding/main.cpp">
+		<Unit filename="/home/mac/IntroAI/pathFinding/Timer.h">
+			<Option target="MySFML"/>
+		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/main2.cpp">
+			<Option target="MySFML"/>
+			<Option target="pathFinding"/>
+		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/sfmlGUI.cpp">
+			<Option target="MySFML"/>
+			<Option target="pathFinding"/>
+		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/sfmlGUI.h">
+			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/cmake_modules/FindSFML.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

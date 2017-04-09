@@ -91,39 +91,43 @@ Node* SearchType::StateLookUp(Node* node, std::tuple<int,int> instruction) {
 }
 
 void SearchType::RenderCurrentMap(Node* currentPosition, Problem& problem) {
-    //Parser test
-    int i = 0;
+
+
+    std::stringstream ss;
+    std::string vis = "";
+
+    std::vector<std::string> tempVec = std::vector<std::string>();
     for(int j = 0; j <  stateList.size(); j++) {
-        for (Node *a : stateList[j]) {
-            std::stringstream ss;
+        for (int i = 0; i < stateList[j].size(); i++) {
 
-            if (i > 10) {
-                i = 0;
-                ss << std::endl;
-            }
-
-            if(a ==  currentPosition){
+//            if (i > stateList[j].size()) {
+//                ss << std::endl;
+//            }
+            if(stateList[j][i] ==  currentPosition){
                 ss << "H" << " | ";
+                vis = "H";
             }
-            else if (a == problem.InitialState){
-                ss << "#" << " | ";
-            }
-            else if (a == problem.GoalState){
+            else if (stateList[j][i] == problem.GoalState){
                 ss << "X" << " | ";
+                vis = "X";
             }
-            else if (a == NULL){
+            else if (stateList[j][i] == NULL){
                 ss << "W" << " | ";
+                vis = "W";
             }
             else {
-                ss << "0" << " | ";
+                ss << "1" << " | ";
+                vis = "1";
             }
-
-
-            std::cout << ss.str();
-            i++;
+            tempVec.push_back(vis);
         }
+
+
+
     }
-    std::cout << std::endl << std::endl;
+    stringPathVec.push_back(tempVec);
+
+   // std::cout << std::endl << std::endl;
 }
 
 bool SearchType::IsInCurrentPath(Node *node) {
@@ -168,7 +172,7 @@ void SearchType::PushPath(Node *node, ActionType journeyAction) {
     currentPath.push_back(Path(node, journeyAction));
 }
 
-void SearchType::TrimPath() {
+std::vector<Path> SearchType::TrimPath() {
     std::vector<Path> trimmedPath;
 
 
@@ -196,10 +200,14 @@ void SearchType::TrimPath() {
     std::reverse(trimmedPath.begin(), trimmedPath.end());
 
     //Replace current path with the newly trimmed goal path
-    currentPath = trimmedPath;
+    return trimmedPath;
 }
 
 bool SearchType::GoalTest(Problem& problem, Node* node) {
     return problem.GoalState == node;
+}
+
+std::vector<std::vector<std::string>> SearchType::GetStringPath() {
+    return stringPathVec;
 }
 

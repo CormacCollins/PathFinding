@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named MySFML
+
+# Build rule for target.
+MySFML: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MySFML
+.PHONY : MySFML
+
+# fast build rule for target.
+MySFML/fast:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/build
+.PHONY : MySFML/fast
+
+#=============================================================================
 # Target rules for targets named pathFinding
 
 # Build rule for target.
@@ -129,6 +142,7 @@ DFS.o: DFS.cpp.o
 
 # target to build an object file
 DFS.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/DFS.cpp.o
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/DFS.cpp.o
 .PHONY : DFS.cpp.o
 
@@ -138,6 +152,7 @@ DFS.i: DFS.cpp.i
 
 # target to preprocess a source file
 DFS.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/DFS.cpp.i
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/DFS.cpp.i
 .PHONY : DFS.cpp.i
 
@@ -147,6 +162,7 @@ DFS.s: DFS.cpp.s
 
 # target to generate assembly for a file
 DFS.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/DFS.cpp.s
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/DFS.cpp.s
 .PHONY : DFS.cpp.s
 
@@ -156,6 +172,7 @@ Parser.o: Parser.cpp.o
 
 # target to build an object file
 Parser.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/Parser.cpp.o
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/Parser.cpp.o
 .PHONY : Parser.cpp.o
 
@@ -165,6 +182,7 @@ Parser.i: Parser.cpp.i
 
 # target to preprocess a source file
 Parser.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/Parser.cpp.i
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/Parser.cpp.i
 .PHONY : Parser.cpp.i
 
@@ -174,6 +192,7 @@ Parser.s: Parser.cpp.s
 
 # target to generate assembly for a file
 Parser.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/Parser.cpp.s
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/Parser.cpp.s
 .PHONY : Parser.cpp.s
 
@@ -183,6 +202,7 @@ SearchTemplates/Action.o: SearchTemplates/Action.cpp.o
 
 # target to build an object file
 SearchTemplates/Action.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Action.cpp.o
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o
 .PHONY : SearchTemplates/Action.cpp.o
 
@@ -192,6 +212,7 @@ SearchTemplates/Action.i: SearchTemplates/Action.cpp.i
 
 # target to preprocess a source file
 SearchTemplates/Action.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Action.cpp.i
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.i
 .PHONY : SearchTemplates/Action.cpp.i
 
@@ -201,6 +222,7 @@ SearchTemplates/Action.s: SearchTemplates/Action.cpp.s
 
 # target to generate assembly for a file
 SearchTemplates/Action.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Action.cpp.s
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.s
 .PHONY : SearchTemplates/Action.cpp.s
 
@@ -210,6 +232,7 @@ SearchTemplates/Astar.o: SearchTemplates/Astar.cpp.o
 
 # target to build an object file
 SearchTemplates/Astar.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Astar.cpp.o
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o
 .PHONY : SearchTemplates/Astar.cpp.o
 
@@ -219,6 +242,7 @@ SearchTemplates/Astar.i: SearchTemplates/Astar.cpp.i
 
 # target to preprocess a source file
 SearchTemplates/Astar.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Astar.cpp.i
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.i
 .PHONY : SearchTemplates/Astar.cpp.i
 
@@ -228,6 +252,7 @@ SearchTemplates/Astar.s: SearchTemplates/Astar.cpp.s
 
 # target to generate assembly for a file
 SearchTemplates/Astar.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Astar.cpp.s
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.s
 .PHONY : SearchTemplates/Astar.cpp.s
 
@@ -237,6 +262,7 @@ SearchTemplates/BFS.o: SearchTemplates/BFS.cpp.o
 
 # target to build an object file
 SearchTemplates/BFS.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/BFS.cpp.o
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o
 .PHONY : SearchTemplates/BFS.cpp.o
 
@@ -246,6 +272,7 @@ SearchTemplates/BFS.i: SearchTemplates/BFS.cpp.i
 
 # target to preprocess a source file
 SearchTemplates/BFS.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/BFS.cpp.i
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.i
 .PHONY : SearchTemplates/BFS.cpp.i
 
@@ -255,6 +282,7 @@ SearchTemplates/BFS.s: SearchTemplates/BFS.cpp.s
 
 # target to generate assembly for a file
 SearchTemplates/BFS.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/BFS.cpp.s
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.s
 .PHONY : SearchTemplates/BFS.cpp.s
 
@@ -264,6 +292,7 @@ SearchTemplates/Path.o: SearchTemplates/Path.cpp.o
 
 # target to build an object file
 SearchTemplates/Path.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Path.cpp.o
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o
 .PHONY : SearchTemplates/Path.cpp.o
 
@@ -273,6 +302,7 @@ SearchTemplates/Path.i: SearchTemplates/Path.cpp.i
 
 # target to preprocess a source file
 SearchTemplates/Path.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Path.cpp.i
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.i
 .PHONY : SearchTemplates/Path.cpp.i
 
@@ -282,6 +312,7 @@ SearchTemplates/Path.s: SearchTemplates/Path.cpp.s
 
 # target to generate assembly for a file
 SearchTemplates/Path.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Path.cpp.s
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.s
 .PHONY : SearchTemplates/Path.cpp.s
 
@@ -291,6 +322,7 @@ SearchTemplates/Problem.o: SearchTemplates/Problem.cpp.o
 
 # target to build an object file
 SearchTemplates/Problem.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Problem.cpp.o
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o
 .PHONY : SearchTemplates/Problem.cpp.o
 
@@ -300,6 +332,7 @@ SearchTemplates/Problem.i: SearchTemplates/Problem.cpp.i
 
 # target to preprocess a source file
 SearchTemplates/Problem.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Problem.cpp.i
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.i
 .PHONY : SearchTemplates/Problem.cpp.i
 
@@ -309,6 +342,7 @@ SearchTemplates/Problem.s: SearchTemplates/Problem.cpp.s
 
 # target to generate assembly for a file
 SearchTemplates/Problem.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Problem.cpp.s
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.s
 .PHONY : SearchTemplates/Problem.cpp.s
 
@@ -318,6 +352,7 @@ SearchTemplates/SearchType.o: SearchTemplates/SearchType.cpp.o
 
 # target to build an object file
 SearchTemplates/SearchType.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/SearchType.cpp.o
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o
 .PHONY : SearchTemplates/SearchType.cpp.o
 
@@ -327,6 +362,7 @@ SearchTemplates/SearchType.i: SearchTemplates/SearchType.cpp.i
 
 # target to preprocess a source file
 SearchTemplates/SearchType.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/SearchType.cpp.i
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.i
 .PHONY : SearchTemplates/SearchType.cpp.i
 
@@ -336,6 +372,7 @@ SearchTemplates/SearchType.s: SearchTemplates/SearchType.cpp.s
 
 # target to generate assembly for a file
 SearchTemplates/SearchType.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/SearchType.cpp.s
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.s
 .PHONY : SearchTemplates/SearchType.cpp.s
 
@@ -345,6 +382,7 @@ SearchTemplates/SolutionResponse.o: SearchTemplates/SolutionResponse.cpp.o
 
 # target to build an object file
 SearchTemplates/SolutionResponse.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/SolutionResponse.cpp.o
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o
 .PHONY : SearchTemplates/SolutionResponse.cpp.o
 
@@ -354,6 +392,7 @@ SearchTemplates/SolutionResponse.i: SearchTemplates/SolutionResponse.cpp.i
 
 # target to preprocess a source file
 SearchTemplates/SolutionResponse.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/SolutionResponse.cpp.i
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.i
 .PHONY : SearchTemplates/SolutionResponse.cpp.i
 
@@ -363,35 +402,69 @@ SearchTemplates/SolutionResponse.s: SearchTemplates/SolutionResponse.cpp.s
 
 # target to generate assembly for a file
 SearchTemplates/SolutionResponse.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/SolutionResponse.cpp.s
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.s
 .PHONY : SearchTemplates/SolutionResponse.cpp.s
 
-main.o: main.cpp.o
+main2.o: main2.cpp.o
 
-.PHONY : main.o
+.PHONY : main2.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/main.cpp.o
-.PHONY : main.cpp.o
+main2.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/main2.cpp.o
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/main2.cpp.o
+.PHONY : main2.cpp.o
 
-main.i: main.cpp.i
+main2.i: main2.cpp.i
 
-.PHONY : main.i
+.PHONY : main2.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/main.cpp.i
-.PHONY : main.cpp.i
+main2.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/main2.cpp.i
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/main2.cpp.i
+.PHONY : main2.cpp.i
 
-main.s: main.cpp.s
+main2.s: main2.cpp.s
 
-.PHONY : main.s
+.PHONY : main2.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/main.cpp.s
-.PHONY : main.cpp.s
+main2.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/main2.cpp.s
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/main2.cpp.s
+.PHONY : main2.cpp.s
+
+sfmlGUI.o: sfmlGUI.cpp.o
+
+.PHONY : sfmlGUI.o
+
+# target to build an object file
+sfmlGUI.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/sfmlGUI.cpp.o
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o
+.PHONY : sfmlGUI.cpp.o
+
+sfmlGUI.i: sfmlGUI.cpp.i
+
+.PHONY : sfmlGUI.i
+
+# target to preprocess a source file
+sfmlGUI.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/sfmlGUI.cpp.i
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/sfmlGUI.cpp.i
+.PHONY : sfmlGUI.cpp.i
+
+sfmlGUI.s: sfmlGUI.cpp.s
+
+.PHONY : sfmlGUI.s
+
+# target to generate assembly for a file
+sfmlGUI.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/sfmlGUI.cpp.s
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/sfmlGUI.cpp.s
+.PHONY : sfmlGUI.cpp.s
 
 # Help Target
 help:
@@ -400,6 +473,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... MySFML"
 	@echo "... rebuild_cache"
 	@echo "... pathFinding"
 	@echo "... DFS.o"
@@ -429,9 +503,12 @@ help:
 	@echo "... SearchTemplates/SolutionResponse.o"
 	@echo "... SearchTemplates/SolutionResponse.i"
 	@echo "... SearchTemplates/SolutionResponse.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... main2.o"
+	@echo "... main2.i"
+	@echo "... main2.s"
+	@echo "... sfmlGUI.o"
+	@echo "... sfmlGUI.i"
+	@echo "... sfmlGUI.s"
 .PHONY : help
 
 

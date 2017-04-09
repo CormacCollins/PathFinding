@@ -57,33 +57,9 @@ include CMakeFiles/pathFinding.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/pathFinding.dir/flags.make
 
-CMakeFiles/pathFinding.dir/main.cpp.o: CMakeFiles/pathFinding.dir/flags.make
-CMakeFiles/pathFinding.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pathFinding.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathFinding.dir/main.cpp.o -c /home/mac/IntroAI/pathFinding/main.cpp
-
-CMakeFiles/pathFinding.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pathFinding.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mac/IntroAI/pathFinding/main.cpp > CMakeFiles/pathFinding.dir/main.cpp.i
-
-CMakeFiles/pathFinding.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pathFinding.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mac/IntroAI/pathFinding/main.cpp -o CMakeFiles/pathFinding.dir/main.cpp.s
-
-CMakeFiles/pathFinding.dir/main.cpp.o.requires:
-
-.PHONY : CMakeFiles/pathFinding.dir/main.cpp.o.requires
-
-CMakeFiles/pathFinding.dir/main.cpp.o.provides: CMakeFiles/pathFinding.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/pathFinding.dir/main.cpp.o.provides
-
-CMakeFiles/pathFinding.dir/main.cpp.o.provides.build: CMakeFiles/pathFinding.dir/main.cpp.o
-
-
 CMakeFiles/pathFinding.dir/Parser.cpp.o: CMakeFiles/pathFinding.dir/flags.make
 CMakeFiles/pathFinding.dir/Parser.cpp.o: ../Parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pathFinding.dir/Parser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pathFinding.dir/Parser.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathFinding.dir/Parser.cpp.o -c /home/mac/IntroAI/pathFinding/Parser.cpp
 
 CMakeFiles/pathFinding.dir/Parser.cpp.i: cmake_force
@@ -107,7 +83,7 @@ CMakeFiles/pathFinding.dir/Parser.cpp.o.provides.build: CMakeFiles/pathFinding.d
 
 CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o: CMakeFiles/pathFinding.dir/flags.make
 CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o: ../SearchTemplates/Problem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o -c /home/mac/IntroAI/pathFinding/SearchTemplates/Problem.cpp
 
 CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.i: cmake_force
@@ -131,7 +107,7 @@ CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/pathFinding.dir/DFS.cpp.o: CMakeFiles/pathFinding.dir/flags.make
 CMakeFiles/pathFinding.dir/DFS.cpp.o: ../DFS.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pathFinding.dir/DFS.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pathFinding.dir/DFS.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathFinding.dir/DFS.cpp.o -c /home/mac/IntroAI/pathFinding/DFS.cpp
 
 CMakeFiles/pathFinding.dir/DFS.cpp.i: cmake_force
@@ -155,7 +131,7 @@ CMakeFiles/pathFinding.dir/DFS.cpp.o.provides.build: CMakeFiles/pathFinding.dir/
 
 CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o: CMakeFiles/pathFinding.dir/flags.make
 CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o: ../SearchTemplates/Action.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o -c /home/mac/IntroAI/pathFinding/SearchTemplates/Action.cpp
 
 CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.i: cmake_force
@@ -179,7 +155,7 @@ CMakeFiles/pathFinding.dir/SearchTemplates/Action.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o: CMakeFiles/pathFinding.dir/flags.make
 CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o: ../SearchTemplates/SearchType.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o -c /home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.cpp
 
 CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.i: cmake_force
@@ -203,7 +179,7 @@ CMakeFiles/pathFinding.dir/SearchTemplates/SearchType.cpp.o.provides.build: CMak
 
 CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o: CMakeFiles/pathFinding.dir/flags.make
 CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o: ../SearchTemplates/SolutionResponse.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o -c /home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.cpp
 
 CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.i: cmake_force
@@ -227,7 +203,7 @@ CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o.provides.build
 
 CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o: CMakeFiles/pathFinding.dir/flags.make
 CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o: ../SearchTemplates/Path.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o -c /home/mac/IntroAI/pathFinding/SearchTemplates/Path.cpp
 
 CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.i: cmake_force
@@ -251,7 +227,7 @@ CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: CMakeFiles/pathFinding.dir/flags.make
 CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o: ../SearchTemplates/BFS.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o -c /home/mac/IntroAI/pathFinding/SearchTemplates/BFS.cpp
 
 CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.i: cmake_force
@@ -275,7 +251,7 @@ CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o: CMakeFiles/pathFinding.dir/flags.make
 CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o: ../SearchTemplates/Astar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o -c /home/mac/IntroAI/pathFinding/SearchTemplates/Astar.cpp
 
 CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.i: cmake_force
@@ -297,9 +273,56 @@ CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o.provides: CMakeFiles/path
 CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o.provides.build: CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o
 
 
+CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o: CMakeFiles/pathFinding.dir/flags.make
+CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o: ../sfmlGUI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o -c /home/mac/IntroAI/pathFinding/sfmlGUI.cpp
+
+CMakeFiles/pathFinding.dir/sfmlGUI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pathFinding.dir/sfmlGUI.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mac/IntroAI/pathFinding/sfmlGUI.cpp > CMakeFiles/pathFinding.dir/sfmlGUI.cpp.i
+
+CMakeFiles/pathFinding.dir/sfmlGUI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pathFinding.dir/sfmlGUI.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mac/IntroAI/pathFinding/sfmlGUI.cpp -o CMakeFiles/pathFinding.dir/sfmlGUI.cpp.s
+
+CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o.requires:
+
+.PHONY : CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o.requires
+
+CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o.provides: CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o.provides.build
+.PHONY : CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o.provides
+
+CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o.provides.build: CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o
+
+
+CMakeFiles/pathFinding.dir/main2.cpp.o: CMakeFiles/pathFinding.dir/flags.make
+CMakeFiles/pathFinding.dir/main2.cpp.o: ../main2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/pathFinding.dir/main2.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pathFinding.dir/main2.cpp.o -c /home/mac/IntroAI/pathFinding/main2.cpp
+
+CMakeFiles/pathFinding.dir/main2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pathFinding.dir/main2.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mac/IntroAI/pathFinding/main2.cpp > CMakeFiles/pathFinding.dir/main2.cpp.i
+
+CMakeFiles/pathFinding.dir/main2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pathFinding.dir/main2.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mac/IntroAI/pathFinding/main2.cpp -o CMakeFiles/pathFinding.dir/main2.cpp.s
+
+CMakeFiles/pathFinding.dir/main2.cpp.o.requires:
+
+.PHONY : CMakeFiles/pathFinding.dir/main2.cpp.o.requires
+
+CMakeFiles/pathFinding.dir/main2.cpp.o.provides: CMakeFiles/pathFinding.dir/main2.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/main2.cpp.o.provides.build
+.PHONY : CMakeFiles/pathFinding.dir/main2.cpp.o.provides
+
+CMakeFiles/pathFinding.dir/main2.cpp.o.provides.build: CMakeFiles/pathFinding.dir/main2.cpp.o
+
+
 # Object files for target pathFinding
 pathFinding_OBJECTS = \
-"CMakeFiles/pathFinding.dir/main.cpp.o" \
 "CMakeFiles/pathFinding.dir/Parser.cpp.o" \
 "CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o" \
 "CMakeFiles/pathFinding.dir/DFS.cpp.o" \
@@ -308,12 +331,13 @@ pathFinding_OBJECTS = \
 "CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o" \
 "CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o" \
 "CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o" \
-"CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o"
+"CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o" \
+"CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o" \
+"CMakeFiles/pathFinding.dir/main2.cpp.o"
 
 # External object files for target pathFinding
 pathFinding_EXTERNAL_OBJECTS =
 
-pathFinding: CMakeFiles/pathFinding.dir/main.cpp.o
 pathFinding: CMakeFiles/pathFinding.dir/Parser.cpp.o
 pathFinding: CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o
 pathFinding: CMakeFiles/pathFinding.dir/DFS.cpp.o
@@ -323,9 +347,11 @@ pathFinding: CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.o
 pathFinding: CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o
 pathFinding: CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o
 pathFinding: CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o
+pathFinding: CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o
+pathFinding: CMakeFiles/pathFinding.dir/main2.cpp.o
 pathFinding: CMakeFiles/pathFinding.dir/build.make
 pathFinding: CMakeFiles/pathFinding.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable pathFinding"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable pathFinding"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pathFinding.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -333,7 +359,6 @@ CMakeFiles/pathFinding.dir/build: pathFinding
 
 .PHONY : CMakeFiles/pathFinding.dir/build
 
-CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/main.cpp.o.requires
 CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/Parser.cpp.o.requires
 CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/SearchTemplates/Problem.cpp.o.requires
 CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/DFS.cpp.o.requires
@@ -343,6 +368,8 @@ CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/SearchTemplates/
 CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/SearchTemplates/Path.cpp.o.requires
 CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.o.requires
 CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o.requires
+CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o.requires
+CMakeFiles/pathFinding.dir/requires: CMakeFiles/pathFinding.dir/main2.cpp.o.requires
 
 .PHONY : CMakeFiles/pathFinding.dir/requires
 
