@@ -34,6 +34,8 @@ public:
     //Heuristic function
     Node* HeuristicFunction();
 
+    void PopFrontierNodeSpecific(Node* node);
+
 };
 
 
