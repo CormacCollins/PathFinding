@@ -20,7 +20,7 @@ public:
     // ------------------------------------
     // Inherits all generic path finding traits from 'SearchType'
     // Properties:
-    //         currentProblem, stateList, frontier, currentPath
+    //         currentProblem, stateList, frontier, exploredPath
     // Functions Includes:
     //         GetActionChild, StateLookUp, ExpandNode, RenderCurrentMap,
     //         GetAction, IsInCurrentPath
@@ -43,9 +43,9 @@ public:
     //Returns true for if goal reached and returns solution path
     bool GoalTest(Problem& problem, Node* node);
 
-    SolutionResponse DepthSearch(Problem& problem, Node* nodeSearch);
+    SolutionResponse* DepthSeach(Problem& problem, Node* nodeSearch);
 
-    SolutionResponse Search(Problem& problem, Node* nodeSearch);
+    virtual SolutionResponse Search(Problem& problem, Node* nodeSearch) override;
 
     void PushPath(Node* node, ActionType journeyAction);
 

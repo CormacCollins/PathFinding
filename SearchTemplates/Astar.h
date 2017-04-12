@@ -12,7 +12,7 @@
 
 class Astar : public SearchType {
 private:
-    int currentLowestCostFunction;
+    float currentLowestCostFunction;
     Node* lowestCostNode;
 
 public:
@@ -36,7 +36,7 @@ public:
 
     void PopFrontierNodeSpecific(Node* node);
 
-    std::vector<std::vector<std::string>> GetStringPath() override;
+    std::vector<std::vector<std::string>>& GetStringPath() override;
 
 };
 

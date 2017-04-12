@@ -6,10 +6,11 @@
 
 //recursively call DepthSearch
 SolutionResponse DFS::Search(Problem& problem, Node* nodeSearch) {
-    return DepthSearch(problem, nodeSearch);
+    auto a = DepthSeach(problem, nodeSearch);
+    return *a;
 }
 
-SolutionResponse DFS::DepthSearch(Problem& problem, Node* searchNode){
+SolutionResponse* DFS::DepthSeach(Problem& problem, Node* nodeSearch){
 
     //Return list from each child expansion
     std::vector<Path> children;
@@ -18,33 +19,34 @@ SolutionResponse DFS::DepthSearch(Problem& problem, Node* searchNode){
     //To be returned solution
     SolutionResponse* solution;
 
+    //First node added to path (without action)
+//    Path firstPath = Path();
+//    firstPath.pathNode = nodeSearch;
+//    exploredPath.push_back(firstPath);
 
     //Goal check
-    if (GoalTest(problem, searchNode)){
-        solution = new SolutionResponse(currentPath, "success");
-        return *solution;
+    if (GoalTest(problem, nodeSearch)){
+        //trimmerPath = TrimPath(problem);
+        SolutionResponse* s = new SolutionResponse(exploredPath, "success");
+        return s;
     }
 
-    RenderCurrentMap(searchNode, problem);
+    RenderCurrentMap(nodeSearch, problem);
     //Push first children onto frontier
-    children = ExpandNode(searchNode, problem);
+    children = ExpandNode(nodeSearch, problem);
 
 
-    if(children.empty()){
-        PopPath();
-        std::cerr << "Could not find solution - empty child";
-        solution = new SolutionResponse("failure");
-        return *solution;
+    //If children then add them otherwise we will go and pop the frontier
+    if(!children.empty()){
+
+        //Extract Nodes form children path
+        for(Path& p : children){
+            childrenNodes.push_back(p.pathNode);
+        }
+
+        //Add path to frontier
+        PushFrontier(childrenNodes);
     }
-
-
-    //Extract Nodes form children path
-    for(Path& p : children){
-        childrenNodes.push_back(p.pathNode);
-    }
-
-    //Add path to frontier
-    PushFrontier(childrenNodes);
 
     while(!FrontierIsEmpty()) {
         //Get top of stack for DFS (LIFO)
@@ -53,7 +55,16 @@ SolutionResponse DFS::DepthSearch(Problem& problem, Node* searchNode){
         PushPath(currentNode, GetAction(children, currentNode));
 
         //begin search again
-        return DepthSearch(problem, currentNode);
+        SolutionResponse* s =  DepthSeach(problem, currentNode);
+
+        //New???
+        //Remove from path if it wa sa failure
+        if(s->responseOutcome == "failure"){
+            PopPath();
+        }
+
+        return s;
+
     }
 };
 
@@ -78,16 +89,15 @@ Node* DFS::PopFrontier() {
 }
 
 bool DFS::GoalTest(Problem& problem, Node* node) {
-    RenderCurrentMap(node, problem);
     return problem.GoalState == node;
 }
 
 
 
 void DFS::PushPath(Node* node, ActionType journeyAction) {
-    currentPath.push_back(Path(node, journeyAction));
+    exploredPath.push_back(Path(node, journeyAction));
 }
 
 void DFS::PopPath() {
-    currentPath.pop_back();
+    exploredPath.pop_back();
 }

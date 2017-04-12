@@ -9,3 +9,7 @@ Path::Path(Node* node, ActionType action) {
     pathAction = action;
 }
 
+Path::Path() {
+
+}
+

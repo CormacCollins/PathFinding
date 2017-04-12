@@ -157,6 +157,10 @@ Parser.h
 /home/mac/IntroAI/pathFinding/Parser.h
 SearchTemplates/Astar.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/Astar.h
+DFS.h
+/home/mac/IntroAI/pathFinding/DFS.h
+SearchTemplates/BFS.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/BFS.h
 iostream
 -
 chrono

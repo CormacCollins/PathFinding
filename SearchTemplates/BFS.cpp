@@ -6,11 +6,6 @@
 
 SolutionResponse BFS::Search(Problem& problem, Node* nodeSearch) {
     SolutionResponse s = BreadthFirstSearch(problem, nodeSearch);
-
-    //Show final path
-    for(Path& p : currentPath){
-        RenderCurrentMap(p.pathNode, problem);
-    }
     return s;
 }
 
@@ -22,44 +17,62 @@ SolutionResponse BFS::BreadthFirstSearch(Problem& problem, Node* searchNode){
     std::vector<Node*> childrenNodes;
     //To be returned solution
     SolutionResponse* solution;
+
+    //First node added to path (without action)
+//    Path firstPath = Path();
+//    firstPath.pathNode = searchNode;
+//    exploredPath.push_back(firstPath);
+
     //Goal check
     if (GoalTest(problem, searchNode)){
-        TrimPath();
-        solution = new SolutionResponse(currentPath, "success");
+        trimmerPath = TrimPath(problem);
+        solution = new SolutionResponse(trimmerPath, "success");
         return *solution;
     }
+
+
+    RenderCurrentMap(searchNode, problem);
 
     //Expand first node and add to frontier
     children = ExpandNode(searchNode, problem);
     for(auto& a: children){
-        if (GoalTest(problem, searchNode)){
-            TrimPath();
-            solution = new SolutionResponse(currentPath, "success");
+
+
+        PushPath(a.pathNode, GetAction(children, a.pathNode));
+        RenderCurrentMap(a.pathNode, problem);
+        //Test before on frontier
+        if (GoalTest(problem, a.pathNode)){
+            trimmerPath = TrimPath(problem);
+            solution = new SolutionResponse(trimmerPath, "success");
             return *solution;
         }
 
         //Add to frontier and add to path storage
         PushFrontier(a.pathNode);
-        PushPath(a.pathNode, GetAction(children, a.pathNode));
+
     }
 
     //Main do while loop
     do {
         Node* n = PopFrontier();
         children = ExpandNode(n, problem);
+
         for(auto& p : children){
+
+            PushPath(p.pathNode, GetAction(children, p.pathNode));
+            RenderCurrentMap(p.pathNode, problem);
+
             //Goal check
             if(GoalTest(problem, p.pathNode)){
                 PushPath(p.pathNode, GetAction(children, p.pathNode));
-                TrimPath();
-                solution = new SolutionResponse(currentPath, "success");
+                trimmerPath = TrimPath(problem);
+                solution = new SolutionResponse(trimmerPath, "success");
                 return *solution;
             }
 
             PushFrontier(p.pathNode);
-            PushPath(p.pathNode, GetAction(children, p.pathNode));
-            RenderCurrentMap(p.pathNode, problem);
         }
+
     } while(!FrontierIsEmpty());
 
     std::cerr << frontier.size() << std::endl;
@@ -93,7 +106,7 @@ void BFS::PushFrontier(Node* newFrontier) {
 
 
 void BFS::PopPath() {
-    currentPath.pop_back();
+    exploredPath.pop_back();
 }
 
 

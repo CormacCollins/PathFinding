@@ -4,7 +4,7 @@
 
 #include "SearchType.h"
 
-std::vector<Path> SearchType::ExpandNode(Node* currentNode, Problem problem) {
+std::vector<Path> SearchType::ExpandNode(Node* currentNode, Problem& problem) {
     int actionCount = 4;
     //Need to track path (nodes and actions)
     std::vector<Path> successors;
@@ -21,7 +21,7 @@ std::vector<Path> SearchType::ExpandNode(Node* currentNode, Problem problem) {
         }
 
         n->Depth = currentNode->Depth + problem.PathCost;
-        n->PathCost = currentNode->Depth + problem.PathCost;
+        n->PathCost = problem.PathCost;
         n->Parent = currentNode;
 
         //Add to vector of Path types
@@ -92,38 +92,49 @@ Node* SearchType::StateLookUp(Node* node, std::tuple<int,int> instruction) {
 
 void SearchType::RenderCurrentMap(Node* currentPosition, Problem& problem) {
 
-
     std::stringstream ss;
     std::string vis = "";
 
     std::vector<std::string> tempVec = std::vector<std::string>();
-    for(int j = 0; j <  stateList.size(); j++) {
+    for (int j = 0; j < stateList.size(); j++) {
         for (int i = 0; i < stateList[j].size(); i++) {
 
 //            if (i > stateList[j].size()) {
 //                ss << std::endl;
 //            }
-            if(stateList[j][i] ==  currentPosition){
+            if (stateList[j][i] == problem.InitialState) {
+                ss << "S" << " | ";
+                vis = "S";
+            }
+            else if (stateList[j][i] == currentPosition) {
                 ss << "H" << " | ";
                 vis = "H";
-            }
-            else if (stateList[j][i] == problem.GoalState){
+            } else if (stateList[j][i] == problem.GoalState) {
                 ss << "X" << " | ";
                 vis = "X";
-            }
-            else if (stateList[j][i] == NULL){
+            } else if (stateList[j][i] == NULL) {
                 ss << "W" << " | ";
                 vis = "W";
-            }
-            else {
+            } else {
                 ss << "1" << " | ";
                 vis = "1";
             }
             tempVec.push_back(vis);
         }
+    }
 
 
 
+    //combine string groups to have all paths search
+
+
+    if (stringPathVec.size() > 0) {
+        for (int i = 0; i < tempVec.size()-1; i++) {
+            if (stringPathVec[stringPathVec.size() - 1][i] == "H") {
+                tempVec[i] = "H";
+            }
+
+        }
     }
     stringPathVec.push_back(tempVec);
 
@@ -131,7 +142,7 @@ void SearchType::RenderCurrentMap(Node* currentPosition, Problem& problem) {
 }
 
 bool SearchType::IsInCurrentPath(Node *node) {
-    for(Path& n : currentPath){
+    for(Path& n : exploredPath){
         if(n.pathNode == node){
             return true;
         }
@@ -158,7 +169,7 @@ Path& SearchType::GetPathFromNode(std::vector<Path> path, Node* nodeLookUp ) {
 //Get nodes stores in current path
 std::vector<Node*> SearchType::getNodes() {
     std::vector<Node*> currentNodePath;
-    for(Path& p : currentPath){
+    for(Path& p : exploredPath){
         currentNodePath.push_back(p.pathNode);
     }
     return currentNodePath;
@@ -169,45 +180,73 @@ bool SearchType::FrontierIsEmpty() {
 }
 
 void SearchType::PushPath(Node *node, ActionType journeyAction) {
-    currentPath.push_back(Path(node, journeyAction));
+    exploredPath.push_back(Path(node, journeyAction));
 }
 
-std::vector<Path> SearchType::TrimPath() {
-    std::vector<Path> trimmedPath;
+std::vector<Path> SearchType::TrimPath( Problem& problem) {
+    std::vector<Path> trimmedPathLocal;
+
+    std::vector<Path> pathCopy = exploredPath;
+
+    if(&exploredPath == &pathCopy)
+        std::cout << "de";
 
 
     //Loop through current path backwards - we want to work backwards from the goal node that we have found
     //E.g. if
-    while(!currentPath.empty()){
+    while(!pathCopy.empty()){
 
         //Get top of path stack (Goal) and follow parents back to start
-        Path p = currentPath[currentPath.size()-1];
-        trimmedPath.push_back(p);
+        Path p = pathCopy[pathCopy.size()-1];
 
-        currentPath.erase(currentPath.end());
+        //Start square has null parent :-
+        //We don't add to path expanded
+//        if(p.pathNode->Parent == NULL){
+//            break;
+//        }
+
+        trimmedPathLocal.push_back(p);
+        pathCopy.erase(pathCopy.end()-1);
 
         //Looping backwards checking nodes against node we have followed with action
         //Remove nodes that don't match the correct route
-        while(currentPath[currentPath.size()-1].pathNode != p.pathNode->Parent){
+        while(pathCopy[pathCopy.size()-1].pathNode != p.pathNode->Parent){
             //remove from current path (trim)
-            currentPath.erase(currentPath.end());
-            if(currentPath.empty())
+            pathCopy.erase(pathCopy.end()-1);
+            if(pathCopy.empty())
                 break;
         }
     }
 
     //reverse paths from start to finish
-    std::reverse(trimmedPath.begin(), trimmedPath.end());
+    std::reverse(trimmedPathLocal.begin(), trimmedPathLocal.end());
 
     //Replace current path with the newly trimmed goal path
-    return trimmedPath;
+    return trimmedPathLocal;
 }
 
 bool SearchType::GoalTest(Problem& problem, Node* node) {
     return problem.GoalState == node;
 }
 
-std::vector<std::vector<std::string>> SearchType::GetStringPath() {
+std::vector<std::vector<std::string>>& SearchType::GetStringPath() {
     return stringPathVec;
+}
+
+SolutionResponse SearchType::Search(Problem& problem, Node* nodeSearch) {
+    //Needs to be implemented by children classes
+    return SolutionResponse();
+}
+
+int SearchType::PathsExplored() {
+    exploredPath.size();
+}
+
+std::vector<Path> SearchType::GetTrimmedPath() {
+    return trimmerPath;
+}
+
+std::vector<Path> SearchType::GetExploredPath() {
+    return exploredPath;
 }
 

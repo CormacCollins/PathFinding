@@ -131,14 +131,18 @@ void Parser::SetupProblem() {
         exit(1);
     }
 
+
+    int tempGoalNodePos[] = {0, 0};
+    int tempStartNodePos[] = {0, 0};
     //Create a Node Ptr for all data positions on map
     for(int i = 0; i < MAP_ROWS; i++){
 
-        if(std::isnan(dataMatrix[i][0])){
-            std::cerr << "Could not continue creating Node Map"
-                      << "Row " << i << " contained no elements";
-            break;
-        }
+//        if(std::isnan(dataMatrix[i][0])){
+//            std::cerr << "Could not continue creating Node Map"
+//                      << "Row " << i << " contained no elements";
+//            break;
+//        }
+
         //for creating vector of pointers
         std::vector<Node*> row;
         for(int j = 0; j < MAP_COLUMNS; j++){
@@ -162,12 +166,15 @@ void Parser::SetupProblem() {
                 n = new Node();
                 newProblem.InitialState = n;
                 row.push_back(n);
+                tempStartNodePos[0] = i;
+                tempStartNodePos[1] = j;
             }
             else if(GOAL_STATE[0] == j && GOAL_STATE[1] == i) {
                 n = new Node();
                 newProblem.GoalState = n;
-                newProblem.GoalState->PathCost = i + j;
                 row.push_back(n);
+                tempGoalNodePos[0] = i;
+                tempGoalNodePos[1] = j;
             }
             else if(addWall)
             {
@@ -184,13 +191,52 @@ void Parser::SetupProblem() {
         newMatrix.push_back(row);
     }
 
+    // ------------------------------------------------
+    // Need to work out heuristic distance (manhattan)
+    // ------------------------------------------------
+
+
+
+    int distBetweenGoalAndStart =
+            (tempGoalNodePos[0] + tempGoalNodePos[1])
+            - (tempStartNodePos[0] + tempStartNodePos[1]);
+
+    //If neg number make it pos - goal is always a pos number distance from start
+    distBetweenGoalAndStart = distBetweenGoalAndStart < 0
+                              ? distBetweenGoalAndStart * -1 : distBetweenGoalAndStart;
+
+    //0 from goal
+    newMatrix[tempGoalNodePos[0]][tempGoalNodePos[1]]->goalCost = 0;
+
+    //Calculated dist from goal
+    newMatrix[tempStartNodePos[0]][tempStartNodePos[1]]->goalCost = distBetweenGoalAndStart;
+
+    int zero = 0;
     //Add pathcosts to nodes for informed search
-    for(int i = 0; i < newMatrix.size()-1; i++){
-        for(int j = 0; j < newMatrix[i].size()-1; j++){
-            if(newMatrix[i][j] != NULL){
-                //Add goalPathCOst
-                // f(n) = g(n) + h(n)
-                newMatrix[i][j]->goalCost = (newProblem.GoalState->PathCost) - (i + j);
+    for(int i = 0; i < MAP_ROWS; i++){
+        for(int j = 0; j < MAP_COLUMNS; j++){
+
+            //Add goalPathCOst
+            if(newMatrix[i][j] != NULL)
+            {
+                auto a = std::pow((float)(i - tempGoalNodePos[0]) , 2);
+                auto b = std::pow((float)(j - tempGoalNodePos[1]), 2);
+
+                auto dist =  std::sqrt( (a) + (b));
+
+
+
+                //Make pos value
+                if(dist < 0){
+                    dist = dist * -1;
+                }
+
+                if(dist == 0)
+                    zero++;
+
+                //node is now specific distance value from goal (can't be negative)
+                newMatrix[i][j]->goalCost = dist;
+
             }
         }
     }

@@ -8,7 +8,7 @@
 
 #include "SearchType.h"
 
-class BFS : SearchType {
+class BFS : public SearchType {
 public:
     BFS(std::vector<std::vector<Node*>> states,
         Problem& problem) : SearchType(states, problem) {}
@@ -28,7 +28,7 @@ public:
 
     void PopPath();
 
-    SolutionResponse Search(Problem& problem, Node* nodeSearch);
+    SolutionResponse Search(Problem& problem, Node* nodeSearch) override;
 
 
 };

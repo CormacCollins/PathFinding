@@ -10,11 +10,17 @@ SolutionResponse Astar::Search(Problem& problem, Node* nodeSearch) {
 
     //To be returned solution
     SolutionResponse* solution;
+    RenderCurrentMap(nodeSearch, problem);
+
+//    //First node added to path (without action)
+//    Path firstPath = Path();
+//    firstPath.pathNode = nodeSearch;
+//    exploredPath.push_back(firstPath);
 
     //First node so is the lowest
     lowestCostNode = nodeSearch;
     //Current distance from node
-    currentLowestCostFunction = lowestCostNode->goalCost;
+    currentLowestCostFunction = problem.InitialState->goalCost + problem.PathCost;
 
     do{
         vector<Path> children = ExpandNode(lowestCostNode, problem);
@@ -23,6 +29,7 @@ SolutionResponse Astar::Search(Problem& problem, Node* nodeSearch) {
         for (auto& p : children) {
             PushFrontier(p.pathNode);
             PushPath(p.pathNode, p.pathAction);
+            RenderCurrentMap(p.pathNode, problem);
         }
 
         //Gets best heuristic value from frontier
@@ -30,12 +37,14 @@ SolutionResponse Astar::Search(Problem& problem, Node* nodeSearch) {
 
         if (GoalTest(problem, lowestCostNode)) {
             //Remove this to see the full Path search of A*
-            TrimPath();
-            solution = new SolutionResponse(currentPath, "success");
+
+            trimmerPath = TrimPath(problem);
+            solution = new SolutionResponse(trimmerPath, "success");
+
+            //trimmerPath = TrimPath();
             return *solution;
         }
 
-        RenderCurrentMap(lowestCostNode, problem);
     } while(!FrontierIsEmpty());
 
     //Frontier was empty so we did not find the goal
@@ -46,23 +55,29 @@ SolutionResponse Astar::Search(Problem& problem, Node* nodeSearch) {
 }
 
 Node* Astar::HeuristicFunction() {
-    //make better?
-    Node* lowestPath = new Node();
 
+    Node* lowestPath = frontier[0];
+    //Get Starting Path
+    float tempLowestCost;
     //Heuristic check
     for(auto& child : frontier){
-        int nodeStepCost = child->PathCost - child->Parent->PathCost;
+        float nodeStepCost = child->PathCost + child->Parent->PathCost;
 
         //cost function to node f(n) = g(n) + h(n)
-        int tempLowestCost = (nodeStepCost + child->Parent->goalCost);
+         tempLowestCost = (nodeStepCost + child->goalCost);
+
+        if(child->goalCost == 0){
+            cout << "fe";
+        }
 
         //if new one is lower than the previous lowest it is now the lower
-        if(tempLowestCost < currentLowestCostFunction)
+        if(tempLowestCost < currentLowestCostFunction) {
             currentLowestCostFunction = tempLowestCost;
             lowestPath = child;
+        }
     }
 
-    //Remove our chosen node from frontier
+    //Remove our chosen node from frontier as it is now the next expanded
     PopFrontierNodeSpecific(lowestPath);
 
     return lowestPath;
@@ -98,7 +113,7 @@ void Astar::PopFrontierNodeSpecific(Node* node) {
     }
 }
 
-std::vector<std::vector<std::string>> Astar::GetStringPath() {
+std::vector<std::vector<std::string>>& Astar::GetStringPath() {
     return stringPathVec;
 }
 

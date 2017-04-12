@@ -68,9 +68,11 @@ CMakeFiles/MySFML.dir/SearchTemplates/SolutionResponse.cpp.o: ../SearchTemplates
 CMakeFiles/MySFML.dir/SearchTemplates/SolutionResponse.cpp.o: ../SearchTemplates/SolutionResponse.cpp
 CMakeFiles/MySFML.dir/SearchTemplates/SolutionResponse.cpp.o: ../SearchTemplates/SolutionResponse.h
 
+CMakeFiles/MySFML.dir/main2.cpp.o: ../DFS.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../Parser.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/Action.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/Astar.h
+CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/BFS.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/Node.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/Path.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/Problem.h
