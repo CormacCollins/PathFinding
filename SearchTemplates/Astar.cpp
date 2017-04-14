@@ -23,13 +23,13 @@ SolutionResponse Astar::Search(Problem& problem, Node* nodeSearch) {
     currentLowestCostFunction = problem.InitialState->goalCost + problem.PathCost;
 
     do{
-        vector<Path> children = ExpandNode(lowestCostNode, problem);
+        vector<Path*> children = ExpandNode(lowestCostNode, problem);
 
         //Add nodes from paths to frontier
         for (auto& p : children) {
-            PushFrontier(p.pathNode);
-            PushPath(p.pathNode, p.pathAction);
-            RenderCurrentMap(p.pathNode, problem);
+            PushFrontier(p);
+            PushPath(p);
+            RenderCurrentMap(p->pathNode, problem);
         }
 
         //Gets best heuristic value from frontier
@@ -56,17 +56,18 @@ SolutionResponse Astar::Search(Problem& problem, Node* nodeSearch) {
 
 Node* Astar::HeuristicFunction() {
 
-    Node* lowestPath = frontier[0];
+    Path* lowestPath = frontier[0];
     //Get Starting Path
     float tempLowestCost;
     //Heuristic check
     for(auto& child : frontier){
-        float nodeStepCost = child->PathCost + child->Parent->PathCost;
+        float nodeStepCost = child->pathNode->PathCost
+                             + child->pathNode->Parent->PathCost;
 
         //cost function to node f(n) = g(n) + h(n)
-         tempLowestCost = (nodeStepCost + child->goalCost);
+         tempLowestCost = (nodeStepCost + child->pathNode->goalCost);
 
-        if(child->goalCost == 0){
+        if(child->pathNode->goalCost == 0){
             cout << "fe";
         }
 
@@ -80,17 +81,17 @@ Node* Astar::HeuristicFunction() {
     //Remove our chosen node from frontier as it is now the next expanded
     PopFrontierNodeSpecific(lowestPath);
 
-    return lowestPath;
+    return lowestPath->pathNode;
 }
 
-Node* Astar::PopFrontier() {
-    Node* removeNode = frontier[0];
+Path* Astar::PopFrontier() {
+    Path* removeNode = frontier[0];
     frontier.erase(frontier.begin());
     return removeNode;
 }
 
 //Multi-node push
-void Astar::PushFrontier(std::vector<Node*> newFrontier) {
+void Astar::PushFrontier(std::vector<Path*> newFrontier) {
     //Add node/action pairs to frontier
     for(auto n : newFrontier){
         frontier.push_back(n);
@@ -98,15 +99,15 @@ void Astar::PushFrontier(std::vector<Node*> newFrontier) {
 }
 
 //Single node push
-void Astar::PushFrontier(Node* newFrontier) {
+void Astar::PushFrontier(Path* newFrontier) {
     //Add node/action pairs to frontier
     frontier.push_back(newFrontier);
 }
 
 //pop specific node from frontier
-void Astar::PopFrontierNodeSpecific(Node* node) {
+void Astar::PopFrontierNodeSpecific(Path* path) {
     for(int i = 0; i < frontier.size(); i++){
-        if(frontier[i] == node){
+        if(frontier[i] == path){
             frontier.erase(frontier.begin()+i);
             break;
         }

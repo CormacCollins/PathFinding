@@ -4,10 +4,10 @@
 
 #include "SearchType.h"
 
-std::vector<Path> SearchType::ExpandNode(Node* currentNode, Problem& problem) {
+std::vector<Path*> SearchType::ExpandNode(Node* currentNode, Problem& problem) {
     int actionCount = 4;
     //Need to track path (nodes and actions)
-    std::vector<Path> successors;
+    std::vector<Path*> successors;
 
     //first in action count is LEFT
     for( int i = 0; i < actionCount; i++){
@@ -25,7 +25,7 @@ std::vector<Path> SearchType::ExpandNode(Node* currentNode, Problem& problem) {
         n->Parent = currentNode;
 
         //Add to vector of Path types
-        successors.push_back(Path(n, ActionType(i)));
+        successors.push_back(new Path(n, ActionType(i)));
     }
 
     return successors;
@@ -142,8 +142,8 @@ void SearchType::RenderCurrentMap(Node* currentPosition, Problem& problem) {
 }
 
 bool SearchType::IsInCurrentPath(Node *node) {
-    for(Path& n : exploredPath){
-        if(n.pathNode == node){
+    for(Path* n : exploredPath){
+        if(n->pathNode == node){
             return true;
         }
     }
@@ -169,8 +169,8 @@ Path& SearchType::GetPathFromNode(std::vector<Path> path, Node* nodeLookUp ) {
 //Get nodes stores in current path
 std::vector<Node*> SearchType::getNodes() {
     std::vector<Node*> currentNodePath;
-    for(Path& p : exploredPath){
-        currentNodePath.push_back(p.pathNode);
+    for(Path* p : exploredPath){
+        currentNodePath.push_back(p->pathNode);
     }
     return currentNodePath;
 }
@@ -179,14 +179,14 @@ bool SearchType::FrontierIsEmpty() {
     return frontier.empty();
 }
 
-void SearchType::PushPath(Node *node, ActionType journeyAction) {
-    exploredPath.push_back(Path(node, journeyAction));
+void SearchType::PushPath(Path* path) {
+    exploredPath.push_back(path);
 }
 
-std::vector<Path> SearchType::TrimPath( Problem& problem) {
-    std::vector<Path> trimmedPathLocal;
+std::vector<Path*> SearchType::TrimPath(Problem& problem) {
+    std::vector<Path*> trimmedPathLocal;
 
-    std::vector<Path> pathCopy = exploredPath;
+    std::vector<Path*> pathCopy = exploredPath;
 
     if(&exploredPath == &pathCopy)
         std::cout << "de";
@@ -197,7 +197,7 @@ std::vector<Path> SearchType::TrimPath( Problem& problem) {
     while(!pathCopy.empty()){
 
         //Get top of path stack (Goal) and follow parents back to start
-        Path p = pathCopy[pathCopy.size()-1];
+        Path* p = pathCopy[pathCopy.size()-1];
 
         //Start square has null parent :-
         //We don't add to path expanded
@@ -208,14 +208,17 @@ std::vector<Path> SearchType::TrimPath( Problem& problem) {
         trimmedPathLocal.push_back(p);
         pathCopy.erase(pathCopy.end()-1);
 
+
         //Looping backwards checking nodes against node we have followed with action
         //Remove nodes that don't match the correct route
-        while(pathCopy[pathCopy.size()-1].pathNode != p.pathNode->Parent){
-            //remove from current path (trim)
-            pathCopy.erase(pathCopy.end()-1);
-            if(pathCopy.empty())
-                break;
-        }
+         if(!pathCopy.empty()) {
+             while (pathCopy[pathCopy.size() - 1]->pathNode != p->pathNode->Parent) {
+                 //remove from current path (trim)
+                 pathCopy.erase(pathCopy.end() - 1);
+                 if (pathCopy.empty())
+                     break;
+             }
+         }
     }
 
     //reverse paths from start to finish
@@ -242,11 +245,11 @@ int SearchType::PathsExplored() {
     exploredPath.size();
 }
 
-std::vector<Path> SearchType::GetTrimmedPath() {
+std::vector<Path*> SearchType::GetTrimmedPath() {
     return trimmerPath;
 }
 
-std::vector<Path> SearchType::GetExploredPath() {
+std::vector<Path*> SearchType::GetExploredPath() {
     return exploredPath;
 }
 

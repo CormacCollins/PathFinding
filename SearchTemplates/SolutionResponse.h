@@ -17,15 +17,15 @@ public:
         responseOutcome = outcome;
     }
     //Solution in XY coords added to SolutionResponse wrapper
-    SolutionResponse(std::vector<Path>& solution, std::string outcome){
+    SolutionResponse(std::vector<Path*>& solution, std::string outcome){
         solutionActions = solution;
         responseOutcome = outcome;
     }
 
-    std::vector<Path> GetActions();
+    std::vector<Path*> GetActions();
     std::string ResOutcome();
 
-    std::vector<Path> solutionActions;
+    std::vector<Path*> solutionActions;
     std::string responseOutcome;
 };
 

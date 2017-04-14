@@ -22,11 +22,11 @@ public:
 
     //Get top of frontier queue
     //DFS = LIFO
-    Node* PopFrontier();
+    Path* PopFrontier();
 
-    void PushFrontier(std::vector<Node*> newFrontier);
+    void PushFrontier(std::vector<Path*> newFrontier);
 
-    void PushFrontier(Node* newFrontier);
+    void PushFrontier(Path* newFrontier);
 
     //Main search function - (recursive)
     SolutionResponse Search(Problem& problem, Node *nodeSearch);
@@ -34,7 +34,7 @@ public:
     //Heuristic function
     Node* HeuristicFunction();
 
-    void PopFrontierNodeSpecific(Node* node);
+    void PopFrontierNodeSpecific(Path* node);
 
     std::vector<std::vector<std::string>>& GetStringPath() override;
 

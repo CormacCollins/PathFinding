@@ -71,8 +71,8 @@ int main() {
     }
     else{
         string route = "";
-        for(Path& p : res.GetActions()){
-            switch(p.pathAction) {
+        for(Path* p : res.GetActions()){
+            switch(p->pathAction) {
                 case ActionType::LEFT:
                     route += "LEFT";
                     break;
@@ -179,7 +179,7 @@ int main() {
                     //Overrides string path with trimmed version for last rneder
                     for (auto& p : trimmedPath) {
 
-                        search1->RenderCurrentMap(p.pathNode, pp.problem);
+                        search1->RenderCurrentMap(p->pathNode, pp.problem);
                     }
                     renderTrimmedPath = true;
                 }

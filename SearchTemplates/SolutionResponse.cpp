@@ -4,7 +4,7 @@
 
 #include "SolutionResponse.h"
 
-std::vector<Path> SolutionResponse::GetActions() {
+std::vector<Path*> SolutionResponse::GetActions() {
     return solutionActions;
 }
 

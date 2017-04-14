@@ -12,7 +12,7 @@ SolutionResponse BFS::Search(Problem& problem, Node* nodeSearch) {
 SolutionResponse BFS::BreadthFirstSearch(Problem& problem, Node* searchNode){
 
     //Return list from each child expansion
-    std::vector<Path> children;
+    std::vector<Path*> children;
     //Nodes we will retrieve from the children Pth return type
     std::vector<Node*> childrenNodes;
     //To be returned solution
@@ -35,42 +35,42 @@ SolutionResponse BFS::BreadthFirstSearch(Problem& problem, Node* searchNode){
 
     //Expand first node and add to frontier
     children = ExpandNode(searchNode, problem);
-    for(auto& a: children){
+    for(auto* a: children){
 
 
-        PushPath(a.pathNode, GetAction(children, a.pathNode));
-        RenderCurrentMap(a.pathNode, problem);
+        PushPath(a);
+        RenderCurrentMap(a->pathNode, problem);
         //Test before on frontier
-        if (GoalTest(problem, a.pathNode)){
+        if (GoalTest(problem, a->pathNode)){
             trimmerPath = TrimPath(problem);
             solution = new SolutionResponse(trimmerPath, "success");
             return *solution;
         }
 
         //Add to frontier and add to path storage
-        PushFrontier(a.pathNode);
+        PushFrontier(a);
 
     }
 
     //Main do while loop
     do {
-        Node* n = PopFrontier();
-        children = ExpandNode(n, problem);
+        Path* p = PopFrontier();
+        children = ExpandNode(p->pathNode, problem);
 
         for(auto& p : children){
 
-            PushPath(p.pathNode, GetAction(children, p.pathNode));
-            RenderCurrentMap(p.pathNode, problem);
+            PushPath(p);
+            RenderCurrentMap(p->pathNode, problem);
 
             //Goal check
-            if(GoalTest(problem, p.pathNode)){
-                PushPath(p.pathNode, GetAction(children, p.pathNode));
+            if(GoalTest(problem, p->pathNode)){
+                PushPath(p);
                 trimmerPath = TrimPath(problem);
                 solution = new SolutionResponse(trimmerPath, "success");
                 return *solution;
             }
 
-            PushFrontier(p.pathNode);
+            PushFrontier(p);
         }
 
     } while(!FrontierIsEmpty());
@@ -83,14 +83,14 @@ SolutionResponse BFS::BreadthFirstSearch(Problem& problem, Node* searchNode){
     return *solution;
 };
 
-Node* BFS::PopFrontier() {
-    Node* removeNode = frontier[0];
+Path* BFS::PopFrontier() {
+    Path* removePath = frontier[0];
     frontier.erase(frontier.begin());
-    return removeNode;
+    return removePath;
 }
 
 //Multi-node push
-void BFS::PushFrontier(std::vector<Node*> newFrontier) {
+void BFS::PushFrontier(std::vector<Path*> newFrontier) {
     //Add node/action pairs to frontier
     for(auto n : newFrontier){
         frontier.push_back(n);
@@ -98,7 +98,7 @@ void BFS::PushFrontier(std::vector<Node*> newFrontier) {
 }
 
 //Single node push
-void BFS::PushFrontier(Node* newFrontier) {
+void BFS::PushFrontier(Path* newFrontier) {
     //Add node/action pairs to frontier
     frontier.push_back(newFrontier);
 }

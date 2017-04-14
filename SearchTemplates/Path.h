@@ -13,6 +13,7 @@ public:
     Node* pathNode;
     ActionType pathAction;
     Path(Node* node, ActionType action);
+    Path(Node* node);
     Path();
 };
 

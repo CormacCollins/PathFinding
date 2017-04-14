@@ -32,22 +32,22 @@ public:
 
     //Get top of frontier queue
     //DFS = LIFO
-    Node* PopFrontier();
+    Path* PopFrontier();
 
-    void PushFrontier(std::vector<Node*> newFrontier);
+    void PushFrontier(std::vector<Path*> newFrontier);
 
-    void PushFrontier(Node* newFrontier);
+    void PushFrontier(Path* newFrontier);
 
     //Takes problem and can invoke its 'Goal Test'
     //Using its state root node and goals state
     //Returns true for if goal reached and returns solution path
     bool GoalTest(Problem& problem, Node* node);
 
-    SolutionResponse* DepthSeach(Problem& problem, Node* nodeSearch);
+    SolutionResponse* DepthSeach(Problem& problem, Path* newPath);
 
     virtual SolutionResponse Search(Problem& problem, Node* nodeSearch) override;
 
-    void PushPath(Node* node, ActionType journeyAction);
+    void PushPath(Path* path);
 
     void PopPath();
 

@@ -15,11 +15,11 @@ public:
 
     //Get top of frontier queue
     //DFS = LIFO
-    Node* PopFrontier();
+    Path* PopFrontier();
 
-    void PushFrontier(std::vector<Node*> newFrontier);
+    void PushFrontier(std::vector<Path*> newFrontier);
 
-    void PushFrontier(Node* newFrontier);
+    void PushFrontier(Path* newFrontier);
 
     SolutionResponse BreadthFirstSearch(Problem& problem, Node* nodeSearch);
 

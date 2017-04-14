@@ -26,10 +26,10 @@ protected:
     Problem CurrentProblem;
     std::vector<std::vector<Node*>> stateList;
     //Nodes and the accompanying action to reach them from parent
-    std::vector<Node*> frontier;
+    std::vector<Path*> frontier;
     //Route taken is stored as we go
-    std::vector<Path> exploredPath;
-    std::vector<Path> trimmerPath;
+    std::vector<Path*> exploredPath;
+    std::vector<Path*> trimmerPath;
     std::vector<std::vector<std::string>> stringPathVec = std::vector<std::vector<std::string>>();
 
 public:
@@ -41,7 +41,7 @@ public:
     SearchType(std::vector<std::vector<Node*>> states, Problem& problem){
         stateList = states;
         CurrentProblem = problem;
-        exploredPath = std::vector<Path>();
+        exploredPath = std::vector<Path*>();
     }
 
     //get child from a node via a given action
@@ -51,7 +51,7 @@ public:
     Node* StateLookUp(Node* node, std::tuple<int,int> instruction);
 
     //Expand current node return path list
-    virtual std::vector<Path> ExpandNode(Node* currentNode, Problem& problem);
+    virtual std::vector<Path*> ExpandNode(Node* currentNode, Problem& problem);
 
     //renderer
     void RenderCurrentMap(Node* currentPosition,  Problem& problem);
@@ -69,10 +69,10 @@ public:
     bool FrontierIsEmpty();
 
     //Add to path storage
-    void PushPath(Node* node, ActionType journeyAction);
+    void PushPath(Path* path);
 
     //Removes redundant nodes for list containing correct path / actions to goals
-    std::vector<Path> TrimPath(Problem& problem);
+    std::vector<Path*> TrimPath(Problem& problem);
 
     //Takes problem and can invoke its 'Goal Test'
     //Using its state root node and goals state
@@ -85,9 +85,9 @@ public:
 
     int PathsExplored();
 
-    std::vector<Path> GetTrimmedPath();
+    std::vector<Path*> GetTrimmedPath();
 
-    std::vector<Path> GetExploredPath();
+    std::vector<Path*> GetExploredPath();
 };
 
 
