@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/MySFML.dir/SearchTemplates/BFS.cpp.o"
   "CMakeFiles/MySFML.dir/SearchTemplates/Astar.cpp.o"
   "CMakeFiles/MySFML.dir/sfmlGUI.cpp.o"
+  "CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o"
   "MySFML.pdb"
   "MySFML"
 )

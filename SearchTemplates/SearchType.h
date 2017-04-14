@@ -23,6 +23,7 @@
 
 class SearchType {
 protected:
+    int iterations = 0;
     Problem CurrentProblem;
     std::vector<std::vector<Node*>> stateList;
     //Nodes and the accompanying action to reach them from parent
@@ -63,7 +64,7 @@ public:
     std::vector<Node*> getNodes();
 
     //Get actions available for current node
-    ActionType GetAction(std::vector<Path> path, Node* nodeLookUp);
+    ActionType GetAction(std::vector<Path*> path, Node* nodeLookUp);
 
     //Check for empty frontier
     bool FrontierIsEmpty();
@@ -88,7 +89,12 @@ public:
     std::vector<Path*> GetTrimmedPath();
 
     std::vector<Path*> GetExploredPath();
+
+    //Check if a path has already been taken
+    bool HasBeenExplored(Node* searchNode);
 };
+
+
 
 
 #endif //PATHFINDING_SEARCHTYPE_H

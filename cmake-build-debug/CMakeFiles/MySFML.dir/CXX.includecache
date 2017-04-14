@@ -72,6 +72,16 @@ BFS.h
 SearchType.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h
 
+/home/mac/IntroAI/pathFinding/SearchTemplates/Greedy.cpp
+Greedy.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/Greedy.h
+
+/home/mac/IntroAI/pathFinding/SearchTemplates/Greedy.h
+SearchType.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h
+Astar.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/Astar.h
+
 /home/mac/IntroAI/pathFinding/SearchTemplates/Node.h
 string
 -
@@ -161,12 +171,8 @@ DFS.h
 /home/mac/IntroAI/pathFinding/DFS.h
 SearchTemplates/BFS.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/BFS.h
-iostream
--
-chrono
--
-thread
--
+SearchTemplates/Greedy.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/Greedy.h
 
 /home/mac/IntroAI/pathFinding/sfmlGUI.cpp
 sfmlGUI.h

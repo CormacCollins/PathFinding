@@ -18,12 +18,12 @@ SolutionResponse Astar::Search(Problem& problem, Node* nodeSearch) {
 //    exploredPath.push_back(firstPath);
 
     //First node so is the lowest
-    lowestCostNode = nodeSearch;
+    Node* searchNode = nodeSearch;
     //Current distance from node
     currentLowestCostFunction = problem.InitialState->goalCost + problem.PathCost;
 
     do{
-        vector<Path*> children = ExpandNode(lowestCostNode, problem);
+        vector<Path*> children = ExpandNode(searchNode, problem);
 
         //Add nodes from paths to frontier
         for (auto& p : children) {
@@ -33,9 +33,9 @@ SolutionResponse Astar::Search(Problem& problem, Node* nodeSearch) {
         }
 
         //Gets best heuristic value from frontier
-        lowestCostNode = HeuristicFunction();
+        Path* bestPath = HeuristicFunction();
 
-        if (GoalTest(problem, lowestCostNode)) {
+        if (GoalTest(problem, bestPath->pathNode)) {
             //Remove this to see the full Path search of A*
 
             trimmerPath = TrimPath(problem);
@@ -44,6 +44,8 @@ SolutionResponse Astar::Search(Problem& problem, Node* nodeSearch) {
             //trimmerPath = TrimPath();
             return *solution;
         }
+
+        searchNode = bestPath->pathNode;
 
     } while(!FrontierIsEmpty());
 
@@ -54,7 +56,7 @@ SolutionResponse Astar::Search(Problem& problem, Node* nodeSearch) {
 
 }
 
-Node* Astar::HeuristicFunction() {
+Path* Astar::HeuristicFunction() {
 
     Path* lowestPath = frontier[0];
     //Get Starting Path
@@ -81,7 +83,7 @@ Node* Astar::HeuristicFunction() {
     //Remove our chosen node from frontier as it is now the next expanded
     PopFrontierNodeSpecific(lowestPath);
 
-    return lowestPath->pathNode;
+    return lowestPath;
 }
 
 Path* Astar::PopFrontier() {
@@ -117,4 +119,7 @@ void Astar::PopFrontierNodeSpecific(Path* path) {
 std::vector<std::vector<std::string>>& Astar::GetStringPath() {
     return stringPathVec;
 }
+
+Astar::Astar() {}
+
 

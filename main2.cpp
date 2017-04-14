@@ -10,9 +10,7 @@
 #include "SearchTemplates/Astar.h"
 #include "DFS.h"
 #include "SearchTemplates/BFS.h"
-#include <iostream>
-#include <chrono>
-#include <thread>
+#include "SearchTemplates/Greedy.h"
 
 using namespace std;
 
@@ -40,7 +38,7 @@ int main() {
 
 
     int algoChoice;
-    cout << "Select algo: DFS(1), BFS(2), A*(3)" << endl;
+    cout << "Select algo: DFS(1), BFS(2), A*(3), Greedy-Best-First(4)" << endl;
     SearchType* search1;
     cin >>  algoChoice;
         switch (algoChoice) {
@@ -55,6 +53,10 @@ int main() {
             case 3:
                 search1 = static_cast<Astar*>(search1);
                 search1 = new Astar(pp.nodeMatrix, pp.problem);
+                break;
+            case 4:
+                search1 = static_cast<Greedy*>(search1);
+                search1 = new Greedy(pp.nodeMatrix, pp.problem);
                 break;
             default:
                 cerr << "Error in choice" << endl;
@@ -92,8 +94,10 @@ int main() {
 
         }
         cout << "Search successful!" << endl << route << endl;
-        cout << "Lowest path: " << search1->GetTrimmedPath().size()-1 << endl;
+        cout << "Best path: " << search1->GetTrimmedPath().size()-1 << endl;
         cout << "Nodes explored: " << search1->GetExploredPath().size()-1 << endl;
+
+
     }
 
     // ----------------------- GUI Code ---------------------------//
@@ -135,7 +139,6 @@ int main() {
     std::chrono::time_point<std::chrono::system_clock> foo = now + std::chrono::milliseconds(1000);
     std::chrono::milliseconds sec(100);
 
-
     int stateRender = 0;
     long stateMax = search1->GetStringPath().size()-1;
     bool renderTrimmedPath = false;
@@ -164,8 +167,8 @@ int main() {
 
             if(stateRender < exploredPathRenderCount){
                 ChangeColours(rectangleVector, height, width, stateRender, s);
-            }
-            else{
+            } //if greedy type we don't trim the path, it only ever follows one path
+            else {
                 //Above code will now not execute
                 exploredPathRenderCount = 0;
 
@@ -189,7 +192,8 @@ int main() {
                 if(stateRender == trimmedPath.size()-1){
                     keepState = true;
                 }
-            }
+            }//Do nothing
+
         }
 
         sf::Event event;

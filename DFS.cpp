@@ -13,7 +13,7 @@ SolutionResponse DFS::Search(Problem& problem, Node* nodeSearch) {
 }
 
 SolutionResponse* DFS::DepthSeach(Problem& problem, Path* newPath){
-
+    iterations++;
     //Return list from each child expansion
     std::vector<Path*> children;
     //Nodes we will retrieve from the children Pth return type
@@ -50,16 +50,23 @@ SolutionResponse* DFS::DepthSeach(Problem& problem, Path* newPath){
         if(!FrontierIsEmpty()) {
             currentPath = PopFrontier();
             PushPath(currentPath);
+        } else {
+
+        }
+
+        if(iterations > 1000){
+            SolutionResponse* s = new SolutionResponse("failure");
+            return s;
         }
 
 
         //begin search again
-        solution =  DepthSeach(problem, currentPath);
+        solution = DepthSeach(problem, currentPath);
 
         //New???
         //Remove from path if it wa sa failure
         if(solution->responseOutcome == "failure"){
-            // PopFrontier();
+            auto f = PopFrontier();
         }else
         {
             //success
@@ -74,19 +81,19 @@ SolutionResponse* DFS::DepthSeach(Problem& problem, Path* newPath){
 void DFS::PushFrontier(std::vector<Path*> newFrontier) {
     //Add node/action pairs to frontier
     for(auto n : newFrontier){
-        frontier.push_back(n);
+        frontier.insert(frontier.begin(), n);
     }
 }
 
 //Single node push
 void DFS::PushFrontier(Path* newFrontier) {
     //Add node/action pairs to frontier
-    frontier.push_back(newFrontier);
+    frontier.insert(frontier.begin(), newFrontier);
 }
 
 Path* DFS::PopFrontier() {
     Path* removeNode = frontier[frontier.size()-1];
-    frontier.pop_back();
+    frontier.erase(frontier.end()-1);
     return removeNode;
 }
 

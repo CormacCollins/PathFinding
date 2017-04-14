@@ -43,6 +43,17 @@ CMakeFiles/MySFML.dir/SearchTemplates/BFS.cpp.o: ../SearchTemplates/Problem.h
 CMakeFiles/MySFML.dir/SearchTemplates/BFS.cpp.o: ../SearchTemplates/SearchType.h
 CMakeFiles/MySFML.dir/SearchTemplates/BFS.cpp.o: ../SearchTemplates/SolutionResponse.h
 
+CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o: ../Parser.h
+CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o: ../SearchTemplates/Action.h
+CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o: ../SearchTemplates/Astar.h
+CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o: ../SearchTemplates/Greedy.cpp
+CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o: ../SearchTemplates/Greedy.h
+CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o: ../SearchTemplates/Node.h
+CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o: ../SearchTemplates/Path.h
+CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o: ../SearchTemplates/Problem.h
+CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o: ../SearchTemplates/SearchType.h
+CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o: ../SearchTemplates/SolutionResponse.h
+
 CMakeFiles/MySFML.dir/SearchTemplates/Path.cpp.o: ../SearchTemplates/Action.h
 CMakeFiles/MySFML.dir/SearchTemplates/Path.cpp.o: ../SearchTemplates/Node.h
 CMakeFiles/MySFML.dir/SearchTemplates/Path.cpp.o: ../SearchTemplates/Path.cpp
@@ -73,6 +84,7 @@ CMakeFiles/MySFML.dir/main2.cpp.o: ../Parser.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/Action.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/Astar.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/BFS.h
+CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/Greedy.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/Node.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/Path.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/Problem.h

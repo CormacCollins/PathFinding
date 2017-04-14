@@ -150,10 +150,10 @@ bool SearchType::IsInCurrentPath(Node *node) {
     return false;
 }
 
-ActionType SearchType::GetAction(std::vector<Path> path, Node* nodeLookUp ) {
-    for(Path& a : path){
-        if(a.pathNode == nodeLookUp)
-            return a.pathAction;
+ActionType SearchType::GetAction(std::vector<Path*> path, Node* nodeLookUp ) {
+    for(Path* a : path){
+        if(a->pathNode == nodeLookUp)
+            return a->pathAction;
     }
     std::cerr << "Error in node to path look up" << std::endl;
 }
@@ -251,5 +251,15 @@ std::vector<Path*> SearchType::GetTrimmedPath() {
 
 std::vector<Path*> SearchType::GetExploredPath() {
     return exploredPath;
+}
+
+bool SearchType::HasBeenExplored(Node* searchNode) {
+    for(Path* a : exploredPath){
+        if(a->pathNode == searchNode){
+            return true;
+        }
+    }
+    return false;
+
 }
 

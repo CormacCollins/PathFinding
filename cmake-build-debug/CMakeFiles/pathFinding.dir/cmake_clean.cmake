@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pathFinding.dir/SearchTemplates/Astar.cpp.o"
   "CMakeFiles/pathFinding.dir/sfmlGUI.cpp.o"
   "CMakeFiles/pathFinding.dir/main2.cpp.o"
+  "CMakeFiles/pathFinding.dir/SearchTemplates/Greedy.cpp.o"
   "pathFinding.pdb"
   "pathFinding"
 )

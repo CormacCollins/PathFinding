@@ -13,10 +13,10 @@
 class Astar : public SearchType {
 private:
     float currentLowestCostFunction;
-    Node* lowestCostNode;
+    Path* searchNode;
 
 public:
-
+    Astar();
     Astar(std::vector<std::vector<Node*>> states,
     Problem& problem) : SearchType(states, problem) {}
 
@@ -28,11 +28,11 @@ public:
 
     void PushFrontier(Path* newFrontier);
 
-    //Main search function - (recursive)
-    SolutionResponse Search(Problem& problem, Node *nodeSearch);
+    //Main search function
+    virtual SolutionResponse Search(Problem& problem, Node *nodeSearch) ;
 
     //Heuristic function
-    Node* HeuristicFunction();
+    virtual Path* HeuristicFunction();
 
     void PopFrontierNodeSpecific(Path* node);
 

@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/mac/IntroAI/pathFinding/SearchTemplates/Action.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/MySFML.dir/SearchTemplates/Action.cpp.o"
   "/home/mac/IntroAI/pathFinding/SearchTemplates/Astar.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/MySFML.dir/SearchTemplates/Astar.cpp.o"
   "/home/mac/IntroAI/pathFinding/SearchTemplates/BFS.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/MySFML.dir/SearchTemplates/BFS.cpp.o"
+  "/home/mac/IntroAI/pathFinding/SearchTemplates/Greedy.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o"
   "/home/mac/IntroAI/pathFinding/SearchTemplates/Path.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/MySFML.dir/SearchTemplates/Path.cpp.o"
   "/home/mac/IntroAI/pathFinding/SearchTemplates/Problem.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/MySFML.dir/SearchTemplates/Problem.cpp.o"
   "/home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.cpp" "/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles/MySFML.dir/SearchTemplates/SearchType.cpp.o"

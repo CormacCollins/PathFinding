@@ -286,6 +286,36 @@ SearchTemplates/BFS.cpp.s:
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.s
 .PHONY : SearchTemplates/BFS.cpp.s
 
+SearchTemplates/Greedy.o: SearchTemplates/Greedy.cpp.o
+
+.PHONY : SearchTemplates/Greedy.o
+
+# target to build an object file
+SearchTemplates/Greedy.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Greedy.cpp.o
+.PHONY : SearchTemplates/Greedy.cpp.o
+
+SearchTemplates/Greedy.i: SearchTemplates/Greedy.cpp.i
+
+.PHONY : SearchTemplates/Greedy.i
+
+# target to preprocess a source file
+SearchTemplates/Greedy.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.i
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Greedy.cpp.i
+.PHONY : SearchTemplates/Greedy.cpp.i
+
+SearchTemplates/Greedy.s: SearchTemplates/Greedy.cpp.s
+
+.PHONY : SearchTemplates/Greedy.s
+
+# target to generate assembly for a file
+SearchTemplates/Greedy.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.s
+	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Greedy.cpp.s
+.PHONY : SearchTemplates/Greedy.cpp.s
+
 SearchTemplates/Path.o: SearchTemplates/Path.cpp.o
 
 .PHONY : SearchTemplates/Path.o
@@ -491,6 +521,9 @@ help:
 	@echo "... SearchTemplates/BFS.o"
 	@echo "... SearchTemplates/BFS.i"
 	@echo "... SearchTemplates/BFS.s"
+	@echo "... SearchTemplates/Greedy.o"
+	@echo "... SearchTemplates/Greedy.i"
+	@echo "... SearchTemplates/Greedy.s"
 	@echo "... SearchTemplates/Path.o"
 	@echo "... SearchTemplates/Path.i"
 	@echo "... SearchTemplates/Path.s"
