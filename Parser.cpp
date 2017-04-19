@@ -249,3 +249,8 @@ void Parser::SetupProblem() {
 
 }
 
+void Parser::AddMapVector(std::vector<std::vector<int>> newMap) {
+    dataMatrix = newMap;
+    SetupProblem();
+}
+

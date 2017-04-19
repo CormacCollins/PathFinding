@@ -7,6 +7,10 @@
 #IncludeRegexTransform: 
 
 /home/mac/IntroAI/pathFinding/DFS.cpp
+chrono
+-
+future
+-
 DFS.h
 /home/mac/IntroAI/pathFinding/DFS.h
 
@@ -21,6 +25,10 @@ Parser.h
 /home/mac/IntroAI/pathFinding/Parser.h
 SearchTemplates/Path.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/Path.h
+SimpleTimer.h
+/home/mac/IntroAI/pathFinding/SimpleTimer.h
+future
+-
 
 /home/mac/IntroAI/pathFinding/Parser.cpp
 Parser.h
@@ -49,6 +57,22 @@ SearchTemplates/Node.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/Node.h
 SearchTemplates/SearchType.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h
+
+/home/mac/IntroAI/pathFinding/RandomPaths.cpp
+iostream
+-
+RandomPaths.h
+/home/mac/IntroAI/pathFinding/RandomPaths.h
+stdlib.h
+-
+time.h
+-
+chrono
+-
+
+/home/mac/IntroAI/pathFinding/RandomPaths.h
+vector
+-
 
 /home/mac/IntroAI/pathFinding/SearchTemplates/Action.cpp
 Action.h
@@ -154,6 +178,14 @@ Node.h
 Path.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/Path.h
 
+/home/mac/IntroAI/pathFinding/SimpleTimer.cpp
+chrono
+-
+SimpleTimer.h
+/home/mac/IntroAI/pathFinding/SimpleTimer.h
+
+/home/mac/IntroAI/pathFinding/SimpleTimer.h
+
 /home/mac/IntroAI/pathFinding/main2.cpp
 iostream
 -
@@ -173,6 +205,8 @@ SearchTemplates/BFS.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/BFS.h
 SearchTemplates/Greedy.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/Greedy.h
+RandomPaths.h
+/home/mac/IntroAI/pathFinding/RandomPaths.h
 
 /home/mac/IntroAI/pathFinding/sfmlGUI.cpp
 sfmlGUI.h

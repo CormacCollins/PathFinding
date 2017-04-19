@@ -10,6 +10,7 @@ CMakeFiles/MySFML.dir/DFS.cpp.o: ../SearchTemplates/Path.h
 CMakeFiles/MySFML.dir/DFS.cpp.o: ../SearchTemplates/Problem.h
 CMakeFiles/MySFML.dir/DFS.cpp.o: ../SearchTemplates/SearchType.h
 CMakeFiles/MySFML.dir/DFS.cpp.o: ../SearchTemplates/SolutionResponse.h
+CMakeFiles/MySFML.dir/DFS.cpp.o: ../SimpleTimer.h
 
 CMakeFiles/MySFML.dir/Parser.cpp.o: ../Parser.cpp
 CMakeFiles/MySFML.dir/Parser.cpp.o: ../Parser.h
@@ -19,6 +20,9 @@ CMakeFiles/MySFML.dir/Parser.cpp.o: ../SearchTemplates/Path.h
 CMakeFiles/MySFML.dir/Parser.cpp.o: ../SearchTemplates/Problem.h
 CMakeFiles/MySFML.dir/Parser.cpp.o: ../SearchTemplates/SearchType.h
 CMakeFiles/MySFML.dir/Parser.cpp.o: ../SearchTemplates/SolutionResponse.h
+
+CMakeFiles/MySFML.dir/RandomPaths.cpp.o: ../RandomPaths.cpp
+CMakeFiles/MySFML.dir/RandomPaths.cpp.o: ../RandomPaths.h
 
 CMakeFiles/MySFML.dir/SearchTemplates/Action.cpp.o: ../SearchTemplates/Action.cpp
 CMakeFiles/MySFML.dir/SearchTemplates/Action.cpp.o: ../SearchTemplates/Action.h
@@ -79,8 +83,12 @@ CMakeFiles/MySFML.dir/SearchTemplates/SolutionResponse.cpp.o: ../SearchTemplates
 CMakeFiles/MySFML.dir/SearchTemplates/SolutionResponse.cpp.o: ../SearchTemplates/SolutionResponse.cpp
 CMakeFiles/MySFML.dir/SearchTemplates/SolutionResponse.cpp.o: ../SearchTemplates/SolutionResponse.h
 
+CMakeFiles/MySFML.dir/SimpleTimer.cpp.o: ../SimpleTimer.cpp
+CMakeFiles/MySFML.dir/SimpleTimer.cpp.o: ../SimpleTimer.h
+
 CMakeFiles/MySFML.dir/main2.cpp.o: ../DFS.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../Parser.h
+CMakeFiles/MySFML.dir/main2.cpp.o: ../RandomPaths.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/Action.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/Astar.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/BFS.h
@@ -90,6 +98,7 @@ CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/Path.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/Problem.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/SearchType.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../SearchTemplates/SolutionResponse.h
+CMakeFiles/MySFML.dir/main2.cpp.o: ../SimpleTimer.h
 CMakeFiles/MySFML.dir/main2.cpp.o: ../main2.cpp
 CMakeFiles/MySFML.dir/main2.cpp.o: ../sfmlGUI.h
 

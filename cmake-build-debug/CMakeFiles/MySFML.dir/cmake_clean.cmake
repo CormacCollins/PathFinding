@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MySFML.dir/SearchTemplates/Astar.cpp.o"
   "CMakeFiles/MySFML.dir/sfmlGUI.cpp.o"
   "CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o"
+  "CMakeFiles/MySFML.dir/SimpleTimer.cpp.o"
+  "CMakeFiles/MySFML.dir/RandomPaths.cpp.o"
   "MySFML.pdb"
   "MySFML"
 )

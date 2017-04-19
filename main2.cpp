@@ -11,31 +11,121 @@
 #include "DFS.h"
 #include "SearchTemplates/BFS.h"
 #include "SearchTemplates/Greedy.h"
+#include "RandomPaths.h"
 
 using namespace std;
 
+//Gui functions
 void ChangeColoursFinalPath(vector<sf::RectangleShape>& rectangleVec, int height, int width, int stateNum, SearchType s);
 void ChangeColours(vector<sf::RectangleShape>& rectangleVec, int height, int width, int stateNum, SearchType s);
 
-int main() {
+//Testing flags
+bool IS_GUI = true;
+bool TESTING_MODE = false;
 
+int main() {
+    int SIMULATION_NO = 100;
+
+    vector<vector<vector<int>>> listLevels = vector<vector<vector<int>>>();
     //Setup parsing object
     Parser pp;
 
-    // Read text file
+    //Loop through newly random levels using A* to test if there is a solution
+
+    RandomPaths r = RandomPaths();
+
+    bool finishableLevel = false;
+
+    if(TESTING_MODE) {
+        for (; SIMULATION_NO > 0; SIMULATION_NO--) {
+
+            while (!finishableLevel) {
+                //Different height width limits in random level creating
+                if (SIMULATION_NO >= 80) {
+                    r.GetRandomSimulationPaths(10, 10);
+                } else if (SIMULATION_NO >= 60) {
+                    r.GetRandomSimulationPaths(15, 10);
+                } else if (SIMULATION_NO >= 40) {
+                    r.GetRandomSimulationPaths(20, 20);
+                } else if (SIMULATION_NO >= 20) {
+                    r.GetRandomSimulationPaths(13, 13);
+                } else {
+                    r.GetRandomSimulationPaths(12, 12);
+                }
+
+                //Create new map vector with parser function
+                auto newMap = r.GetNewPath();
+                pp.AddMapVector(newMap);
+
+                //Run A* to test if it works
+                //If it works we will use it
+                Astar a = Astar(pp.nodeMatrix, pp.problem);
+                auto res = a.Search(pp.problem, pp.problem.InitialState);
+                if (res.ResOutcome() != "failure") {
+                    finishableLevel = true;
+                    listLevels.push_back(newMap);
+                }
+            }
+            finishableLevel = false;
+        }
+
+        // -------------------------------------- //
+        // Run all simulation levels on each Algo //
+        // -------------------------------------- //
+
+        //TODO: Fix up DFS, setup write to csv file class with (initial row followed by data of: nodes explored vs time complexity
+
+        //Ready for looping again
+        SIMULATION_NO = 100;
+        SolutionResponse res;
+
+        for (; SIMULATION_NO > 0; SIMULATION_NO--) {
+
+            if (listLevels.empty()) {
+                break;
+            } else {
+                //Create map vector
+                pp.AddMapVector(listLevels[listLevels.size() - 1]);
+                listLevels.pop_back();
+            }
+
+            Astar a = Astar(pp.nodeMatrix, pp.problem);
+            res = a.Search(pp.problem, pp.problem.InitialState);
+            if (res.ResOutcome() != "failure") {
+                cerr << "passed - Node expanded: ";
+                cerr << a.GetExploredPath().size() - 1 << endl;
+            }
+            Greedy g = Greedy(pp.nodeMatrix, pp.problem);
+            res = a.Search(pp.problem, pp.problem.InitialState);
+            if (res.ResOutcome() != "failure") {
+                cerr << "passed - Node expanded: ";
+                cerr << a.GetExploredPath().size() - 1 << endl;
+            }
+            BFS b = BFS(pp.nodeMatrix, pp.problem);
+            res = a.Search(pp.problem, pp.problem.InitialState);
+            if (res.ResOutcome() != "failure") {
+                cerr << "passed - Node expanded: ";
+                cerr << a.GetExploredPath().size() - 1 << endl;
+            }
+            DFS d = DFS(pp.nodeMatrix, pp.problem);
+            res = a.Search(pp.problem, pp.problem.InitialState);
+            if (res.ResOutcome() != "failure") {
+                cerr << "passed - Node expanded: ";
+                cerr << a.GetExploredPath().size() - 1 << endl;
+            }
+        }
+    }
+    else{
+        //Not running tests
+    }
+
+
+    //Read text file
     std::ifstream in("/home/mac/IntroAI/pathFinding/parseFile.txt");
 
     //Parse file
     //Will be available as NodeMap following this
     pp.ParseFile(in);
-
-    for(int i = 0; i < pp.dataMatrix.size(); i++){
-        for(int j = 0; j < pp.dataMatrix[i].size(); j++){
-            std::cout << pp.dataMatrix[i][j] << ",";
-        }
-        std::cout << std::endl;
-    }
-
 
     int algoChoice;
     cout << "Select algo: DFS(1), BFS(2), A*(3), Greedy-Best-First(4)" << endl;
@@ -63,10 +153,30 @@ int main() {
                 break;
     }
 
-    //Pass in node map and problem (as defined by the parsing result)
-    //Astar search1(pp.nodeMatrix, pp.problem);
+    SolutionResponse res;
 
-    SolutionResponse res = search1->Search(pp.problem, pp.problem.InitialState);
+    // ---------------------------------
+    //To be moved up to testing area
+    // ---------------------------------
+    if(TESTING_MODE) {
+        //repeated simulations in testing mode
+        for(int i = 1; i <= SIMULATION_NO; i++) {
+            //Clock start to measure search run time
+            clock_t t;    t = clock();
+
+            //TODO: time-out response for DFS
+            res = search1->Search(pp.problem, pp.problem.InitialState);
+            t = clock() - t;
+            printf ("It took %d clicks (%f seconds).\n",t,((float)t)/CLOCKS_PER_SEC);
+
+            //Clear all paths etc.
+            search1->Reset();
+        }
+    }
+    else{
+        res = search1->Search(pp.problem, pp.problem.InitialState);
+    }
+
     if(res.ResOutcome() == "failure"){
         cout << "Search failed depth search could not find solution" << endl;
         return 1;
@@ -102,6 +212,12 @@ int main() {
 
     // ----------------------- GUI Code ---------------------------//
     // ------------------------------------------------------------//
+
+
+    if(!IS_GUI){
+        cout << endl << "**Gui not enabled**" << endl;
+        return 0;
+    }
 
 
     int width = pp.mapWidth;

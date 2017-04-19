@@ -263,3 +263,11 @@ bool SearchType::HasBeenExplored(Node* searchNode) {
 
 }
 
+void SearchType::Reset() {
+    frontier.clear();
+    exploredPath.clear();
+    trimmerPath.clear();
+    //full of vector's will this memory leak?
+    stringPathVec.clear();
+}
+

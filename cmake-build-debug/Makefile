@@ -196,6 +196,33 @@ Parser.cpp.s:
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/Parser.cpp.s
 .PHONY : Parser.cpp.s
 
+RandomPaths.o: RandomPaths.cpp.o
+
+.PHONY : RandomPaths.o
+
+# target to build an object file
+RandomPaths.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/RandomPaths.cpp.o
+.PHONY : RandomPaths.cpp.o
+
+RandomPaths.i: RandomPaths.cpp.i
+
+.PHONY : RandomPaths.i
+
+# target to preprocess a source file
+RandomPaths.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/RandomPaths.cpp.i
+.PHONY : RandomPaths.cpp.i
+
+RandomPaths.s: RandomPaths.cpp.s
+
+.PHONY : RandomPaths.s
+
+# target to generate assembly for a file
+RandomPaths.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/RandomPaths.cpp.s
+.PHONY : RandomPaths.cpp.s
+
 SearchTemplates/Action.o: SearchTemplates/Action.cpp.o
 
 .PHONY : SearchTemplates/Action.o
@@ -436,6 +463,33 @@ SearchTemplates/SolutionResponse.cpp.s:
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/SolutionResponse.cpp.s
 .PHONY : SearchTemplates/SolutionResponse.cpp.s
 
+SimpleTimer.o: SimpleTimer.cpp.o
+
+.PHONY : SimpleTimer.o
+
+# target to build an object file
+SimpleTimer.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SimpleTimer.cpp.o
+.PHONY : SimpleTimer.cpp.o
+
+SimpleTimer.i: SimpleTimer.cpp.i
+
+.PHONY : SimpleTimer.i
+
+# target to preprocess a source file
+SimpleTimer.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SimpleTimer.cpp.i
+.PHONY : SimpleTimer.cpp.i
+
+SimpleTimer.s: SimpleTimer.cpp.s
+
+.PHONY : SimpleTimer.s
+
+# target to generate assembly for a file
+SimpleTimer.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SimpleTimer.cpp.s
+.PHONY : SimpleTimer.cpp.s
+
 main2.o: main2.cpp.o
 
 .PHONY : main2.o
@@ -512,6 +566,9 @@ help:
 	@echo "... Parser.o"
 	@echo "... Parser.i"
 	@echo "... Parser.s"
+	@echo "... RandomPaths.o"
+	@echo "... RandomPaths.i"
+	@echo "... RandomPaths.s"
 	@echo "... SearchTemplates/Action.o"
 	@echo "... SearchTemplates/Action.i"
 	@echo "... SearchTemplates/Action.s"
@@ -536,6 +593,9 @@ help:
 	@echo "... SearchTemplates/SolutionResponse.o"
 	@echo "... SearchTemplates/SolutionResponse.i"
 	@echo "... SearchTemplates/SolutionResponse.s"
+	@echo "... SimpleTimer.o"
+	@echo "... SimpleTimer.i"
+	@echo "... SimpleTimer.s"
 	@echo "... main2.o"
 	@echo "... main2.i"
 	@echo "... main2.s"

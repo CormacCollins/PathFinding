@@ -10,11 +10,16 @@
 #include "SearchTemplates/SolutionResponse.h"
 #include "Parser.h"
 #include "SearchTemplates/Path.h"
+#include "SimpleTimer.h"
+#include <future>
 
 ///Depth First Search
 ///Inherits basic traits from 'SearchType'
 ///Includes Problem & StateList(Node*'s)
 class DFS : public SearchType {
+private:
+    //Timer for search time outs
+    SimpleTimer* timeoutTimer;
 public:
 
     // ------------------------------------

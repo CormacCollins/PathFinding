@@ -92,6 +92,8 @@ public:
 
     //Check if a path has already been taken
     bool HasBeenExplored(Node* searchNode);
+
+    void Reset();
 };
 
 

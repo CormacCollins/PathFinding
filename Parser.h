@@ -30,6 +30,9 @@ public:
     //Values to provide a search algorithm
     Problem problem;
     std::vector<std::vector<Node*>> nodeMatrix;
+
+    //For artificially created maps
+    void AddMapVector(std::vector<std::vector<int>> newMap);
 };
 
 #endif //PATHFINDING_PARSER_H

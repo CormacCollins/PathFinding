@@ -9,7 +9,7 @@ add_executable(pathFinding ${SOURCE_FILES})
 
 # Define sources and executable
 set(EXECUTABLE_NAME "MySFML")
-add_executable(${EXECUTABLE_NAME} main2.cpp ${SOURCE_FILES})
+add_executable(${EXECUTABLE_NAME} main2.cpp ${SOURCE_FILES} SimpleTimer.cpp SimpleTimer.h RandomPaths.cpp RandomPaths.h)
 
 
 # Detect and add SFML

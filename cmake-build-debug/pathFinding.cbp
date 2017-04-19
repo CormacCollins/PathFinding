@@ -146,6 +146,12 @@
 			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/RandomPaths.cpp">
+			<Option target="MySFML"/>
+		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/RandomPaths.h">
+			<Option target="MySFML"/>
+		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Action.cpp">
 			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
@@ -213,6 +219,12 @@
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.h">
 			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
+		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/SimpleTimer.cpp">
+			<Option target="MySFML"/>
+		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/SimpleTimer.h">
+			<Option target="MySFML"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/main2.cpp">
 			<Option target="MySFML"/>

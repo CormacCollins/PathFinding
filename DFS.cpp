@@ -2,10 +2,13 @@
 // Created by mac on 23/03/17.
 //
 
+#include <chrono>
+#include <future>
 #include "DFS.h"
 
 //recursively call DepthSearch
 SolutionResponse DFS::Search(Problem& problem, Node* nodeSearch) {
+    timeoutTimer = new SimpleTimer(5000);
     //Depth search requires paths passed around
     Path* openingPath = new Path(nodeSearch);
     auto a = DepthSeach(problem, openingPath);
@@ -13,7 +16,13 @@ SolutionResponse DFS::Search(Problem& problem, Node* nodeSearch) {
 }
 
 SolutionResponse* DFS::DepthSeach(Problem& problem, Path* newPath){
-    iterations++;
+
+    if(timeoutTimer->CheckTime()){
+        //timeoutTimer->Reset(5000);
+        SolutionResponse* s = new SolutionResponse("failure");
+        return s;
+    }
+
     //Return list from each child expansion
     std::vector<Path*> children;
     //Nodes we will retrieve from the children Pth return type
@@ -53,12 +62,6 @@ SolutionResponse* DFS::DepthSeach(Problem& problem, Path* newPath){
         } else {
 
         }
-
-        if(iterations > 1000){
-            SolutionResponse* s = new SolutionResponse("failure");
-            return s;
-        }
-
 
         //begin search again
         solution = DepthSeach(problem, currentPath);
