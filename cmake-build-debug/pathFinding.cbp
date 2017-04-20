@@ -182,6 +182,12 @@
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Bidirectional.h">
 			<Option target="MySFML"/>
 		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/GUIwrapper.cpp">
+			<Option target="MySFML"/>
+		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/GUIwrapper.h">
+			<Option target="MySFML"/>
+		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Greedy.cpp">
 			<Option target="MySFML"/>
 			<Option target="pathFinding"/>

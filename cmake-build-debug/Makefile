@@ -340,6 +340,33 @@ SearchTemplates/Bidirectional.cpp.s:
 	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.s
 .PHONY : SearchTemplates/Bidirectional.cpp.s
 
+SearchTemplates/GUIwrapper.o: SearchTemplates/GUIwrapper.cpp.o
+
+.PHONY : SearchTemplates/GUIwrapper.o
+
+# target to build an object file
+SearchTemplates/GUIwrapper.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/GUIwrapper.cpp.o
+.PHONY : SearchTemplates/GUIwrapper.cpp.o
+
+SearchTemplates/GUIwrapper.i: SearchTemplates/GUIwrapper.cpp.i
+
+.PHONY : SearchTemplates/GUIwrapper.i
+
+# target to preprocess a source file
+SearchTemplates/GUIwrapper.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/GUIwrapper.cpp.i
+.PHONY : SearchTemplates/GUIwrapper.cpp.i
+
+SearchTemplates/GUIwrapper.s: SearchTemplates/GUIwrapper.cpp.s
+
+.PHONY : SearchTemplates/GUIwrapper.s
+
+# target to generate assembly for a file
+SearchTemplates/GUIwrapper.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/GUIwrapper.cpp.s
+.PHONY : SearchTemplates/GUIwrapper.cpp.s
+
 SearchTemplates/Greedy.o: SearchTemplates/Greedy.cpp.o
 
 .PHONY : SearchTemplates/Greedy.o
@@ -635,6 +662,9 @@ help:
 	@echo "... SearchTemplates/Bidirectional.o"
 	@echo "... SearchTemplates/Bidirectional.i"
 	@echo "... SearchTemplates/Bidirectional.s"
+	@echo "... SearchTemplates/GUIwrapper.o"
+	@echo "... SearchTemplates/GUIwrapper.i"
+	@echo "... SearchTemplates/GUIwrapper.s"
 	@echo "... SearchTemplates/Greedy.o"
 	@echo "... SearchTemplates/Greedy.i"
 	@echo "... SearchTemplates/Greedy.s"

@@ -16,13 +16,13 @@ SolutionResponse DFS::Search(Problem& problem, Node* nodeSearch) {
 }
 
 SolutionResponse* DFS::DepthSeach(Problem& problem, Path* newPath){
-//
-//    iterations++;
-//
-//    if(iterations > ITERATION_MAX){
-//        SolutionResponse* s = new SolutionResponse("failure");
-//        return s;
-//    }
+
+    iterations++;
+
+    if(iterations > ITERATION_MAX){
+        SolutionResponse* s = new SolutionResponse("failure");
+        return s;
+    }
 
     //Return list from each child expansion
     std::vector<Path*> children;

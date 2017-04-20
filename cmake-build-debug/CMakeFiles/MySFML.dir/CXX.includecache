@@ -227,6 +227,8 @@ SearchTemplates/Bidirectional.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/Bidirectional.h
 SearchTemplates/MBAstar.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/MBAstar.h
+fstream
+-
 
 /home/mac/IntroAI/pathFinding/sfmlGUI.cpp
 sfmlGUI.h

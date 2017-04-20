@@ -71,6 +71,7 @@ void MBAstar::RemoveWorstPathFromExplored(Problem problem) {
 
 SolutionResponse MBAstar::Search(Problem& problem, Node* nodeSearch) {
 
+
     //To be returned solution
     SolutionResponse* solution;
     RenderCurrentMap(nodeSearch, problem);
@@ -105,6 +106,13 @@ SolutionResponse MBAstar::Search(Problem& problem, Node* nodeSearch) {
         }
 
         searchNode = bestPath->pathNode;
+
+        iterations++;
+
+        if(iterations > ITERATION_MAX){
+            SolutionResponse* s = new SolutionResponse("failure");
+            return *s;
+        }
 
     } while(!FrontierIsEmpty());
 

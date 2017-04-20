@@ -11,6 +11,8 @@
 
 class MBAstar : public Astar {
 private:
+    int iterations = 0;
+    int const ITERATION_MAX = 100;
     int const MAX_PATHS = 25;
     Node* nodeRemove = NULL;
 public:

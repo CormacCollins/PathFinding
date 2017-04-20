@@ -14,6 +14,7 @@
 #include "RandomPaths.h"
 #include "SearchTemplates/Bidirectional.h"
 #include "SearchTemplates/MBAstar.h"
+#include <fstream>
 
 using namespace std;
 
@@ -23,7 +24,7 @@ void ChangeColours(vector<sf::RectangleShape>& rectangleVec, int height, int wid
 
 //Testing flags
 bool IS_GUI = true;
-bool TESTING_MODE = false;
+bool TESTING_MODE = true;
 
 int main() {
     int SIMULATION_NO = 100;
@@ -74,6 +75,11 @@ int main() {
         // -------------------------------------- //
         // Run all simulation levels on each Algo //
         // -------------------------------------- //
+        std::ofstream dataFile;
+        dataFile.open("/home/mac/IntroAI/pathFinding/output.txt");
+
+        //For csv file format
+        dataFile << "Test, " << "Algo, " << "Pass, " << "NodesExp, " << "Shortest " << endl;
 
         //TODO: Fix up DFS, setup write to csv file class with (initial row followed by data of: nodes explored vs time complexity
 
@@ -94,33 +100,85 @@ int main() {
             Astar a = Astar(pp.nodeMatrix, pp.problem);
             res = a.Search(pp.problem, pp.problem.InitialState);
             if (res.ResOutcome() != "failure") {
-                cerr << "passed - Node expanded: ";
-                cerr << a.GetExploredPath().size() - 1 << endl;
+                dataFile << SIMULATION_NO << ", ";
+                dataFile << "Astar, " << "passed, " << a.GetExploredPath().size() << ", ";
+                dataFile << a.GetTrimmedPath().size() << endl;
             }
+            else{
+                dataFile << SIMULATION_NO << ", ";
+                dataFile << "Astar, " << "failed, " << a.GetExploredPath().size() << ", ";
+                dataFile << 0 << endl;
+            }
+
+
             Greedy g = Greedy(pp.nodeMatrix, pp.problem);
-            res = a.Search(pp.problem, pp.problem.InitialState);
+            res = g.Search(pp.problem, pp.problem.InitialState);
             if (res.ResOutcome() != "failure") {
-                cerr << "passed - Node expanded: ";
-                cerr << a.GetExploredPath().size() - 1 << endl;
+                dataFile << SIMULATION_NO << ", ";
+                dataFile << "Greedy, " << "passed, " << g.GetExploredPath().size() << ", ";
+                dataFile << g.GetTrimmedPath().size() << endl;
             }
+            else{
+                dataFile << SIMULATION_NO << ", ";
+                dataFile << "Greedy, " << "failed, " << g.GetExploredPath().size() << ", ";
+                dataFile << 0 << endl;
+            }
+
             BFS b = BFS(pp.nodeMatrix, pp.problem);
-            res = a.Search(pp.problem, pp.problem.InitialState);
+            res = b.Search(pp.problem, pp.problem.InitialState);
             if (res.ResOutcome() != "failure") {
-                cerr << "passed - Node expanded: ";
-                cerr << a.GetExploredPath().size() - 1 << endl;
+                dataFile << SIMULATION_NO << ", ";
+                dataFile << "BFS, " << "passed, " << b.GetExploredPath().size() << ", ";
+                dataFile << b.GetTrimmedPath().size() << endl;
             }
+            else{
+                dataFile << SIMULATION_NO << ", ";
+                dataFile << "BFS, " << "failed, " << b.GetExploredPath().size() << ", ";
+                dataFile << 0 << endl;
+            }
+
             DFS d = DFS(pp.nodeMatrix, pp.problem);
-            res = a.Search(pp.problem, pp.problem.InitialState);
+            res = d.Search(pp.problem, pp.problem.InitialState);
             if (res.ResOutcome() != "failure") {
-                cerr << "passed - Node expanded: ";
-                cerr << a.GetExploredPath().size() - 1 << endl;
+                dataFile << SIMULATION_NO << ", ";
+                dataFile << "DFS, " << "passed, " << d.GetExploredPath().size() << ", ";
+                dataFile << d.GetTrimmedPath().size() << endl;
+            }else{
+                dataFile << SIMULATION_NO << ", ";
+                dataFile << "DFS, " << "failed, " << d.GetExploredPath().size() << ", ";
+                dataFile << 0 << endl;
+            }
+
+            Bidirectional bi = Bidirectional(pp.nodeMatrix, pp.problem);
+            res = bi.Search(pp.problem, pp.problem.InitialState);
+            if (res.ResOutcome() != "failure") {
+                dataFile << SIMULATION_NO << ", ";
+                dataFile << "BI-DIR, " << "passed, " << bi.GetExploredPath().size() << ", ";
+                dataFile << 0 << endl;
+            }else{
+                dataFile << SIMULATION_NO << ", ";
+                dataFile << "BI-DIR, " << "failed, " << bi.GetExploredPath().size() << ", ";
+                dataFile << 0 << endl;
+            }
+
+            MBAstar mba = MBAstar(pp.nodeMatrix, pp.problem);
+            res = mba.Search(pp.problem, pp.problem.InitialState);
+            if (res.ResOutcome() != "failure") {
+                dataFile << SIMULATION_NO << ", ";
+                dataFile << "MBAstar, " << "passed, " << mba.GetExploredPath().size() << ", ";
+                dataFile << 0 << endl;
+            }else{
+                dataFile << SIMULATION_NO << ", ";
+                dataFile << "MBAstar, " << "failed, " << mba.GetExploredPath().size() << ", ";
+                dataFile << 0 << endl;
             }
         }
+        dataFile.close();
+
     }
     else{
         //Not running tests
     }
-
 
     //Read text file
     std::ifstream in("/home/mac/IntroAI/pathFinding/parseFile.txt");

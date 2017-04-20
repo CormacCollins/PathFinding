@@ -54,9 +54,6 @@ SolutionResponse Bidirectional::BidirectionalSearch(Problem& problem){
         //Gets best heuristic value from frontier
         Path* bestPathFromGoal = HeuristicFunctionFromGoal(problem);
 
-        cout << "best path start: " << currentLowestCostFunction << endl;
-        cout << "best path from finish: " << currentInvertedCostFunction << endl;
-
         //Check if any intersection between frontier nodes
         if (BidirectionalGoalTest()) {
 
@@ -71,6 +68,13 @@ SolutionResponse Bidirectional::BidirectionalSearch(Problem& problem){
 
         searchNodeStart = bestPath->pathNode;
         searchNodeEnd = bestPathFromGoal->pathNode;
+
+        iterations++;
+
+        if(iterations > ITERATION_MAX){
+            SolutionResponse* s = new SolutionResponse("failure");
+            return *s;
+        }
 
     } while(!FrontierIsEmpty() || !GoalFrontierIsEmpty());
 

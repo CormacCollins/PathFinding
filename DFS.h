@@ -19,7 +19,7 @@
 class DFS : public SearchType {
 private:
     int iterations = 0;
-    int const ITERATION_MAX = 10;
+    int const ITERATION_MAX = 100;
 public:
 
     // ------------------------------------

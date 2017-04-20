@@ -10,6 +10,8 @@
 
 class Bidirectional : public SearchType {
 private:
+    int iterations = 0;
+    int const ITERATION_MAX = 100;
     float currentLowestCostFunction;
     float currentInvertedCostFunction;
     std::vector<Path*> frontierFromGoal;

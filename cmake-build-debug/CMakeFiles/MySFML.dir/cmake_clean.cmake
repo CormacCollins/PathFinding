@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/MySFML.dir/RandomPaths.cpp.o"
   "CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o"
   "CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o"
+  "CMakeFiles/MySFML.dir/SearchTemplates/GUIwrapper.cpp.o"
   "MySFML.pdb"
   "MySFML"
 )
