@@ -17,9 +17,9 @@ void Parser::ParseFile(std::ifstream& file) {
 
     if(!file){
         std::cerr << "File could not be parsed please check it is formatted correctly";
+        file.close();
     }
 
-    std::cout << "Parsing File" << std::endl;
     //While file still good keep reading
     while(file.good()){
 
@@ -62,14 +62,9 @@ void Parser::ParseFile(std::ifstream& file) {
         }
     }
     file.close();
-
-    std::cout << "File Parse Completed successfully" << std::endl;
-
-    std::cout << "Creating Node Matrix For DepthSearch...." << std::endl;
     //Called here so the user knows they can access the node-map created
     //Don't need multiple calls to setup
     SetupProblem();
-    std::cout << "Node Matrix complete" << std::endl;
 
 }
 
@@ -97,7 +92,6 @@ void Parser::SetupProblem() {
         for(int rangeY = 0; rangeY < y; rangeY++){
             for(int rangeX = 0; rangeX < x ; rangeX++){
                 WALL_LIST.push_back(std::make_tuple(dataMatrix[i][0]+rangeX, dataMatrix[i][1]+rangeY));
-                std::cout << dataMatrix[i][0]+rangeX << ", " << dataMatrix[i][1]+rangeY << std::endl;
             }
         }
     }

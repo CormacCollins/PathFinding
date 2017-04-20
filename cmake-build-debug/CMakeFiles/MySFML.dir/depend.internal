@@ -57,6 +57,17 @@ CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o
  /home/mac/IntroAI/pathFinding/SearchTemplates/Problem.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.h
+CMakeFiles/MySFML.dir/SearchTemplates/GUIwrapper.cpp.o
+ /home/mac/IntroAI/pathFinding/Parser.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/GUIwrapper.cpp
+ /home/mac/IntroAI/pathFinding/SearchTemplates/GUIwrapper.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Node.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Path.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/Problem.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/SolutionResponse.h
+ /home/mac/IntroAI/pathFinding/sfmlGUI.h
 CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o
  /home/mac/IntroAI/pathFinding/Parser.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Action.h
@@ -115,6 +126,7 @@ CMakeFiles/MySFML.dir/main2.cpp.o
  /home/mac/IntroAI/pathFinding/SearchTemplates/Astar.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/BFS.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Bidirectional.h
+ /home/mac/IntroAI/pathFinding/SearchTemplates/GUIwrapper.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Greedy.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/MBAstar.h
  /home/mac/IntroAI/pathFinding/SearchTemplates/Node.h

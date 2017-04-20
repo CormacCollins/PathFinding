@@ -69,10 +69,6 @@ Path* Astar::HeuristicFunction(Problem problem) {
         //cost function to node f(n) = g(n) + h(n)
          tempLowestCost = (nodeStepCost + child->pathNode->goalCost);
 
-        if(child->pathNode->goalCost == 0){
-            cout << "fe";
-        }
-
         //if new one is lower than the previous lowest it is now the lower
         if(tempLowestCost < currentLowestCostFunction) {
             currentLowestCostFunction = tempLowestCost;

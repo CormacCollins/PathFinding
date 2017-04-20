@@ -114,7 +114,11 @@ Path* Bidirectional::HeuristicFunction() {
 //Find biggest cost (trying to get away from goal
 Path* Bidirectional::HeuristicFunctionFromGoal(Problem problem) {
 
-    Path* highestPath = frontierFromGoal[0];
+    Path* highestPath;
+    if(!frontierFromGoal.empty()){
+        highestPath = frontier[0];
+    }
+
     //Get Starting Path
     float tempHighestCost;
     //Heuristic check
