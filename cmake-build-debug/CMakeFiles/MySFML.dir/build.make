@@ -393,6 +393,54 @@ CMakeFiles/MySFML.dir/RandomPaths.cpp.o.provides: CMakeFiles/MySFML.dir/RandomPa
 CMakeFiles/MySFML.dir/RandomPaths.cpp.o.provides.build: CMakeFiles/MySFML.dir/RandomPaths.cpp.o
 
 
+CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o: CMakeFiles/MySFML.dir/flags.make
+CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o: ../SearchTemplates/Bidirectional.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o -c /home/mac/IntroAI/pathFinding/SearchTemplates/Bidirectional.cpp
+
+CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mac/IntroAI/pathFinding/SearchTemplates/Bidirectional.cpp > CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.i
+
+CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mac/IntroAI/pathFinding/SearchTemplates/Bidirectional.cpp -o CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.s
+
+CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o.requires:
+
+.PHONY : CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o.requires
+
+CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o.provides: CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o.requires
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o.provides.build
+.PHONY : CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o.provides
+
+CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o.provides.build: CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o
+
+
+CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o: CMakeFiles/MySFML.dir/flags.make
+CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o: ../SearchTemplates/MBAstar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o -c /home/mac/IntroAI/pathFinding/SearchTemplates/MBAstar.cpp
+
+CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mac/IntroAI/pathFinding/SearchTemplates/MBAstar.cpp > CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.i
+
+CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mac/IntroAI/pathFinding/SearchTemplates/MBAstar.cpp -o CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.s
+
+CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o.requires:
+
+.PHONY : CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o.requires
+
+CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o.provides: CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o.requires
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o.provides.build
+.PHONY : CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o.provides
+
+CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o.provides.build: CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o
+
+
 # Object files for target MySFML
 MySFML_OBJECTS = \
 "CMakeFiles/MySFML.dir/main2.cpp.o" \
@@ -408,7 +456,9 @@ MySFML_OBJECTS = \
 "CMakeFiles/MySFML.dir/sfmlGUI.cpp.o" \
 "CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o" \
 "CMakeFiles/MySFML.dir/SimpleTimer.cpp.o" \
-"CMakeFiles/MySFML.dir/RandomPaths.cpp.o"
+"CMakeFiles/MySFML.dir/RandomPaths.cpp.o" \
+"CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o" \
+"CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o"
 
 # External object files for target MySFML
 MySFML_EXTERNAL_OBJECTS =
@@ -427,6 +477,8 @@ MySFML: CMakeFiles/MySFML.dir/sfmlGUI.cpp.o
 MySFML: CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o
 MySFML: CMakeFiles/MySFML.dir/SimpleTimer.cpp.o
 MySFML: CMakeFiles/MySFML.dir/RandomPaths.cpp.o
+MySFML: CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o
+MySFML: CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o
 MySFML: CMakeFiles/MySFML.dir/build.make
 MySFML: /usr/lib/x86_64-linux-gnu/libsfml-system.so
 MySFML: /usr/lib/x86_64-linux-gnu/libsfml-window.so
@@ -434,7 +486,7 @@ MySFML: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so
 MySFML: /usr/lib/x86_64-linux-gnu/libsfml-network.so
 MySFML: /usr/lib/x86_64-linux-gnu/libsfml-audio.so
 MySFML: CMakeFiles/MySFML.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable MySFML"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mac/IntroAI/pathFinding/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable MySFML"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MySFML.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -456,6 +508,8 @@ CMakeFiles/MySFML.dir/requires: CMakeFiles/MySFML.dir/sfmlGUI.cpp.o.requires
 CMakeFiles/MySFML.dir/requires: CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.o.requires
 CMakeFiles/MySFML.dir/requires: CMakeFiles/MySFML.dir/SimpleTimer.cpp.o.requires
 CMakeFiles/MySFML.dir/requires: CMakeFiles/MySFML.dir/RandomPaths.cpp.o.requires
+CMakeFiles/MySFML.dir/requires: CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o.requires
+CMakeFiles/MySFML.dir/requires: CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o.requires
 
 .PHONY : CMakeFiles/MySFML.dir/requires
 

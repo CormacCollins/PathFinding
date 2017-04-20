@@ -8,20 +8,21 @@
 
 //recursively call DepthSearch
 SolutionResponse DFS::Search(Problem& problem, Node* nodeSearch) {
-    timeoutTimer = new SimpleTimer(5000);
     //Depth search requires paths passed around
+    exploredPath = std::vector<Path*>();
     Path* openingPath = new Path(nodeSearch);
     auto a = DepthSeach(problem, openingPath);
     return *a;
 }
 
 SolutionResponse* DFS::DepthSeach(Problem& problem, Path* newPath){
-
-    if(timeoutTimer->CheckTime()){
-        //timeoutTimer->Reset(5000);
-        SolutionResponse* s = new SolutionResponse("failure");
-        return s;
-    }
+//
+//    iterations++;
+//
+//    if(iterations > ITERATION_MAX){
+//        SolutionResponse* s = new SolutionResponse("failure");
+//        return s;
+//    }
 
     //Return list from each child expansion
     std::vector<Path*> children;
@@ -40,8 +41,8 @@ SolutionResponse* DFS::DepthSeach(Problem& problem, Path* newPath){
 
     //Goal check
     if (GoalTest(problem, currentPath->pathNode)){
-        trimmerPath = TrimPath(problem);
-        SolutionResponse* s = new SolutionResponse(trimmerPath, "success");
+        trimmedPath = TrimPath(problem, exploredPath);
+        SolutionResponse* s = new SolutionResponse(trimmedPath, "success");
         return s;
     }
 
@@ -59,19 +60,16 @@ SolutionResponse* DFS::DepthSeach(Problem& problem, Path* newPath){
         if(!FrontierIsEmpty()) {
             currentPath = PopFrontier();
             PushPath(currentPath);
-        } else {
 
+            //begin search again
+            solution = DepthSeach(problem, currentPath);
         }
 
-        //begin search again
-        solution = DepthSeach(problem, currentPath);
+
 
         //New???
         //Remove from path if it wa sa failure
-        if(solution->responseOutcome == "failure"){
-            auto f = PopFrontier();
-        }else
-        {
+        if(solution->responseOutcome != "failure"){
             //success
             return solution;
         }
@@ -84,7 +82,7 @@ SolutionResponse* DFS::DepthSeach(Problem& problem, Path* newPath){
 void DFS::PushFrontier(std::vector<Path*> newFrontier) {
     //Add node/action pairs to frontier
     for(auto n : newFrontier){
-        frontier.insert(frontier.begin(), n);
+        frontier.push_back(n);
     }
 }
 

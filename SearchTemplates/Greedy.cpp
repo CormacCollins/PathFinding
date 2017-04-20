@@ -14,7 +14,7 @@ SolutionResponse Greedy::Search(Problem& problem, Node* nodeSearch) {
     Path* bestPath = &newPath;
 
     do{
-        vector<Path*> children = ExpandNode(bestPath->pathNode, problem);
+        vector<Path*> children = GreedyExpandNode(bestPath->pathNode, problem);
 
         //Add nodes from paths to frontier
         for (auto& p : children) {
@@ -30,8 +30,8 @@ SolutionResponse Greedy::Search(Problem& problem, Node* nodeSearch) {
 
         //Check for goal
         if (GoalTest(problem, bestPath->pathNode)) {
-            trimmerPath = TrimPath(problem);
-            solution = new SolutionResponse(trimmerPath, "success");
+            trimmedPath = TrimPath(problem, exploredPath);
+            solution = new SolutionResponse(trimmedPath, "success");
             return *solution;
         }
 
@@ -72,7 +72,7 @@ Path* Greedy::HeuristicFunction(vector<Path*>& paths) {
     return lowestPath;
 }
 
-std::vector<Path*> Greedy::ExpandNode(Node* currentNode, Problem& problem) {
+std::vector<Path*> Greedy::GreedyExpandNode(Node* currentNode, Problem& problem ) {
     int actionCount = 4;
     //Need to track path (nodes and actions)
     std::vector<Path*> successors;

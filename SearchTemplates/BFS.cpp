@@ -25,8 +25,8 @@ SolutionResponse BFS::BreadthFirstSearch(Problem& problem, Node* searchNode){
 
     //Goal check
     if (GoalTest(problem, searchNode)){
-        trimmerPath = TrimPath(problem);
-        solution = new SolutionResponse(trimmerPath, "success");
+        trimmedPath = TrimPath(problem, exploredPath);
+        solution = new SolutionResponse(trimmedPath, "success");
         return *solution;
     }
 
@@ -42,8 +42,8 @@ SolutionResponse BFS::BreadthFirstSearch(Problem& problem, Node* searchNode){
         RenderCurrentMap(a->pathNode, problem);
         //Test before on frontier
         if (GoalTest(problem, a->pathNode)){
-            trimmerPath = TrimPath(problem);
-            solution = new SolutionResponse(trimmerPath, "success");
+            trimmedPath = TrimPath(problem, exploredPath);
+            solution = new SolutionResponse(trimmedPath, "success");
             return *solution;
         }
 
@@ -65,8 +65,8 @@ SolutionResponse BFS::BreadthFirstSearch(Problem& problem, Node* searchNode){
             //Goal check
             if(GoalTest(problem, p->pathNode)){
                 PushPath(p);
-                trimmerPath = TrimPath(problem);
-                solution = new SolutionResponse(trimmerPath, "success");
+                trimmedPath = TrimPath(problem, exploredPath);
+                solution = new SolutionResponse(trimmedPath, "success");
                 return *solution;
             }
 

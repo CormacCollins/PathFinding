@@ -18,8 +18,8 @@
 ///Includes Problem & StateList(Node*'s)
 class DFS : public SearchType {
 private:
-    //Timer for search time outs
-    SimpleTimer* timeoutTimer;
+    int iterations = 0;
+    int const ITERATION_MAX = 10;
 public:
 
     // ------------------------------------

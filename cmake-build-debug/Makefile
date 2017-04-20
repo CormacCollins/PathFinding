@@ -313,6 +313,33 @@ SearchTemplates/BFS.cpp.s:
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/BFS.cpp.s
 .PHONY : SearchTemplates/BFS.cpp.s
 
+SearchTemplates/Bidirectional.o: SearchTemplates/Bidirectional.cpp.o
+
+.PHONY : SearchTemplates/Bidirectional.o
+
+# target to build an object file
+SearchTemplates/Bidirectional.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.o
+.PHONY : SearchTemplates/Bidirectional.cpp.o
+
+SearchTemplates/Bidirectional.i: SearchTemplates/Bidirectional.cpp.i
+
+.PHONY : SearchTemplates/Bidirectional.i
+
+# target to preprocess a source file
+SearchTemplates/Bidirectional.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.i
+.PHONY : SearchTemplates/Bidirectional.cpp.i
+
+SearchTemplates/Bidirectional.s: SearchTemplates/Bidirectional.cpp.s
+
+.PHONY : SearchTemplates/Bidirectional.s
+
+# target to generate assembly for a file
+SearchTemplates/Bidirectional.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Bidirectional.cpp.s
+.PHONY : SearchTemplates/Bidirectional.cpp.s
+
 SearchTemplates/Greedy.o: SearchTemplates/Greedy.cpp.o
 
 .PHONY : SearchTemplates/Greedy.o
@@ -342,6 +369,33 @@ SearchTemplates/Greedy.cpp.s:
 	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/Greedy.cpp.s
 	$(MAKE) -f CMakeFiles/pathFinding.dir/build.make CMakeFiles/pathFinding.dir/SearchTemplates/Greedy.cpp.s
 .PHONY : SearchTemplates/Greedy.cpp.s
+
+SearchTemplates/MBAstar.o: SearchTemplates/MBAstar.cpp.o
+
+.PHONY : SearchTemplates/MBAstar.o
+
+# target to build an object file
+SearchTemplates/MBAstar.cpp.o:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.o
+.PHONY : SearchTemplates/MBAstar.cpp.o
+
+SearchTemplates/MBAstar.i: SearchTemplates/MBAstar.cpp.i
+
+.PHONY : SearchTemplates/MBAstar.i
+
+# target to preprocess a source file
+SearchTemplates/MBAstar.cpp.i:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.i
+.PHONY : SearchTemplates/MBAstar.cpp.i
+
+SearchTemplates/MBAstar.s: SearchTemplates/MBAstar.cpp.s
+
+.PHONY : SearchTemplates/MBAstar.s
+
+# target to generate assembly for a file
+SearchTemplates/MBAstar.cpp.s:
+	$(MAKE) -f CMakeFiles/MySFML.dir/build.make CMakeFiles/MySFML.dir/SearchTemplates/MBAstar.cpp.s
+.PHONY : SearchTemplates/MBAstar.cpp.s
 
 SearchTemplates/Path.o: SearchTemplates/Path.cpp.o
 
@@ -578,9 +632,15 @@ help:
 	@echo "... SearchTemplates/BFS.o"
 	@echo "... SearchTemplates/BFS.i"
 	@echo "... SearchTemplates/BFS.s"
+	@echo "... SearchTemplates/Bidirectional.o"
+	@echo "... SearchTemplates/Bidirectional.i"
+	@echo "... SearchTemplates/Bidirectional.s"
 	@echo "... SearchTemplates/Greedy.o"
 	@echo "... SearchTemplates/Greedy.i"
 	@echo "... SearchTemplates/Greedy.s"
+	@echo "... SearchTemplates/MBAstar.o"
+	@echo "... SearchTemplates/MBAstar.i"
+	@echo "... SearchTemplates/MBAstar.s"
 	@echo "... SearchTemplates/Path.o"
 	@echo "... SearchTemplates/Path.i"
 	@echo "... SearchTemplates/Path.s"

@@ -96,6 +96,14 @@ BFS.h
 SearchType.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h
 
+/home/mac/IntroAI/pathFinding/SearchTemplates/Bidirectional.cpp
+Bidirectional.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/Bidirectional.h
+
+/home/mac/IntroAI/pathFinding/SearchTemplates/Bidirectional.h
+SearchType.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h
+
 /home/mac/IntroAI/pathFinding/SearchTemplates/Greedy.cpp
 Greedy.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/Greedy.h
@@ -103,6 +111,14 @@ Greedy.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/Greedy.h
 SearchType.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/SearchType.h
+Astar.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/Astar.h
+
+/home/mac/IntroAI/pathFinding/SearchTemplates/MBAstar.cpp
+MBAstar.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/MBAstar.h
+
+/home/mac/IntroAI/pathFinding/SearchTemplates/MBAstar.h
 Astar.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/Astar.h
 
@@ -207,6 +223,10 @@ SearchTemplates/Greedy.h
 /home/mac/IntroAI/pathFinding/SearchTemplates/Greedy.h
 RandomPaths.h
 /home/mac/IntroAI/pathFinding/RandomPaths.h
+SearchTemplates/Bidirectional.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/Bidirectional.h
+SearchTemplates/MBAstar.h
+/home/mac/IntroAI/pathFinding/SearchTemplates/MBAstar.h
 
 /home/mac/IntroAI/pathFinding/sfmlGUI.cpp
 sfmlGUI.h

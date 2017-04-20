@@ -33,15 +33,15 @@ SolutionResponse Astar::Search(Problem& problem, Node* nodeSearch) {
         }
 
         //Gets best heuristic value from frontier
-        Path* bestPath = HeuristicFunction();
+        Path* bestPath = HeuristicFunction(problem);
 
         if (GoalTest(problem, bestPath->pathNode)) {
             //Remove this to see the full Path search of A*
 
-            trimmerPath = TrimPath(problem);
-            solution = new SolutionResponse(trimmerPath, "success");
+            trimmedPath = TrimPath(problem, exploredPath);
+            solution = new SolutionResponse(trimmedPath, "success");
 
-            //trimmerPath = TrimPath();
+            //trimmedPath = TrimPath();
             return *solution;
         }
 
@@ -56,7 +56,7 @@ SolutionResponse Astar::Search(Problem& problem, Node* nodeSearch) {
 
 }
 
-Path* Astar::HeuristicFunction() {
+Path* Astar::HeuristicFunction(Problem problem) {
 
     Path* lowestPath = frontier[0];
     //Get Starting Path

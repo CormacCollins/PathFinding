@@ -11,7 +11,7 @@
 //f (n) = g(n) + h(n)
 
 class Astar : public SearchType {
-private:
+protected:
     float currentLowestCostFunction;
     Path* searchNode;
 
@@ -32,7 +32,7 @@ public:
     virtual SolutionResponse Search(Problem& problem, Node *nodeSearch) ;
 
     //Heuristic function
-    virtual Path* HeuristicFunction();
+    virtual Path* HeuristicFunction(Problem problem);
 
     void PopFrontierNodeSpecific(Path* node);
 

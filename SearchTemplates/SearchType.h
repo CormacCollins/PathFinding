@@ -30,7 +30,7 @@ protected:
     std::vector<Path*> frontier;
     //Route taken is stored as we go
     std::vector<Path*> exploredPath;
-    std::vector<Path*> trimmerPath;
+    std::vector<Path*> trimmedPath;
     std::vector<std::vector<std::string>> stringPathVec = std::vector<std::vector<std::string>>();
 
 public:
@@ -55,10 +55,10 @@ public:
     virtual std::vector<Path*> ExpandNode(Node* currentNode, Problem& problem);
 
     //renderer
-    void RenderCurrentMap(Node* currentPosition,  Problem& problem);
+    virtual void RenderCurrentMap(Node* currentPosition,  Problem& problem);
 
     //To prevent loops when searching a given path
-    bool IsInCurrentPath(Node* node);
+    bool IsInCurrentPath(Node *node);
 
     //Get Nodes from current path
     std::vector<Node*> getNodes();
@@ -73,7 +73,7 @@ public:
     void PushPath(Path* path);
 
     //Removes redundant nodes for list containing correct path / actions to goals
-    std::vector<Path*> TrimPath(Problem& problem);
+    virtual std::vector<Path*> TrimPath(Problem& problem, std::vector<Path*> chosenPath); //for some algo's with special trim needs
 
     //Takes problem and can invoke its 'Goal Test'
     //Using its state root node and goals state
@@ -94,6 +94,7 @@ public:
     bool HasBeenExplored(Node* searchNode);
 
     void Reset();
+
 };
 
 

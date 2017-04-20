@@ -12,6 +12,8 @@
 #include "SearchTemplates/BFS.h"
 #include "SearchTemplates/Greedy.h"
 #include "RandomPaths.h"
+#include "SearchTemplates/Bidirectional.h"
+#include "SearchTemplates/MBAstar.h"
 
 using namespace std;
 
@@ -128,7 +130,7 @@ int main() {
     pp.ParseFile(in);
 
     int algoChoice;
-    cout << "Select algo: DFS(1), BFS(2), A*(3), Greedy-Best-First(4)" << endl;
+    cout << "Select algo: DFS(1), BFS(2), A*(3), Greedy-Best-First(4), Bidirectional(5), MBAstar(6)" << endl;
     SearchType* search1;
     cin >>  algoChoice;
         switch (algoChoice) {
@@ -147,6 +149,14 @@ int main() {
             case 4:
                 search1 = static_cast<Greedy*>(search1);
                 search1 = new Greedy(pp.nodeMatrix, pp.problem);
+                break;
+            case 5:
+                search1 = static_cast<Bidirectional*>(search1);
+                search1 = new Bidirectional(pp.nodeMatrix, pp.problem);
+                break;
+            case 6:
+                search1 = static_cast<MBAstar*>(search1);
+                search1 = new MBAstar(pp.nodeMatrix, pp.problem);
                 break;
             default:
                 cerr << "Error in choice" << endl;
@@ -182,31 +192,44 @@ int main() {
         return 1;
     }
     else{
-        string route = "";
-        for(Path* p : res.GetActions()){
-            switch(p->pathAction) {
-                case ActionType::LEFT:
-                    route += "LEFT";
-                    break;
-                case ActionType::RIGHT:
-                    route += "RIGHT";
-                    break;
-                case ActionType::UP:
-                    route += "UP";
-                    break;
-                case ActionType::DOWN:
-                    route += "DOWN";
-                    break;
-                default:
-                    break;
-            }
-            route += ", ";
 
+        //No path available for Bidirectional
+        if(algoChoice == 5) {
+            search1 = static_cast<Bidirectional *>(search1);
+            cout << "Search successful!" << endl;
+            cout << "Nodes explored: " << search1->GetExploredPath().size() + search1->GetExploredPath().size() << endl;
         }
-        cout << "Search successful!" << endl << route << endl;
-        cout << "Best path: " << search1->GetTrimmedPath().size()-1 << endl;
-        cout << "Nodes explored: " << search1->GetExploredPath().size()-1 << endl;
+        else if(algoChoice == 6){
+            search1 = static_cast<MBAstar*>(search1);
+            cout << "Search successful!" << endl;
+            cout << "Nodes explored: " << search1->GetExploredPath().size() << endl;
+        }
+        else {
+            string route = "";
+            for (Path *p : res.GetActions()) {
+                switch (p->pathAction) {
+                    case ActionType::LEFT:
+                        route += "LEFT";
+                        break;
+                    case ActionType::RIGHT:
+                        route += "RIGHT";
+                        break;
+                    case ActionType::UP:
+                        route += "UP";
+                        break;
+                    case ActionType::DOWN:
+                        route += "DOWN";
+                        break;
+                    default:
+                        break;
+                }
+                route += ", ";
 
+                cout << "Search successful!" << endl << route << endl;
+                cout << "Best path: " << search1->GetTrimmedPath().size() << endl;
+                cout << "Nodes explored: " << search1->GetExploredPath().size() << endl;
+            }
+        }
 
     }
 
@@ -244,9 +267,9 @@ int main() {
     }
 
 
-    SearchType& s = static_cast<SearchType&>(*search1);
+    //SearchType& s = static_cast<SearchType&>(*search1);
 
-    ChangeColours(rectangleVector, height, width, 0, s);
+    ChangeColours(rectangleVector, height, width, 0, *search1);
 
     //Set window
     sf::RenderWindow window(sf::VideoMode(width*tileSize, height*tileSize), "SFML works!");
@@ -259,7 +282,7 @@ int main() {
     long stateMax = search1->GetStringPath().size()-1;
     bool renderTrimmedPath = false;
     bool keepState = false;
-    long exploredPathRenderCount = s.GetStringPath().size();
+    long exploredPathRenderCount = search1->GetStringPath().size();
 
     while (window.isOpen())
     {
@@ -282,19 +305,37 @@ int main() {
             }
 
             if(stateRender < exploredPathRenderCount){
-                ChangeColours(rectangleVector, height, width, stateRender, s);
+                ChangeColours(rectangleVector, height, width, stateRender, *search1);
             } //if greedy type we don't trim the path, it only ever follows one path
             else {
                 //Above code will now not execute
                 exploredPathRenderCount = 0;
 
-                auto trimmedPath = s.TrimPath(pp.problem);
-                //re-fill path strings for last rendering
                 if(!renderTrimmedPath) {
+
+                    std::vector<Path*> trimmedPath;
+
+                    //Chose bidrectional
+                    if(algoChoice == 5){
+//                        //Static cast to get spcific function form child class
+//                        Bidirectional* biSearch = static_cast<Bidirectional*>(search1);
+//                        trimmedPath = biSearch->TrimPath(pp.problem, search1->GetExploredPath());
+//                        auto trimmedPathFromGoal = biSearch->TrimPath(pp.problem, biSearch->GetExploredPathFromGoal());
+//                        trimmedPath = biSearch->CombineTrimmedPaths(trimmedPath, trimmedPathFromGoal);
+                          stateRender = search1->GetTrimmedPath().size()-1;
+                        keepState = true;
+                        break;
+                    }
+                    else{
+                        trimmedPath = search1->TrimPath(pp.problem, search1->GetExploredPath());
+                    }
+
+                    //re-fill path strings for last rendering
+
                     //Set up new render
                     stateRender = 0;
 
-                    s.GetStringPath().clear();
+                    search1->GetStringPath().clear();
                     //Overrides string path with trimmed version for last rneder
                     for (auto& p : trimmedPath) {
 
@@ -303,12 +344,11 @@ int main() {
                     renderTrimmedPath = true;
                 }
 
-                ChangeColoursFinalPath(rectangleVector, height, width, stateRender, s);
-
-                if(stateRender == trimmedPath.size()-1){
+                ChangeColoursFinalPath(rectangleVector, height, width, stateRender, *search1);
+                if(stateRender == search1->GetTrimmedPath().size()-1){
                     keepState = true;
                 }
-            }//Do nothing
+            }
 
         }
 

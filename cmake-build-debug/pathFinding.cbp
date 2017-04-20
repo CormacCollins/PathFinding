@@ -176,6 +176,12 @@
 			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
 		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Bidirectional.cpp">
+			<Option target="MySFML"/>
+		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Bidirectional.h">
+			<Option target="MySFML"/>
+		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Greedy.cpp">
 			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
@@ -183,6 +189,12 @@
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Greedy.h">
 			<Option target="MySFML"/>
 			<Option target="pathFinding"/>
+		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/MBAstar.cpp">
+			<Option target="MySFML"/>
+		</Unit>
+		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/MBAstar.h">
+			<Option target="MySFML"/>
 		</Unit>
 		<Unit filename="/home/mac/IntroAI/pathFinding/SearchTemplates/Node.h">
 			<Option target="MySFML"/>

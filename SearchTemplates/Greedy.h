@@ -24,7 +24,7 @@ private:
     Path* HeuristicFunction(std::vector<Path*>& path);
     std::vector<Node*> deadEnds;
     //Expand current node return path list
-    std::vector<Path*> ExpandNode(Node* currentNode, Problem& problem) override;
+    std::vector<Path*> GreedyExpandNode(Node* currentNode, Problem& problem);
     Path* PopFrontier();
 
 };

@@ -123,11 +123,7 @@ void SearchType::RenderCurrentMap(Node* currentPosition, Problem& problem) {
         }
     }
 
-
-
     //combine string groups to have all paths search
-
-
     if (stringPathVec.size() > 0) {
         for (int i = 0; i < tempVec.size()-1; i++) {
             if (stringPathVec[stringPathVec.size() - 1][i] == "H") {
@@ -183,14 +179,10 @@ void SearchType::PushPath(Path* path) {
     exploredPath.push_back(path);
 }
 
-std::vector<Path*> SearchType::TrimPath(Problem& problem) {
+std::vector<Path*> SearchType::TrimPath(Problem& problem, std::vector<Path*> chosenPath) {
     std::vector<Path*> trimmedPathLocal;
 
-    std::vector<Path*> pathCopy = exploredPath;
-
-    if(&exploredPath == &pathCopy)
-        std::cout << "de";
-
+    std::vector<Path*> pathCopy = chosenPath;
 
     //Loop through current path backwards - we want to work backwards from the goal node that we have found
     //E.g. if
@@ -199,26 +191,24 @@ std::vector<Path*> SearchType::TrimPath(Problem& problem) {
         //Get top of path stack (Goal) and follow parents back to start
         Path* p = pathCopy[pathCopy.size()-1];
 
-        //Start square has null parent :-
-        //We don't add to path expanded
-//        if(p.pathNode->Parent == NULL){
-//            break;
-//        }
-
         trimmedPathLocal.push_back(p);
         pathCopy.erase(pathCopy.end()-1);
 
+        //we are finished as we have returned tot he original node
+        if(p->pathNode->Parent == NULL){
+            break;
+        }
 
         //Looping backwards checking nodes against node we have followed with action
         //Remove nodes that don't match the correct route
-         if(!pathCopy.empty()) {
-             while (pathCopy[pathCopy.size() - 1]->pathNode != p->pathNode->Parent) {
-                 //remove from current path (trim)
-                 pathCopy.erase(pathCopy.end() - 1);
-                 if (pathCopy.empty())
-                     break;
-             }
-         }
+        if(!pathCopy.empty()) {
+            while (pathCopy[pathCopy.size() - 1]->pathNode != p->pathNode->Parent) {
+                //remove from current path (trim)
+                pathCopy.erase(pathCopy.end() - 1);
+                if (pathCopy.empty())
+                    break;
+            }
+        }
     }
 
     //reverse paths from start to finish
@@ -246,7 +236,7 @@ int SearchType::PathsExplored() {
 }
 
 std::vector<Path*> SearchType::GetTrimmedPath() {
-    return trimmerPath;
+    return trimmedPath;
 }
 
 std::vector<Path*> SearchType::GetExploredPath() {
@@ -266,7 +256,7 @@ bool SearchType::HasBeenExplored(Node* searchNode) {
 void SearchType::Reset() {
     frontier.clear();
     exploredPath.clear();
-    trimmerPath.clear();
+    trimmedPath.clear();
     //full of vector's will this memory leak?
     stringPathVec.clear();
 }
