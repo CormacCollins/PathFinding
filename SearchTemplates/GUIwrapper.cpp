@@ -38,7 +38,7 @@ GUIwrapper::GUIwrapper(Parser pp, SearchType* search1, int algoChoice ) {
     ChangeColours(rectangleVector, height, width, 0, *search1);
 
     //Set window
-    sf::RenderWindow window(sf::VideoMode(width*tileSize, height*tileSize), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(width*tileSize, height*tileSize), "Search Space");
 
     std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
     std::chrono::time_point<std::chrono::system_clock> foo = now + std::chrono::milliseconds(1000);

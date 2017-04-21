@@ -99,9 +99,6 @@ void SearchType::RenderCurrentMap(Node* currentPosition, Problem& problem) {
     for (int j = 0; j < stateList.size(); j++) {
         for (int i = 0; i < stateList[j].size(); i++) {
 
-//            if (i > stateList[j].size()) {
-//                ss << std::endl;
-//            }
             if (stateList[j][i] == problem.InitialState) {
                 ss << "S" << " | ";
                 vis = "S";

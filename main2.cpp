@@ -24,7 +24,7 @@ void ChangeColoursFinalPath(vector<sf::RectangleShape>& rectangleVec, int height
 void ChangeColours(vector<sf::RectangleShape>& rectangleVec, int height, int width, int stateNum, SearchType s);
 
 //Testing flags
-bool IS_GUI = true;
+bool IS_GUI = false;
 bool TESTING_MODE = false;
 
 int main(int argc, char *argv[]) {
@@ -32,10 +32,21 @@ int main(int argc, char *argv[]) {
 
     string searchType = "";
     string fileRead = "";
-    if ( argc < 2 )
+
+    if ( argc > 2)
+    {
+        fileRead = argv[1];
+        searchType = argv[2];
+        string temp = argv[3];
+        if(temp == "GUI"){
+            IS_GUI = true;
+        }
+    }
+    else if ( argc < 2 )
     {
         cerr << "Missing argument!" << endl;
         cerr << "Please provide arg1 textfile and arg2 search method" << endl;
+        cerr << "optional arg3=\"GUI\" for GUI representaiotn" << endl;
         return 1;
     }
     else{
@@ -61,15 +72,15 @@ int main(int argc, char *argv[]) {
             while (!finishableLevel) {
                 //Different height width limits in random level creating
                 if (SIMULATION_NO >= 80) {
-                    r.GetRandomSimulationPaths(10, 10);
+                    r.GetRandomSimulationPaths(8, 8);
                 } else if (SIMULATION_NO >= 60) {
-                    r.GetRandomSimulationPaths(15, 10);
-                } else if (SIMULATION_NO >= 40) {
-                    r.GetRandomSimulationPaths(20, 20);
-                } else if (SIMULATION_NO >= 20) {
-                    r.GetRandomSimulationPaths(13, 13);
-                } else {
                     r.GetRandomSimulationPaths(12, 12);
+                } else if (SIMULATION_NO >= 40) {
+                    r.GetRandomSimulationPaths(15, 15);
+                } else if (SIMULATION_NO >= 20) {
+                    r.GetRandomSimulationPaths(17, 17);
+                } else {
+                    r.GetRandomSimulationPaths(20, 20);
                 }
 
                 //Create new map vector with parser function
@@ -201,7 +212,6 @@ int main(int argc, char *argv[]) {
 
     //Read text file
     std::ifstream in(fileRead);
-
     //Parse file
     //Will be available as NodeMap following this
     pp.ParseFile(in);

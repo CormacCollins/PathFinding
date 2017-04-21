@@ -19,25 +19,39 @@
 #include <sstream>
 #include "SolutionResponse.h"
 
-//Parent class for All search algorithms
+// -------------------------------------- //
+// Parent class for All search algorithms
+// -------------------------------------- //
 
 class SearchType {
 protected:
+
+    //Used for time out feature
     int iterations = 0;
+
+    //Search problem
     Problem CurrentProblem;
+
+    //NxM state of constructed Node*
     std::vector<std::vector<Node*>> stateList;
+
     //Nodes and the accompanying action to reach them from parent
     std::vector<Path*> frontier;
+
     //Route taken is stored as we go
     std::vector<Path*> exploredPath;
+
+    //Used after search as output containing the 'best' path with directions
     std::vector<Path*> trimmedPath;
+
+    //Stored string representations of state - original visualizing now stored for interpretation by GUI
     std::vector<std::vector<std::string>> stringPathVec = std::vector<std::vector<std::string>>();
 
 public:
-    //Default constructor
+
     SearchType() {};
 
-    virtual std::vector<std::vector<std::string>>& GetStringPath();
+
     //Construct search with given state map and problem
     SearchType(std::vector<std::vector<Node*>> states, Problem& problem){
         stateList = states;
@@ -48,20 +62,14 @@ public:
     //get child from a node via a given action
     Node* GetActionChild(Node *node, ActionType action);
 
-    //Find node in state map
+    //Find node in state map - takes instruction that is determined by graph 'direction' i.e. LEFT
     Node* StateLookUp(Node* node, std::tuple<int,int> instruction);
 
-    //Expand current node return path list
+    //Gets children from a node (returns both the child Node and it's accompanying Direction
     virtual std::vector<Path*> ExpandNode(Node* currentNode, Problem& problem);
 
-    //renderer
-    virtual void RenderCurrentMap(Node* currentPosition,  Problem& problem);
-
-    //To prevent loops when searching a given path
+    //To prevent loops when searching a given path - checks our explored Path for a given node
     bool IsInCurrentPath(Node *node);
-
-    //Get Nodes from current path
-    std::vector<Node*> getNodes();
 
     //Get actions available for current node
     ActionType GetAction(std::vector<Path*> path, Node* nodeLookUp);
@@ -80,20 +88,25 @@ public:
     //Returns true for if goal reached and returns solution path
     bool GoalTest(Problem& problem, Node* node);
 
-    Path& GetPathFromNode(std::vector<Path> path, Node* nodeLookUp );
-
+    //Generic Search to be overriden by all children
     virtual SolutionResponse Search(Problem& problem, Node *nodeSearch);
 
-    int PathsExplored();
-
+    //Return the trimmedPath
     std::vector<Path*> GetTrimmedPath();
 
+    //Return the fully explored path
     std::vector<Path*> GetExploredPath();
 
-    //Check if a path has already been taken
-    bool HasBeenExplored(Node* searchNode);
-
+    //Reset class for new state search
     void Reset();
+
+    // -------- GUI RELATED FUNCTIONS --------- //
+
+    //Access to states for GUI
+    virtual std::vector<std::vector<std::string>>& GetStringPath();
+
+    //Saves string representation of map for GUI
+    virtual void RenderCurrentMap(Node* currentPosition,  Problem& problem);
 
 };
 
