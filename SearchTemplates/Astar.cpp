@@ -12,11 +12,6 @@ SolutionResponse Astar::Search(Problem& problem, Node* nodeSearch) {
     SolutionResponse* solution;
     RenderCurrentMap(nodeSearch, problem);
 
-//    //First node added to path (without action)
-//    Path firstPath = Path();
-//    firstPath.pathNode = nodeSearch;
-//    exploredPath.push_back(firstPath);
-
     //First node so is the lowest
     Node* searchNode = nodeSearch;
     //Current distance from node
