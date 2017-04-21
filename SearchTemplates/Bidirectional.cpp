@@ -79,7 +79,7 @@ SolutionResponse Bidirectional::BidirectionalSearch(Problem& problem){
     } while(!FrontierIsEmpty() || !GoalFrontierIsEmpty());
 
     //Frontier was empty so we did not find the goal
-    std::cerr << "Could not find solution - empty child";
+    //std::cerr << "Could not find solution - empty child";
     solution = new SolutionResponse("failure");
     return *solution;
 

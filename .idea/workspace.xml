@@ -13,7 +13,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bc44ae1-e34e-4f52-a8f2-a32ef2cc671e" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TestingResults/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TestingResults/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TestingResults/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TestingResults/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TestingResults/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TestingResults/output.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/callgrind.out.5412" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/10" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/12" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/6" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/9" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/corm.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/csvWithGraph.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/files.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/filesWc.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output.csv " afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/parseFile.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/MySFML" afterPath="$PROJECT_DIR$/cmake-build-debug/MySFML" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DFS.h" afterPath="$PROJECT_DIR$/DFS.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchTemplates/Astar.cpp" afterPath="$PROJECT_DIR$/SearchTemplates/Astar.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchTemplates/BFS.cpp" afterPath="$PROJECT_DIR$/SearchTemplates/BFS.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchTemplates/Bidirectional.cpp" afterPath="$PROJECT_DIR$/SearchTemplates/Bidirectional.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchTemplates/GUIwrapper.cpp" afterPath="$PROJECT_DIR$/SearchTemplates/GUIwrapper.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchTemplates/Greedy.cpp" afterPath="$PROJECT_DIR$/SearchTemplates/Greedy.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchTemplates/MBAstar.cpp" afterPath="$PROJECT_DIR$/SearchTemplates/MBAstar.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchTemplates/MBAstar.h" afterPath="$PROJECT_DIR$/SearchTemplates/MBAstar.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SearchTemplates/SearchType.cpp" afterPath="$PROJECT_DIR$/SearchTemplates/SearchType.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main2.cpp" afterPath="$PROJECT_DIR$/main2.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,8 +69,8 @@
       <file leaf-file-name="main2.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main2.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1230">
-              <caret line="82" column="53" lean-forward="false" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+            <state relative-caret-position="1961">
+              <caret line="208" column="13" lean-forward="true" selection-start-line="208" selection-start-column="13" selection-end-line="208" selection-end-column="13" />
               <folding>
                 <element signature="e#37#56#0" expanded="true" />
               </folding>
@@ -44,43 +78,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUIwrapper.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SearchTemplates/GUIwrapper.cpp">
+      <file leaf-file-name="Astar.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SearchTemplates/Astar.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="63" column="19" lean-forward="false" selection-start-line="63" selection-start-column="11" selection-end-line="63" selection-end-column="19" />
-              <folding>
-                <element signature="e#38#81#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DFS.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DFS.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="21" selection-end-column="34" />
+            <state relative-caret-position="329">
+              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Problem.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SearchTemplates/Problem.h">
+      <file leaf-file-name="SolutionResponse.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SearchTemplates/SolutionResponse.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Greedy.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SearchTemplates/Greedy.cpp">
+      <file leaf-file-name="Greedy.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SearchTemplates/Greedy.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="375">
+              <caret line="26" column="77" lean-forward="true" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -96,41 +118,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchType.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SearchTemplates/SearchType.cpp">
+      <file leaf-file-name="BFS.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SearchTemplates/BFS.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BFS.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SearchTemplates/BFS.cpp">
+      <file leaf-file-name="GUIwrapper.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SearchTemplates/GUIwrapper.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="81" column="21" lean-forward="false" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+            <state relative-caret-position="544">
+              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+              <folding>
+                <element signature="e#38#81#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MBAstar.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SearchTemplates/MBAstar.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Astar.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SearchTemplates/Astar.cpp">
+      <file leaf-file-name="DFS.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DFS.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Action.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SearchTemplates/Action.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="15" />
+            <state relative-caret-position="225">
+              <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -140,13 +164,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>std</find>
-      <find>chrono</find>
-      <find>ailed depth search could not find solutio</find>
       <find>GetEx</find>
       <find>Get</find>
       <find>PushPa</find>
-      <find>Render</find>
       <find>PushP</find>
       <find>void PushPath(Path* path);Ex</find>
       <find>Path</find>
@@ -170,6 +190,10 @@
       <find>cout</find>
       <find>nodes</find>
       <find>sfml</find>
+      <find>GetPathFromNode</find>
+      <find>Render</find>
+      <find>successful</find>
+      <find>cerr</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -201,23 +225,23 @@
         <option value="$PROJECT_DIR$/RandomPaths.cpp" />
         <option value="$PROJECT_DIR$/SearchTemplates/Greedy.h" />
         <option value="$PROJECT_DIR$/SearchTemplates/Astar.h" />
-        <option value="$PROJECT_DIR$/parseFile.txt" />
-        <option value="$PROJECT_DIR$/SearchTemplates/BFS.cpp" />
-        <option value="$PROJECT_DIR$/SearchTemplates/Greedy.cpp" />
         <option value="$PROJECT_DIR$/DFS.cpp" />
-        <option value="$PROJECT_DIR$/DFS.h" />
         <option value="$PROJECT_DIR$/SearchTemplates/Bidirectional.h" />
-        <option value="$PROJECT_DIR$/SearchTemplates/MBAstar.h" />
-        <option value="$PROJECT_DIR$/SearchTemplates/MBAstar.cpp" />
         <option value="$PROJECT_DIR$/SearchTemplates/GUIwrapper.h" />
-        <option value="$PROJECT_DIR$/SearchTemplates/Bidirectional.cpp" />
         <option value="$PROJECT_DIR$/Parser.cpp" />
-        <option value="$PROJECT_DIR$/SearchTemplates/GUIwrapper.cpp" />
         <option value="$PROJECT_DIR$/SearchTemplates/Problem.h" />
-        <option value="$PROJECT_DIR$/main2.cpp" />
         <option value="$PROJECT_DIR$/SearchTemplates/SearchType.h" />
+        <option value="$PROJECT_DIR$/SearchTemplates/GUIwrapper.cpp" />
+        <option value="$PROJECT_DIR$/parseFile.txt" />
         <option value="$PROJECT_DIR$/SearchTemplates/SearchType.cpp" />
+        <option value="$PROJECT_DIR$/SearchTemplates/Bidirectional.cpp" />
+        <option value="$PROJECT_DIR$/SearchTemplates/BFS.cpp" />
         <option value="$PROJECT_DIR$/SearchTemplates/Astar.cpp" />
+        <option value="$PROJECT_DIR$/SearchTemplates/Greedy.cpp" />
+        <option value="$PROJECT_DIR$/SearchTemplates/MBAstar.cpp" />
+        <option value="$PROJECT_DIR$/main2.cpp" />
+        <option value="$PROJECT_DIR$/DFS.h" />
+        <option value="$PROJECT_DIR$/SearchTemplates/MBAstar.h" />
       </list>
     </option>
   </component>
@@ -462,7 +486,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="MySFML" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/parseFile.txt Greedy GUI" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pathFinding" TARGET_NAME="MySFML" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pathFinding" RUN_TARGET_NAME="MySFML">
+    <configuration default="false" name="MySFML" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/parseFile.txt Bi-directional TEST" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pathFinding" TARGET_NAME="MySFML" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pathFinding" RUN_TARGET_NAME="MySFML">
       <envs />
       <method />
     </configuration>
@@ -526,12 +550,13 @@
       <workItem from="1492660059754" duration="5721000" />
       <workItem from="1492673362482" duration="16837000" />
       <workItem from="1492691822865" duration="16187000" />
-      <workItem from="1492733279756" duration="2703000" />
+      <workItem from="1492733279756" duration="13108000" />
+      <workItem from="1492751106434" duration="2740000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="297841000" />
+    <option name="totallyTimeSpent" value="310986000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -548,22 +573,22 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14447439" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29663607" sideWeight="0.24690028" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26605505" sideWeight="0.6539084" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29663607" sideWeight="0.75309974" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.49811321" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26605505" sideWeight="0.28625336" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282365" sideWeight="0.48948786" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282365" sideWeight="0.48733154" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38430172" sideWeight="0.3385445" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29663607" sideWeight="0.36226416" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26605505" sideWeight="0.34609166" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.49811321" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3792049" sideWeight="0.40808624" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -607,69 +632,34 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/SearchTemplates/MBAstar.cpp</url>
-          <line>243</line>
+          <line>244</line>
           <option name="timeStamp" value="890" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main2.cpp</url>
-          <line>111</line>
+          <line>117</line>
           <option name="timeStamp" value="920" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main2.cpp</url>
-          <line>204</line>
-          <option name="timeStamp" value="921" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main2.cpp</url>
-          <line>213</line>
-          <option name="timeStamp" value="929" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main2.cpp</url>
-          <line>202</line>
-          <option name="timeStamp" value="931" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main2.cpp</url>
-          <line>288</line>
+          <line>293</line>
           <option name="timeStamp" value="937" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/SearchTemplates/Greedy.cpp</url>
-          <line>34</line>
-          <option name="timeStamp" value="938" />
+          <url>file://$PROJECT_DIR$/main2.cpp</url>
+          <line>351</line>
+          <option name="timeStamp" value="960" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main2.cpp</url>
-          <line>316</line>
-          <option name="timeStamp" value="939" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main2.cpp</url>
-          <line>319</line>
-          <option name="timeStamp" value="940" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main2.cpp</url>
-          <line>35</line>
-          <option name="timeStamp" value="944" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main2.cpp</url>
-          <line>40</line>
-          <option name="timeStamp" value="945" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main2.cpp</url>
-          <line>41</line>
-          <option name="timeStamp" value="946" />
+          <line>296</line>
+          <option name="timeStamp" value="961" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="947" />
+      <option name="time" value="969" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -767,13 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SearchTemplates/SolutionResponse.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/5/bits/stl_algobase.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
@@ -823,21 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RandomPaths.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="26" column="44" lean-forward="false" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SearchTemplates/Greedy.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="26" column="77" lean-forward="true" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/5/ext/alloc_traits.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -845,25 +813,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parseFile.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SearchTemplates/Astar.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SearchTemplates/BFS.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -882,30 +835,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SearchTemplates/Bidirectional.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="81" column="21" lean-forward="false" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SearchTemplates/MBAstar.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="176" column="16" lean-forward="false" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SearchTemplates/MBAstar.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding />
+          <folding>
+            <element signature="e#106#129#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -945,36 +877,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/c++/5/bits/stl_vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="779" column="0" lean-forward="false" selection-start-line="779" selection-start-column="0" selection-end-line="779" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SearchTemplates/Greedy.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SearchTemplates/GUIwrapper.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="63" column="19" lean-forward="false" selection-start-line="63" selection-start-column="11" selection-end-line="63" selection-end-column="19" />
-          <folding>
-            <element signature="e#38#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SearchTemplates/Problem.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -982,32 +888,120 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchTemplates/SolutionResponse.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchTemplates/SearchType.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="150" column="15" lean-forward="false" selection-start-line="150" selection-start-column="11" selection-end-line="150" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RandomPaths.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="158" column="20" lean-forward="false" selection-start-line="158" selection-start-column="16" selection-end-line="158" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchTemplates/BFS.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="79" column="15" lean-forward="false" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchTemplates/Bidirectional.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="81" column="15" lean-forward="false" selection-start-line="81" selection-start-column="11" selection-end-line="81" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchTemplates/MBAstar.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="104" column="39" lean-forward="false" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parseFile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchTemplates/Astar.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchTemplates/GUIwrapper.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <element signature="e#38#81#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main2.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="82" column="53" lean-forward="false" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+        <state relative-caret-position="1961">
+          <caret line="208" column="13" lean-forward="true" selection-start-line="208" selection-start-column="13" selection-end-line="208" selection-end-column="13" />
           <folding>
             <element signature="e#37#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SearchTemplates/SolutionResponse.h">
+    <entry file="file:///usr/include/c++/5/bits/stl_vector.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        <state relative-caret-position="388">
+          <caret line="789" column="68" lean-forward="false" selection-start-line="789" selection-start-column="68" selection-end-line="789" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DFS.h">
+    <entry file="file://$PROJECT_DIR$/SearchTemplates/Greedy.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="21" selection-end-column="34" />
+        <state relative-caret-position="209">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchTemplates/SolutionResponse.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SearchTemplates/Greedy.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="77" lean-forward="true" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
           <folding />
         </state>
       </provider>
@@ -1020,26 +1014,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SearchTemplates/SearchType.cpp">
+    <entry file="file://$PROJECT_DIR$/SearchTemplates/BFS.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SearchTemplates/BFS.cpp">
+    <entry file="file://$PROJECT_DIR$/DFS.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="81" column="21" lean-forward="false" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+        <state relative-caret-position="225">
+          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SearchTemplates/Astar.cpp">
+    <entry file="file://$PROJECT_DIR$/SearchTemplates/MBAstar.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>

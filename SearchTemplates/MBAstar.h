@@ -11,9 +11,10 @@
 
 class MBAstar : public Astar {
 private:
+    int nodeCount = 0;
     int iterations = 0;
-    int const ITERATION_MAX = 100;
-    int const MAX_PATHS = 25;
+    int const ITERATION_MAX = 2000;
+    int const MAX_PATHS = 50;
     Node* nodeRemove = NULL;
 public:
     MBAstar(std::vector<std::vector<Node*>> states,

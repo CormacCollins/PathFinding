@@ -87,9 +87,7 @@ GUIwrapper::GUIwrapper(Parser pp, SearchType* search1, int algoChoice ) {
 //                        trimmedPath = biSearch->TrimPath(pp.problem, search1->GetExploredPath());
 //                        auto trimmedPathFromGoal = biSearch->TrimPath(pp.problem, biSearch->GetExploredPathFromGoal());
 //                        trimmedPath = biSearch->CombineTrimmedPaths(trimmedPath, trimmedPathFromGoal);
-                        stateRender = search1->GetTrimmedPath().size()-1;
-                        keepState = true;
-                        break;
+                        trimmedPath = search1->GetTrimmedPath();
                     }
                     else{
                         trimmedPath = search1->GetTrimmedPath();

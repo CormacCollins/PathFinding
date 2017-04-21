@@ -75,10 +75,9 @@ SolutionResponse BFS::BreadthFirstSearch(Problem& problem, Node* searchNode){
 
     } while(!FrontierIsEmpty());
 
-    std::cerr << frontier.size() << std::endl;
     //if children empty
     PopPath();
-    std::cerr << "Could not find solution - empty child";
+    //std::cerr << "Could not find solution - empty child";
     solution = new SolutionResponse("failure");
     return *solution;
 };

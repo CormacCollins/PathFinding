@@ -52,7 +52,7 @@ Node* SearchType::GetActionChild(Node *node, ActionType action) {
             instruction = std::make_tuple(1,0);
             break;
         default:
-            std::cerr << "Error with action look up " << a << std::endl;
+            //std::cerr << "Error with action look up " << a << std::endl;
             instruction = std::make_tuple(0,0);
             break;
     }
@@ -148,24 +148,7 @@ ActionType SearchType::GetAction(std::vector<Path*> path, Node* nodeLookUp ) {
         if(a->pathNode == nodeLookUp)
             return a->pathAction;
     }
-    std::cerr << "Error in node to path look up" << std::endl;
-}
-
-Path& SearchType::GetPathFromNode(std::vector<Path> path, Node* nodeLookUp ) {
-    for(Path& a : path){
-        if(a.pathNode == nodeLookUp)
-            return a;
-    }
-    std::cerr << "Error in node to path look up" << std::endl;
-}
-
-//Get nodes stores in current path
-std::vector<Node*> SearchType::getNodes() {
-    std::vector<Node*> currentNodePath;
-    for(Path* p : exploredPath){
-        currentNodePath.push_back(p->pathNode);
-    }
-    return currentNodePath;
+    //std::cerr << "Error in node to path look up" << std::endl;
 }
 
 bool SearchType::FrontierIsEmpty() {
@@ -228,26 +211,12 @@ SolutionResponse SearchType::Search(Problem& problem, Node* nodeSearch) {
     return SolutionResponse();
 }
 
-int SearchType::PathsExplored() {
-    exploredPath.size();
-}
-
 std::vector<Path*> SearchType::GetTrimmedPath() {
     return trimmedPath;
 }
 
 std::vector<Path*> SearchType::GetExploredPath() {
     return exploredPath;
-}
-
-bool SearchType::HasBeenExplored(Node* searchNode) {
-    for(Path* a : exploredPath){
-        if(a->pathNode == searchNode){
-            return true;
-        }
-    }
-    return false;
-
 }
 
 void SearchType::Reset() {

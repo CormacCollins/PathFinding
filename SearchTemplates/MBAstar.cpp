@@ -89,6 +89,7 @@ SolutionResponse MBAstar::Search(Problem& problem, Node* nodeSearch) {
         for (auto& p : children) {
             PushFrontier(p);
             PushPath(p);
+            nodeCount++;
             RenderCurrentMap(p->pathNode, problem);
         }
 
@@ -117,7 +118,7 @@ SolutionResponse MBAstar::Search(Problem& problem, Node* nodeSearch) {
     } while(!FrontierIsEmpty());
 
     //Frontier was empty so we did not find the goal
-    std::cerr << "Could not find solution - empty child";
+   // std::cerr << "Could not find solution - empty child";
     solution = new SolutionResponse("failure");
     return *solution;
 

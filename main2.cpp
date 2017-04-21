@@ -41,6 +41,9 @@ int main(int argc, char *argv[]) {
         if(temp == "GUI"){
             IS_GUI = true;
         }
+        if(temp == "TEST"){
+            TESTING_MODE = true;
+        }
     }
     else if ( argc < 2 )
     {
@@ -67,20 +70,23 @@ int main(int argc, char *argv[]) {
     bool finishableLevel = false;
 
     if(TESTING_MODE) {
+
+        cout << "Testing mode entered" << endl;
+
         for (; SIMULATION_NO > 0; SIMULATION_NO--) {
 
             while (!finishableLevel) {
                 //Different height width limits in random level creating
                 if (SIMULATION_NO >= 80) {
-                    r.GetRandomSimulationPaths(8, 8);
+                    r.GetRandomSimulationPaths(10, 10);
                 } else if (SIMULATION_NO >= 60) {
-                    r.GetRandomSimulationPaths(12, 12);
-                } else if (SIMULATION_NO >= 40) {
                     r.GetRandomSimulationPaths(15, 15);
+                } else if (SIMULATION_NO >= 40) {
+                    r.GetRandomSimulationPaths(8, 8);
                 } else if (SIMULATION_NO >= 20) {
-                    r.GetRandomSimulationPaths(17, 17);
-                } else {
                     r.GetRandomSimulationPaths(20, 20);
+                } else {
+                    r.GetRandomSimulationPaths(25, 25);
                 }
 
                 //Create new map vector with parser function
@@ -128,8 +134,7 @@ int main(int argc, char *argv[]) {
                 dataFile << SIMULATION_NO << ", ";
                 dataFile << "Astar, " << "passed, " << a.GetExploredPath().size() << ", ";
                 dataFile << a.GetTrimmedPath().size() << endl;
-            }
-            else{
+            } else {
                 dataFile << SIMULATION_NO << ", ";
                 dataFile << "Astar, " << "failed, " << a.GetExploredPath().size() << ", ";
                 dataFile << 0 << endl;
@@ -173,29 +178,29 @@ int main(int argc, char *argv[]) {
                 dataFile << 0 << endl;
             }
 
-            Bidirectional bi = Bidirectional(pp.nodeMatrix, pp.problem);
-            res = bi.Search(pp.problem, pp.problem.InitialState);
-            if (res.ResOutcome() != "failure") {
-                dataFile << SIMULATION_NO << ", ";
-                dataFile << "BI-DIR, " << "passed, " << bi.GetExploredPath().size() << ", ";
-                dataFile << 0 << endl;
-            }else{
-                dataFile << SIMULATION_NO << ", ";
-                dataFile << "BI-DIR, " << "failed, " << bi.GetExploredPath().size() << ", ";
-                dataFile << 0 << endl;
-            }
+//            Bidirectional bi = Bidirectional(pp.nodeMatrix, pp.problem);
+//            res = bi.Search(pp.problem, pp.problem.InitialState);
+//            if (res.ResOutcome() != "failure") {
+//                dataFile << SIMULATION_NO << ", ";
+//                dataFile << "BI-DIR, " << "passed, " << bi.GetExploredPath().size() << ", ";
+//                dataFile << 0 << endl;
+//            }else{
+//                dataFile << SIMULATION_NO << ", ";
+//                dataFile << "BI-DIR, " << "failed, " << bi.GetExploredPath().size() << ", ";
+//                dataFile << 0 << endl;
+//            }
 
-            MBAstar mba = MBAstar(pp.nodeMatrix, pp.problem);
-            res = mba.Search(pp.problem, pp.problem.InitialState);
-            if (res.ResOutcome() != "failure") {
-                dataFile << SIMULATION_NO << ", ";
-                dataFile << "MBAstar, " << "passed, " << mba.GetExploredPath().size() << ", ";
-                dataFile << 0 << endl;
-            }else{
-                dataFile << SIMULATION_NO << ", ";
-                dataFile << "MBAstar, " << "failed, " << mba.GetExploredPath().size() << ", ";
-                dataFile << 0 << endl;
-            }
+//            MBAstar mba = MBAstar(pp.nodeMatrix, pp.problem);
+//            res = mba.Search(pp.problem, pp.problem.InitialState);
+//            if (res.ResOutcome() != "failure") {
+//                dataFile << SIMULATION_NO << ", ";
+//                dataFile << "MBAstar, " << "passed, " << mba.GetExploredPath().size() << ", ";
+//                dataFile << 0 << endl;
+//            }else{
+//                dataFile << SIMULATION_NO << ", ";
+//                dataFile << "MBAstar, " << "failed, " << mba.GetExploredPath().size() << ", ";
+//                dataFile << 0 << endl;
+//            }
 
             if(SIMULATION_NO % 20 == 0) {
                 SearchType *s;
@@ -289,7 +294,7 @@ int main(int argc, char *argv[]) {
     if(res.ResOutcome() == "failure"){
         //No path available for Bidirectional
         if(algoChoice == 5) {
-            search1 = static_cast<Bidirectional*>(search1);
+            search1 = static_cast<Bidirectional*>(search1);;
             cout <<  search1->GetExploredPath().size() + search1->GetExploredPath().size() << endl;
             cout << "No Solution Found " << endl;
         }
@@ -344,8 +349,7 @@ int main(int argc, char *argv[]) {
     // ------------------------------------------------------------//
 
 
-    if(!IS_GUI){
-        cout << endl << "**Gui not enabled**" << endl;
+    if(!IS_GUI || searchType == "Bi-directional"){
         return 0;
     }
     else{

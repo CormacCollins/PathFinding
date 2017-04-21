@@ -45,7 +45,7 @@ SolutionResponse Astar::Search(Problem& problem, Node* nodeSearch) {
     } while(!FrontierIsEmpty());
 
     //Frontier was empty so we did not find the goal
-    std::cerr << "Could not find solution - empty child";
+    //std::cerr << "Could not find solution - empty child";
     solution = new SolutionResponse("failure");
     return *solution;
 
